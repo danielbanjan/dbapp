@@ -59,8 +59,6 @@ namespace test2
                     tabs.TabPages.Insert(1, tabPage2);
                     tabs.TabPages.Insert(2, Synonymspage);
                     tabs.TabPages.Insert(3, tabPage3);
-                    //tabs.TabPages.Remove(tabPage1);
-                    //this.tabPage1.Hide();
                     this.tabPage2.Show();
                     this.Synonymspage.Show();
                     this.tabPage3.Show();
@@ -276,8 +274,11 @@ namespace test2
             { st = "select * from JobTitles_JobWordsCategoryMapping where categoryID = '" + jttxtbox.Text + "'"; }
             else
             { st = "select * from JobTitles_JobWordsCategoryMapping where phrase = '" + jttxtbox.Text + "'"; }
-
-            if (jobtitlecb.SelectedItems.Count != 1 || string.IsNullOrWhiteSpace(jttxtbox.Text))
+            if (string.IsNullOrWhiteSpace(jttxtbox.Text))
+            {
+                st = "select * from JobTitles_JobWordsCategoryMapping";
+            }
+            if (jobtitlecb.SelectedItems.Count != 1)
             {
                 sclbl1.ForeColor = System.Drawing.Color.Red;
                 jttxtboxlbl.ForeColor = System.Drawing.Color.Red;
@@ -302,6 +303,16 @@ namespace test2
                     MessageBox.Show(ex.Message);
                 }
             }
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

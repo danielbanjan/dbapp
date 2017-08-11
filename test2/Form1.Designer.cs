@@ -39,6 +39,7 @@
             this.untxtbox = new System.Windows.Forms.TextBox();
             this.loginbtn = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.emailtxtbox = new System.Windows.Forms.RichTextBox();
             this.sclbl = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,7 +81,8 @@
             this.jobtitlecb = new System.Windows.Forms.CheckedListBox();
             this.config_geo_location_synonymTableAdapter = new test2.ItalyDataSetTableAdapters.config_geo_location_synonymTableAdapter();
             this.tableAdapterManager = new test2.ItalyDataSetTableAdapters.TableAdapterManager();
-            this.emailtxtbox = new System.Windows.Forms.RichTextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pmcb = new System.Windows.Forms.CheckBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -197,6 +199,14 @@
             this.tabPage2.Size = new System.Drawing.Size(747, 455);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Delete Users";
+            // 
+            // emailtxtbox
+            // 
+            this.emailtxtbox.Location = new System.Drawing.Point(4, 48);
+            this.emailtxtbox.Name = "emailtxtbox";
+            this.emailtxtbox.Size = new System.Drawing.Size(265, 160);
+            this.emailtxtbox.TabIndex = 10;
+            this.emailtxtbox.Text = "";
             // 
             // sclbl
             // 
@@ -493,6 +503,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.pmcb);
+            this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.Controls.Add(this.jttxtbox);
             this.tabPage3.Controls.Add(this.jttxtboxlbl);
             this.tabPage3.Controls.Add(this.dgvlbl);
@@ -544,7 +556,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(302, 229);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(429, 220);
+            this.dataGridView1.Size = new System.Drawing.Size(442, 220);
             this.dataGridView1.TabIndex = 19;
             // 
             // Insertbtn
@@ -658,13 +670,29 @@
             this.tableAdapterManager.config_geo_location_synonymTableAdapter = this.config_geo_location_synonymTableAdapter;
             this.tableAdapterManager.UpdateOrder = test2.ItalyDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // emailtxtbox
+            // comboBox1
             // 
-            this.emailtxtbox.Location = new System.Drawing.Point(4, 48);
-            this.emailtxtbox.Name = "emailtxtbox";
-            this.emailtxtbox.Size = new System.Drawing.Size(265, 160);
-            this.emailtxtbox.TabIndex = 10;
-            this.emailtxtbox.Text = "";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Whitelisted Job Titles",
+            "Job words Category Mapping",
+            "Job Titles Local Job Category"});
+            this.comboBox1.Location = new System.Drawing.Point(302, 112);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(173, 21);
+            this.comboBox1.TabIndex = 25;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // pmcb
+            // 
+            this.pmcb.AutoSize = true;
+            this.pmcb.Location = new System.Drawing.Point(384, 29);
+            this.pmcb.Name = "pmcb";
+            this.pmcb.Size = new System.Drawing.Size(87, 17);
+            this.pmcb.TabIndex = 26;
+            this.pmcb.Text = "Partial match";
+            this.pmcb.UseVisualStyleBackColor = true;
+            this.pmcb.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // Form1
             // 
@@ -756,6 +784,8 @@
         private System.Windows.Forms.Label jttxtboxlbl;
         private System.Windows.Forms.RichTextBox jttxtbox;
         private System.Windows.Forms.RichTextBox emailtxtbox;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox pmcb;
     }
 }
 

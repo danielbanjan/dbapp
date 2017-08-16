@@ -159,7 +159,6 @@ namespace test2
         private void usersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)

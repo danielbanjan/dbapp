@@ -160,8 +160,6 @@ namespace test2
         {
             this.Validate();
 
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -268,6 +268,8 @@ namespace test2
             bool result = Int32.TryParse(jttxtbox.Text, out number);
             if (result == true)
             { st = "select * from JobTitles_JobWordsCategoryMapping where categoryID = '" + jttxtbox.Text + "'"; }
+            if (pmcb.Checked == true)
+            { st = "select * from JobTitles_JobWordsCategoryMapping where phrase like '%" + jttxtbox.Text + "%'"; }
             else
             { st = "select * from JobTitles_JobWordsCategoryMapping where phrase = '" + jttxtbox.Text + "'"; }
             if (string.IsNullOrWhiteSpace(jttxtbox.Text))
@@ -304,7 +306,7 @@ namespace test2
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -174,7 +174,7 @@ namespace test2
 
         private void usersBindingNavigator_RefreshItems(object sender, EventArgs e)
         {
-                    }
+                  }
 
         private void emailtxtbox_KeyDown(object sender, KeyEventArgs e)
         {

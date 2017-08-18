@@ -336,6 +336,7 @@
             this.tablecb.Name = "tablecb";
             this.tablecb.Size = new System.Drawing.Size(173, 21);
             this.tablecb.TabIndex = 25;
+            this.tablecb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tablecb_SelectedIndexChanged);
             // 
             // jttxtbox
             // 

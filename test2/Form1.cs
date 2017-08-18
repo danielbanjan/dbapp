@@ -99,7 +99,7 @@ namespace test2
                 pwtxtbox.Text = Settings.Default["Password"].ToString();
                 rmbr_cb.Checked = Convert.ToBoolean(Settings.Default["Remember"]);
                 loginbtn.Text = "Logout";
-                tabs.SelectedTab = tabPage3;
+                tabs.SelectedTab = tabPage2;
             }
 
         }
@@ -165,21 +165,6 @@ namespace test2
             {
                 MessageBox.Show("Deleted users from all selected portals.");
             } 
-        }
-
-        private void config_geo_location_synonymBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.Validate();
-                this.config_geo_location_synonymBindingSource.EndEdit();
-                this.tableAdapterManager.UpdateAll(this.italyDataSet);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("An error occurred ",ex.Message);
-            }
-
         }
 
         private void deletebtnjob_Click(object sender, EventArgs e)
@@ -409,6 +394,12 @@ namespace test2
             {
                 jttxtbox.Focus();
             }
+        }
+
+        private void tablecb_SelectedIndexChanged(object sender, MouseEventArgs e)
+        {
+            tablecb.DroppedDown = true;
+
         }
 
         //private void config_geo_location_synonymDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)

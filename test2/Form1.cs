@@ -57,6 +57,7 @@ namespace test2
                 untxtbox.Focus();
                 rmbr_cb.Checked = false;
                 loginbtn.Text = "Login";
+                
             }
             if (rmbr_cb.Checked == true)
             {

@@ -45,34 +45,34 @@
     <Setting Name="Norway" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Norway;Persist Security Info=True;User ID=rubrikkadmin@sq2eaxbdss;Password=ueoBzUGP&amp;amp;U2u&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Norway;Persist Security Info=True;User ID=rubrikkadmin@h9o0tfu6g8;Password=ueoBzUGP&amp;amp;U2u&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Norway;Persist Security Info=True;User ID=rubrikkadmin@sq2eaxbdss;Password=ueoBzUGP&amp;U2u</Value>
+      <Value Profile="(Default)">Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Norway;Persist Security Info=True;User ID=rubrikkadmin@h9o0tfu6g8;Password=ueoBzUGP&amp;U2u</Value>
     </Setting>
     <Setting Name="Sweden" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Sweden;Persist Security Info=True;User ID=rubrikkadmin@sq2eaxbdss;Password=ueoBzUGP&amp;amp;U2u&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Sweden;Persist Security Info=True;User ID=rubrikkadmin@h9o0tfu6g8;Password=ueoBzUGP&amp;amp;U2u&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Sweden;Persist Security Info=True;User ID=rubrikkadmin@sq2eaxbdss;Password=ueoBzUGP&amp;U2u</Value>
+      <Value Profile="(Default)">Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Sweden;Persist Security Info=True;User ID=rubrikkadmin@h9o0tfu6g8;Password=ueoBzUGP&amp;U2u</Value>
     </Setting>
     <Setting Name="Finland" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Finland;Persist Security Info=True;User ID=rubrikkadmin@sq2eaxbdss;Password=ueoBzUGP&amp;amp;U2u&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Finland;Persist Security Info=True;User ID=rubrikkadmin@h9o0tfu6g8;Password=ueoBzUGP&amp;amp;U2u&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Finland;Persist Security Info=True;User ID=rubrikkadmin@sq2eaxbdss;Password=ueoBzUGP&amp;U2u</Value>
+      <Value Profile="(Default)">Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Finland;Persist Security Info=True;User ID=rubrikkadmin@h9o0tfu6g8;Password=ueoBzUGP&amp;U2u</Value>
     </Setting>
     <Setting Name="SouthAfrica" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=SouthAfrica;Persist Security Info=True;User ID=rubrikkadmin@sq2eaxbdss;Password=ueoBzUGP&amp;amp;U2u&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=SouthAfrica;Persist Security Info=True;User ID=rubrikkadmin@h9o0tfu6g8;Password=ueoBzUGP&amp;amp;U2u&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=SouthAfrica;Persist Security Info=True;User ID=rubrikkadmin@sq2eaxbdss;Password=ueoBzUGP&amp;U2u</Value>
+      <Value Profile="(Default)">Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=SouthAfrica;Persist Security Info=True;User ID=rubrikkadmin@h9o0tfu6g8;Password=ueoBzUGP&amp;U2u</Value>
     </Setting>
     <Setting Name="Germany" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;

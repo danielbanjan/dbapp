@@ -12,7 +12,7 @@ namespace test2.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.1.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -106,7 +106,7 @@ namespace test2.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Norway;Persist Se" +
-            "curity Info=True;User ID=rubrikkadmin@sq2eaxbdss;Password=ueoBzUGP&U2u")]
+            "curity Info=True;User ID=rubrikkadmin@h9o0tfu6g8;Password=ueoBzUGP&U2u")]
         public string Norway {
             get {
                 return ((string)(this["Norway"]));
@@ -117,7 +117,7 @@ namespace test2.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Sweden;Persist Se" +
-            "curity Info=True;User ID=rubrikkadmin@sq2eaxbdss;Password=ueoBzUGP&U2u")]
+            "curity Info=True;User ID=rubrikkadmin@h9o0tfu6g8;Password=ueoBzUGP&U2u")]
         public string Sweden {
             get {
                 return ((string)(this["Sweden"]));
@@ -128,7 +128,7 @@ namespace test2.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=Finland;Persist S" +
-            "ecurity Info=True;User ID=rubrikkadmin@sq2eaxbdss;Password=ueoBzUGP&U2u")]
+            "ecurity Info=True;User ID=rubrikkadmin@h9o0tfu6g8;Password=ueoBzUGP&U2u")]
         public string Finland {
             get {
                 return ((string)(this["Finland"]));
@@ -139,7 +139,7 @@ namespace test2.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=db-nosedkfiza.hugintechnologies.com;Initial Catalog=SouthAfrica;Persi" +
-            "st Security Info=True;User ID=rubrikkadmin@sq2eaxbdss;Password=ueoBzUGP&U2u")]
+            "st Security Info=True;User ID=rubrikkadmin@h9o0tfu6g8;Password=ueoBzUGP&U2u")]
         public string SouthAfrica {
             get {
                 return ((string)(this["SouthAfrica"]));

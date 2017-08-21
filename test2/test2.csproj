@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A7EDEC9A-6178-4046-BB2C-0292FA964EA9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>test2</RootNamespace>
+    <RootNamespace>dbapp</RootNamespace>
     <AssemblyName>DB Application</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -71,7 +71,8 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>danipass.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -109,7 +110,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="danipass.pfx" />
     <None Include="ItalyDataSet.xsc">
       <DependentUpon>ItalyDataSet.xsd</DependentUpon>
     </None>

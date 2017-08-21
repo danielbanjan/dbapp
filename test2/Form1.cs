@@ -18,14 +18,15 @@ namespace test2
     {
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'italyDataSet.config_geo_location_synonym' table. You can move, or remove it, as needed.
             //this.config_geo_location_synonymTableAdapter.Fill(this.italyDataSet.config_geo_location_synonym);
-            // TODO: This line of code loads data into the 'loginsDataSet.Users' table. You can move, or remove it, as needed.
             System.Windows.Forms.ToolTip sctt = new System.Windows.Forms.ToolTip();
             sctt.SetToolTip(this.sclbl, "Select a country by checking an item from the list\n below or use Select ALL checkbox to select all countries.");
             System.Windows.Forms.ToolTip remembertt = new System.Windows.Forms.ToolTip();
             remembertt.SetToolTip(this.rmbr_cb, "Check this box if you want the application\n to save your login credentials.");
             if (tablecb.SelectedItem == null) { tablecb.SelectedItem = "Job Words Category Mapping"; }
+            MessageBox.Show("tests.");
+            dataGridView1.Hide();
+            dgvlbl.Hide();
         }
 
         public Form1()
@@ -40,7 +41,6 @@ namespace test2
             untxtbox.Text = Settings.Default["Username"].ToString();
             pwtxtbox.Text = Settings.Default["Password"].ToString();
             rmbr_cb.Checked = Convert.ToBoolean(Settings.Default["Remember"]);
-
         }
 
         private void loginbtn_Click(object sender, EventArgs e)
@@ -56,8 +56,7 @@ namespace test2
                 pwtxtbox.Text = "";
                 untxtbox.Focus();
                 rmbr_cb.Checked = false;
-                loginbtn.Text = "Login";
-                
+                loginbtn.Text = "Login"; 
             }
             if (rmbr_cb.Checked == true)
             {
@@ -73,7 +72,6 @@ namespace test2
                 Settings.Default["Remember"] = false;
                 Settings.Default.Save();
             }
-
             if ("admin" != untxtbox.Text && "admin" != pwtxtbox.Text)
             {
                 unlbl.ForeColor = System.Drawing.Color.Red;
@@ -84,7 +82,6 @@ namespace test2
                 pwtxtbox.Clear();
                 untxtbox.Focus();
             }
-  
             else
             {
                 tabs.TabPages.Insert(1, tabPage2);
@@ -101,7 +98,6 @@ namespace test2
                 loginbtn.Text = "Logout";
                 tabs.SelectedTab = tabPage2;
             }
-
         }
 
         private void deletebtn_Click(object sender, EventArgs e)
@@ -210,8 +206,7 @@ namespace test2
                             }
                             else st = "select * from JobTitles_LocalJobCategory where LocalDisplayName = '" + jttxtbox.Text + "'";
                         }
-
-                            SqlCommand sqlcom = new SqlCommand(st, conn);
+                        SqlCommand sqlcom = new SqlCommand(st, conn);
                         try
                         {
                             conn.Open();
@@ -224,7 +219,6 @@ namespace test2
                             MessageBox.Show(ex.Message);
                         }
                     }
-                    
                 }
                 MessageBox.Show("Mappings deleted!");
             }
@@ -235,7 +229,6 @@ namespace test2
             String st="";
             int number;
             bool result = Int32.TryParse(jttxtbox.Text, out number);
-            
             if (pmcb.Checked == true)
             {
                 if (tablecb.SelectedItem.ToString() == "Whitelisted Job Titles")
@@ -292,6 +285,8 @@ namespace test2
                     DataTable dt = new DataTable();
                     adp.Fill(dt);
                     dataGridView1.DataSource = dt;
+                    dataGridView1.Show();
+                    dgvlbl.Show();
                     conn.Close();
                 }
                 catch (SqlException ex)
@@ -299,7 +294,6 @@ namespace test2
                     MessageBox.Show(ex.Message);
                 }
             }
-
         }
 
         private void Insertbtn_Click(object sender, EventArgs e)
@@ -312,7 +306,6 @@ namespace test2
             }
             else
             {
-
                 foreach (string s in jobtitlecb.CheckedItems)
                 {
                     sclbl1.ForeColor = System.Drawing.Color.Black;
@@ -332,6 +325,7 @@ namespace test2
                             j = j + 2;
                         }
                         SqlCommand sqlcom = new SqlCommand(st, conn);
+                        MessageBox.Show(st.ToString());
                         try
                         {
                             conn.Open();
@@ -345,7 +339,6 @@ namespace test2
                     }
                 }
                 MessageBox.Show("Mappings Added!");
-
             }
         }
 
@@ -399,7 +392,6 @@ namespace test2
         private void tablecb_SelectedIndexChanged(object sender, MouseEventArgs e)
         {
             tablecb.DroppedDown = true;
-
         }
 
         //private void config_geo_location_synonymDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)

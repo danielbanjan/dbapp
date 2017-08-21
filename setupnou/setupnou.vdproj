@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_AFCF71E4618E4F56B279CD1A208F0032"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C2C72341073640B9A694EF726E7E2E64"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -189,6 +195,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AFCF71E4618E4F56B279CD1A208F0032"
+            {
+            "SourcePath" = "8:..\\test2\\Icons\\logo_icon_600x315_II0_icon.ico"
+            "TargetName" = "8:logo_icon_600x315_II0_icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -246,7 +272,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:setupnou"
         "ProductCode" = "8:{CF19301F-129F-4500-8138-6C8D93CFF0FA}"
-        "PackageCode" = "8:{54260BFB-CEE4-4D2F-8FEC-826F6F61DE8A}"
+        "PackageCode" = "8:{1A4A576D-5281-4AFA-B2C5-37847EC83174}"
         "UpgradeCode" = "8:{AF681842-C145-4DEB-ACAE-24362CD6AFB3}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -263,7 +289,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:for work"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_7CAEED3058D74828841465AC61D3DDCE"
+        "ARPPRODUCTICON" = "8:_AFCF71E4618E4F56B279CD1A208F0032"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"

@@ -61,10 +61,10 @@
             this.sclbl1 = new System.Windows.Forms.Label();
             this.sacbjt = new System.Windows.Forms.CheckBox();
             this.jobtitlecb = new System.Windows.Forms.CheckedListBox();
+            this.tableAdapterManager = new test2.ItalyDataSetTableAdapters.TableAdapterManager();
+            this.config_geo_location_synonymTableAdapter = new test2.ItalyDataSetTableAdapters.config_geo_location_synonymTableAdapter();
             this.config_geo_location_synonymBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.italyDataSet = new test2.ItalyDataSet();
-            this.config_geo_location_synonymTableAdapter = new test2.ItalyDataSetTableAdapters.config_geo_location_synonymTableAdapter();
-            this.tableAdapterManager = new test2.ItalyDataSetTableAdapters.TableAdapterManager();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -476,27 +476,27 @@
             this.jobtitlecb.Location = new System.Drawing.Point(481, 24);
             this.jobtitlecb.Name = "jobtitlecb";
             this.jobtitlecb.Size = new System.Drawing.Size(263, 197);
+            this.jobtitlecb.Sorted = true;
             this.jobtitlecb.TabIndex = 10;
-            // 
-            // config_geo_location_synonymBindingSource
-            // 
-            this.config_geo_location_synonymBindingSource.DataMember = "config_geo_location_synonym";
-            this.config_geo_location_synonymBindingSource.DataSource = this.italyDataSet;
-            // 
-            // italyDataSet
-            // 
-            this.italyDataSet.DataSetName = "ItalyDataSet";
-            this.italyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // config_geo_location_synonymTableAdapter
-            // 
-            this.config_geo_location_synonymTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.config_geo_location_synonymTableAdapter = this.config_geo_location_synonymTableAdapter;
             this.tableAdapterManager.UpdateOrder = test2.ItalyDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // config_geo_location_synonymTableAdapter
+            // 
+            this.config_geo_location_synonymTableAdapter.ClearBeforeFill = true;
+            // 
+            // config_geo_location_synonymBindingSource
+            // 
+            this.config_geo_location_synonymBindingSource.DataMember = "config_geo_location_synonym";
+            // 
+            // italyDataSet
+            // 
+            this.italyDataSet.DataSetName = "ItalyDataSet";
+            this.italyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Form1
             // 
@@ -546,9 +546,6 @@
         private System.Windows.Forms.CheckedListBox checkbox;
         private System.Windows.Forms.TabControl tabs;
         private System.Windows.Forms.Label sclbl;
-        private ItalyDataSet italyDataSet;
-        private System.Windows.Forms.BindingSource config_geo_location_synonymBindingSource;
-        private ItalyDataSetTableAdapters.config_geo_location_synonymTableAdapter config_geo_location_synonymTableAdapter;
         private ItalyDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -565,6 +562,9 @@
         private System.Windows.Forms.RichTextBox emailtxtbox;
         private System.Windows.Forms.ComboBox tablecb;
         private System.Windows.Forms.CheckBox pmcb;
+        private ItalyDataSetTableAdapters.config_geo_location_synonymTableAdapter config_geo_location_synonymTableAdapter;
+        private System.Windows.Forms.BindingSource config_geo_location_synonymBindingSource;
+        private ItalyDataSet italyDataSet;
     }
 }
 

@@ -25,7 +25,9 @@
     <UpdateUrl>\\DESKTOP-OEGVCUK\Users\Daniel\Desktop\Publishes\</UpdateUrl>
     <ProductName>DB Application</ProductName>
     <PublisherName>Daniel Banjan</PublisherName>
-    <ApplicationRevision>19</ApplicationRevision>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>25</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -63,7 +65,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>logo_icon_600x315_II0_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>

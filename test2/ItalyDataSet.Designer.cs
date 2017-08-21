@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace dbapp {
+namespace test2 {
     
     
     /// <summary>
@@ -620,7 +620,7 @@ namespace dbapp {
         }
     }
 }
-namespace dbapp.ItalyDataSetTableAdapters {
+namespace test2.ItalyDataSetTableAdapters {
     
     
     /// <summary>

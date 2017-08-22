@@ -201,9 +201,9 @@ namespace test2
                         {
                             if (pmcb.Checked == true)
                             {
-                                st = "select * from JobTitles_LocalJobCategory where LocalDisplayName like '%" + jttxtbox.Text + "%'";
+                                st = "DELETE FROM JobTitles_LocalJobCategory where LocalDisplayName like '%" + jttxtbox.Text + "%'";
                             }
-                            else st = "select * from JobTitles_LocalJobCategory where LocalDisplayName = '" + jttxtbox.Text + "'";
+                            else st = "DELETE FROM JobTitles_LocalJobCategory where LocalDisplayName = '" + jttxtbox.Text + "'";
                         }
                         SqlCommand sqlcom = new SqlCommand(st, conn);
                         try

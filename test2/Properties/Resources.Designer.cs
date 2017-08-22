@@ -69,5 +69,15 @@ namespace test2.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon logo_icon_600x315_II0_icon {
+            get {
+                object obj = ResourceManager.GetObject("logo_icon_600x315_II0_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }

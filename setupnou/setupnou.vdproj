@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_7CAEED3058D74828841465AC61D3DDCE"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_9F26A8633732762E28074D2FBE597010"
         "OwnerKey" = "8:_C2C72341073640B9A694EF726E7E2E64"
         "MsmSig" = "8:_UNDEFINED"
@@ -34,12 +28,6 @@
         "Entry"
         {
         "MsmKey" = "8:_C2C72341073640B9A694EF726E7E2E64"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FB157F6D95ED472896B83D1AF782481E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -150,26 +138,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7CAEED3058D74828841465AC61D3DDCE"
-            {
-            "SourcePath" = "8:..\\test2\\Icons\\icon.ico"
-            "TargetName" = "8:icon.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9F26A8633732762E28074D2FBE597010"
             {
             "AssemblyRegister" = "3:1"
@@ -180,7 +148,7 @@
                     "_9F26A8633732762E28074D2FBE597010"
                     {
                     "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
+                    "Attributes" = "3:514"
                     }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
@@ -191,7 +159,7 @@
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
+            "Hidden" = "11:TRUE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -211,27 +179,7 @@
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FB157F6D95ED472896B83D1AF782481E"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\Documents\\Visual Studio 2017\\Projects\\test2\\test2\\Resources\\dBTechnologies_logo.png"
-            "TargetName" = "8:dBTechnologies_logo.png"
-            "Tag" = "8:"
-            "Folder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
+            "Hidden" = "11:TRUE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -298,7 +246,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:setupnou"
         "ProductCode" = "8:{CF19301F-129F-4500-8138-6C8D93CFF0FA}"
-        "PackageCode" = "8:{1A4A576D-5281-4AFA-B2C5-37847EC83174}"
+        "PackageCode" = "8:{3442A6F0-DF60-4483-8955-DFCB8809A856}"
         "UpgradeCode" = "8:{AF681842-C145-4DEB-ACAE-24362CD6AFB3}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -418,9 +366,9 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2BD62A66FF6846E899F7745ADD16D3E9"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_23A64FD077D745B49C3E3B62FDCFFA79"
             {
-            "Name" = "8:DB App"
+            "Name" = "8:Shortcut to Primary output from test2 (Active)"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -432,9 +380,9 @@
             "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_AB4E232971CD4E8FA22C9DB7FE287E65"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_AC74F45698E44DCD8C7A34BD731AE4F3"
             {
-            "Name" = "8:Db app"
+            "Name" = "8:Shortcut to Primary output from test2 (Active) (2)"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -718,8 +666,7 @@
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
-                            "Setting" = "3:2"
-                            "Value" = "8:_FB157F6D95ED472896B83D1AF782481E"
+                            "Setting" = "3:1"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "InstallAllUsersVisible"
@@ -754,8 +701,7 @@
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
-                            "Setting" = "3:2"
-                            "Value" = "8:_FB157F6D95ED472896B83D1AF782481E"
+                            "Setting" = "3:1"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -777,8 +723,7 @@
                             "Type" = "3:8"
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
-                            "Setting" = "3:2"
-                            "Value" = "8:_FB157F6D95ED472896B83D1AF782481E"
+                            "Setting" = "3:1"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "CopyrightWarning"

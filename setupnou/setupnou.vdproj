@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_6E8AAF28F3074518934946A2E5BCBAE5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9F26A8633732762E28074D2FBE597010"
         "OwnerKey" = "8:_C2C72341073640B9A694EF726E7E2E64"
         "MsmSig" = "8:_UNDEFINED"
@@ -138,6 +144,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6E8AAF28F3074518934946A2E5BCBAE5"
+            {
+            "SourcePath" = "8:..\\test2\\Resources\\arpi.ico"
+            "TargetName" = "8:arpi.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:TRUE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9F26A8633732762E28074D2FBE597010"
             {
             "AssemblyRegister" = "3:1"
@@ -145,6 +171,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_9F26A8633732762E28074D2FBE597010"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:514"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -258,7 +289,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:for work"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_AFCF71E4618E4F56B279CD1A208F0032"
+        "ARPPRODUCTICON" = "8:_6E8AAF28F3074518934946A2E5BCBAE5"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"

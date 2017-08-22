@@ -145,11 +145,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_9F26A8633732762E28074D2FBE597010"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:514"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -368,7 +363,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_23A64FD077D745B49C3E3B62FDCFFA79"
             {
-            "Name" = "8:Shortcut to Primary output from test2 (Active)"
+            "Name" = "8:DB App"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -377,12 +372,12 @@
             "Target" = "8:_C2C72341073640B9A694EF726E7E2E64"
             "Folder" = "8:_0B5D3017E53040F4AD6F8894A2A0AE1A"
             "WorkingFolder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
-            "Icon" = "8:"
+            "Icon" = "8:_AFCF71E4618E4F56B279CD1A208F0032"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_AC74F45698E44DCD8C7A34BD731AE4F3"
             {
-            "Name" = "8:Shortcut to Primary output from test2 (Active) (2)"
+            "Name" = "8:DB App"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -391,7 +386,7 @@
             "Target" = "8:_C2C72341073640B9A694EF726E7E2E64"
             "Folder" = "8:_A108A6D715A54B628BD6E302260D642D"
             "WorkingFolder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
-            "Icon" = "8:"
+            "Icon" = "8:_AFCF71E4618E4F56B279CD1A208F0032"
             "Feature" = "8:"
             }
         }

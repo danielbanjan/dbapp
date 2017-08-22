@@ -24,7 +24,6 @@ namespace test2
             System.Windows.Forms.ToolTip remembertt = new System.Windows.Forms.ToolTip();
             remembertt.SetToolTip(this.rmbr_cb, "Check this box if you want the application\n to save your login credentials.");
             if (tablecb.SelectedItem == null) { tablecb.SelectedItem = "Job Words Category Mapping"; }
-            MessageBox.Show("tests.");
             dataGridView1.Hide();
             dgvlbl.Hide();
         }

@@ -262,10 +262,19 @@ namespace test2
             {
                 st = "select * from JobTitles_JobWordsCategoryMapping where categoryID = " + jttxtbox.Text + "";
             }
-            if (string.IsNullOrWhiteSpace(jttxtbox.Text))
+            if (string.IsNullOrWhiteSpace(jttxtbox.Text)&& tablecb.SelectedItem.ToString() == "Job Words Category Mapping")
             {
                 st = "select * from JobTitles_JobWordsCategoryMapping";
             }
+            if (string.IsNullOrWhiteSpace(jttxtbox.Text) && tablecb.SelectedItem.ToString() == "Job Titles Local Job Category")
+            {
+                st = "select * from JobTitles_LocalJobCategory";
+            }
+            if (string.IsNullOrWhiteSpace(jttxtbox.Text) && tablecb.SelectedItem.ToString() == "Whitelisted Job Titles")
+            {
+                st = "select * from JobTitles_WhitelistedJobTitles";
+            }
+
             if (jobtitlecb.SelectedItems.Count != 1)
             {
                 sclbl1.ForeColor = System.Drawing.Color.Red;

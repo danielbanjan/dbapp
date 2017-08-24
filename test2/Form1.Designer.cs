@@ -296,7 +296,7 @@
             this.tabs.Padding = new System.Drawing.Point(0, 0);
             this.tabs.SelectedIndex = 0;
             this.tabs.ShowToolTips = true;
-            this.tabs.Size = new System.Drawing.Size(756, 484);
+            this.tabs.Size = new System.Drawing.Size(841, 503);
             this.tabs.TabIndex = 0;
             this.tabs.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -318,7 +318,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(748, 458);
+            this.tabPage3.Size = new System.Drawing.Size(833, 477);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Job Titles";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -326,7 +326,7 @@
             // pmcb
             // 
             this.pmcb.AutoSize = true;
-            this.pmcb.Location = new System.Drawing.Point(384, 29);
+            this.pmcb.Location = new System.Drawing.Point(395, 30);
             this.pmcb.Name = "pmcb";
             this.pmcb.Size = new System.Drawing.Size(87, 17);
             this.pmcb.TabIndex = 26;
@@ -340,7 +340,7 @@
             "Whitelisted Job Titles",
             "Job Words Category Mapping",
             "Job Titles Local Job Category"});
-            this.tablecb.Location = new System.Drawing.Point(302, 112);
+            this.tablecb.Location = new System.Drawing.Point(313, 112);
             this.tablecb.Name = "tablecb";
             this.tablecb.Size = new System.Drawing.Size(173, 21);
             this.tablecb.TabIndex = 25;
@@ -351,7 +351,7 @@
             this.jttxtbox.AcceptsTab = true;
             this.jttxtbox.Location = new System.Drawing.Point(0, 24);
             this.jttxtbox.Name = "jttxtbox";
-            this.jttxtbox.Size = new System.Drawing.Size(295, 288);
+            this.jttxtbox.Size = new System.Drawing.Size(267, 288);
             this.jttxtbox.TabIndex = 23;
             this.jttxtbox.Text = "";
             // 
@@ -367,7 +367,7 @@
             // dgvlbl
             // 
             this.dgvlbl.AutoSize = true;
-            this.dgvlbl.Location = new System.Drawing.Point(302, 210);
+            this.dgvlbl.Location = new System.Drawing.Point(273, 176);
             this.dgvlbl.Name = "dgvlbl";
             this.dgvlbl.Size = new System.Drawing.Size(79, 13);
             this.dgvlbl.TabIndex = 20;
@@ -381,14 +381,14 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(302, 229);
+            this.dataGridView1.Location = new System.Drawing.Point(273, 192);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(442, 220);
+            this.dataGridView1.Size = new System.Drawing.Size(354, 276);
             this.dataGridView1.TabIndex = 19;
             // 
             // Insertbtn
             // 
-            this.Insertbtn.Location = new System.Drawing.Point(302, 53);
+            this.Insertbtn.Location = new System.Drawing.Point(313, 54);
             this.Insertbtn.Name = "Insertbtn";
             this.Insertbtn.Size = new System.Drawing.Size(75, 23);
             this.Insertbtn.TabIndex = 16;
@@ -398,7 +398,7 @@
             // 
             // searchbtn
             // 
-            this.searchbtn.Location = new System.Drawing.Point(302, 24);
+            this.searchbtn.Location = new System.Drawing.Point(313, 25);
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.Size = new System.Drawing.Size(75, 23);
             this.searchbtn.TabIndex = 15;
@@ -408,7 +408,7 @@
             // 
             // deletebtnjob
             // 
-            this.deletebtnjob.Location = new System.Drawing.Point(302, 82);
+            this.deletebtnjob.Location = new System.Drawing.Point(313, 83);
             this.deletebtnjob.Name = "deletebtnjob";
             this.deletebtnjob.Size = new System.Drawing.Size(75, 23);
             this.deletebtnjob.TabIndex = 14;
@@ -421,7 +421,7 @@
             this.pictureBox4.Image = global::test2.Properties.Resources.dBTechnologies_logo;
             this.pictureBox4.Location = new System.Drawing.Point(0, 318);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(295, 141);
+            this.pictureBox4.Size = new System.Drawing.Size(267, 141);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
@@ -429,7 +429,7 @@
             // sclbl1
             // 
             this.sclbl1.AutoSize = true;
-            this.sclbl1.Location = new System.Drawing.Point(572, 7);
+            this.sclbl1.Location = new System.Drawing.Point(724, 7);
             this.sclbl1.Name = "sclbl1";
             this.sclbl1.Size = new System.Drawing.Size(84, 13);
             this.sclbl1.TabIndex = 12;
@@ -439,7 +439,7 @@
             // 
             this.sacbjt.AutoSize = true;
             this.sacbjt.BackColor = System.Drawing.Color.Transparent;
-            this.sacbjt.Location = new System.Drawing.Point(482, 6);
+            this.sacbjt.Location = new System.Drawing.Point(634, 6);
             this.sacbjt.Name = "sacbjt";
             this.sacbjt.Size = new System.Drawing.Size(70, 17);
             this.sacbjt.TabIndex = 11;
@@ -487,9 +487,9 @@
             "Turkey",
             "UK",
             "Vietnam"});
-            this.jobtitlecb.Location = new System.Drawing.Point(481, 24);
+            this.jobtitlecb.Location = new System.Drawing.Point(633, 24);
             this.jobtitlecb.Name = "jobtitlecb";
-            this.jobtitlecb.Size = new System.Drawing.Size(263, 197);
+            this.jobtitlecb.Size = new System.Drawing.Size(196, 452);
             this.jobtitlecb.Sorted = true;
             this.jobtitlecb.TabIndex = 10;
             // 
@@ -519,7 +519,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(756, 484);
+            this.ClientSize = new System.Drawing.Size(841, 503);
             this.Controls.Add(this.tabs);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";

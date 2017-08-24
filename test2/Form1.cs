@@ -247,7 +247,7 @@ namespace test2
             {
                 if (tablecb.SelectedItem.ToString() == "Whitelisted Job Titles")
                 {
-                    st = "select * from JobTitles_WhitelistedJobTitles where JobTitle = '" + jttxtbox.Text + "'";
+                    st = "select jobtitle from JobTitles_WhitelistedJobTitles where JobTitle = '" + jttxtbox.Text + "'";
                 }
                 if (tablecb.SelectedItem.ToString() == "Job Words Category Mapping")
                 {
@@ -272,7 +272,7 @@ namespace test2
             }
             if (string.IsNullOrWhiteSpace(jttxtbox.Text) && tablecb.SelectedItem.ToString() == "Whitelisted Job Titles")
             {
-                st = "select * from JobTitles_WhitelistedJobTitles";
+                st = "select jobtitle from JobTitles_WhitelistedJobTitles";
             }
 
             if (jobtitlecb.SelectedItems.Count != 1)

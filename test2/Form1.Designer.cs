@@ -92,7 +92,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(747, 455);
+            this.tabPage1.Size = new System.Drawing.Size(748, 458);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login";
             // 
@@ -173,7 +173,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(747, 455);
+            this.tabPage2.Size = new System.Drawing.Size(748, 458);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Delete Users";
             // 
@@ -182,7 +182,7 @@
             this.emailtxtbox.AcceptsTab = true;
             this.emailtxtbox.Location = new System.Drawing.Point(0, 26);
             this.emailtxtbox.Name = "emailtxtbox";
-            this.emailtxtbox.Size = new System.Drawing.Size(327, 239);
+            this.emailtxtbox.Size = new System.Drawing.Size(328, 242);
             this.emailtxtbox.TabIndex = 10;
             this.emailtxtbox.Text = "";
             // 
@@ -200,7 +200,7 @@
             this.pictureBox2.Image = global::test2.Properties.Resources.dBTechnologies_logo;
             this.pictureBox2.Location = new System.Drawing.Point(0, 306);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(327, 153);
+            this.pictureBox2.Size = new System.Drawing.Size(328, 156);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -230,7 +230,7 @@
             // 
             this.deletebtn.Location = new System.Drawing.Point(358, 29);
             this.deletebtn.Name = "deletebtn";
-            this.deletebtn.Size = new System.Drawing.Size(75, 23);
+            this.deletebtn.Size = new System.Drawing.Size(76, 26);
             this.deletebtn.TabIndex = 2;
             this.deletebtn.Text = "Delete";
             this.deletebtn.UseVisualStyleBackColor = true;
@@ -238,6 +238,9 @@
             // 
             // checkbox
             // 
+            this.checkbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.checkbox.BackColor = System.Drawing.SystemColors.Window;
             this.checkbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.checkbox.CheckOnClick = true;
@@ -275,20 +278,25 @@
             "Vietnam"});
             this.checkbox.Location = new System.Drawing.Point(480, 29);
             this.checkbox.Name = "checkbox";
-            this.checkbox.Size = new System.Drawing.Size(263, 422);
+            this.checkbox.Size = new System.Drawing.Size(264, 422);
             this.checkbox.TabIndex = 1;
             // 
             // tabs
             // 
             this.tabs.AccessibleName = "";
+            this.tabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabs.Controls.Add(this.tabPage2);
             this.tabs.Controls.Add(this.tabPage1);
             this.tabs.Controls.Add(this.tabPage3);
+            this.tabs.HotTrack = true;
             this.tabs.Location = new System.Drawing.Point(0, 0);
             this.tabs.Name = "tabs";
+            this.tabs.Padding = new System.Drawing.Point(0, 0);
             this.tabs.SelectedIndex = 0;
             this.tabs.ShowToolTips = true;
-            this.tabs.Size = new System.Drawing.Size(755, 481);
+            this.tabs.Size = new System.Drawing.Size(756, 484);
             this.tabs.TabIndex = 0;
             this.tabs.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -310,7 +318,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(747, 455);
+            this.tabPage3.Size = new System.Drawing.Size(748, 458);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Job Titles";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -367,9 +375,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(302, 229);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(442, 220);
@@ -438,6 +449,9 @@
             // 
             // jobtitlecb
             // 
+            this.jobtitlecb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.jobtitlecb.BackColor = System.Drawing.SystemColors.Window;
             this.jobtitlecb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.jobtitlecb.CheckOnClick = true;

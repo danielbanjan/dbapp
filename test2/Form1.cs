@@ -404,8 +404,10 @@ namespace test2
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
-
-        }
+            //select* from Config_CategoryTree_PremiumAds
+            //    select* from[dbo].[Config_Customerv2_Campaign]
+            //    select * from Config_Customerv2_Deboosting 
+    }
 
         //private void config_geo_location_synonymDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         //{

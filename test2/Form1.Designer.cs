@@ -68,6 +68,7 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.updatebtn = new System.Windows.Forms.Button();
+            this.Feature_deboost_combobox = new System.Windows.Forms.ComboBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -520,7 +521,8 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage4.BackColor = System.Drawing.Color.White;
+            this.tabPage4.Controls.Add(this.Feature_deboost_combobox);
             this.tabPage4.Controls.Add(this.updatebtn);
             this.tabPage4.Controls.Add(this.dataGridView2);
             this.tabPage4.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -533,6 +535,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(280, 7);
             this.dataGridView2.Name = "dataGridView2";
@@ -548,6 +551,45 @@
             this.updatebtn.Text = "Update";
             this.updatebtn.UseVisualStyleBackColor = true;
             this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
+            // 
+            // Feature_deboost_combobox
+            // 
+            this.Feature_deboost_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Feature_deboost_combobox.FormattingEnabled = true;
+            this.Feature_deboost_combobox.Items.AddRange(new object[] {
+            "Argentina",
+            "Australia",
+            "Austria",
+            "Bangladesh",
+            "Belgium",
+            "Brazil",
+            "Canada",
+            "Chile",
+            "Colombia",
+            "Denmark",
+            "Finland",
+            "France",
+            "Germany",
+            "India",
+            "Ireland",
+            "Italy",
+            "Kenya",
+            "Mexico",
+            "Nederland",
+            "Norway",
+            "Poland",
+            "Romania",
+            "SouthAfrica",
+            "Spain",
+            "Sweden",
+            "Switzerland",
+            "Turkey",
+            "UK",
+            "Vietnam"});
+            this.Feature_deboost_combobox.Location = new System.Drawing.Point(18, 23);
+            this.Feature_deboost_combobox.Name = "Feature_deboost_combobox";
+            this.Feature_deboost_combobox.Size = new System.Drawing.Size(121, 21);
+            this.Feature_deboost_combobox.TabIndex = 2;
             // 
             // Form1
             // 
@@ -621,6 +663,7 @@
         private System.Windows.Forms.TabControl tabs;
         private System.Windows.Forms.Button updatebtn;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ComboBox Feature_deboost_combobox;
     }
 }
 

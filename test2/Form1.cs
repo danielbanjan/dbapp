@@ -402,6 +402,11 @@ namespace test2
             tablecb.DroppedDown = true;
         }
 
+        private void updatebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //private void config_geo_location_synonymDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         //{
         //    try

@@ -65,6 +65,9 @@
             this.config_geo_location_synonymTableAdapter = new test2.ItalyDataSetTableAdapters.config_geo_location_synonymTableAdapter();
             this.config_geo_location_synonymBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.italyDataSet = new test2.ItalyDataSet();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.updatebtn = new System.Windows.Forms.Button();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -75,6 +78,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.config_geo_location_synonymBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.italyDataSet)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -92,7 +97,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(748, 458);
+            this.tabPage1.Size = new System.Drawing.Size(833, 477);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login";
             // 
@@ -173,7 +178,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(748, 458);
+            this.tabPage2.Size = new System.Drawing.Size(833, 477);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Delete Users";
             // 
@@ -290,6 +295,7 @@
             this.tabs.Controls.Add(this.tabPage2);
             this.tabs.Controls.Add(this.tabPage1);
             this.tabs.Controls.Add(this.tabPage3);
+            this.tabs.Controls.Add(this.tabPage4);
             this.tabs.HotTrack = true;
             this.tabs.Location = new System.Drawing.Point(0, 0);
             this.tabs.Name = "tabs";
@@ -512,6 +518,37 @@
             this.italyDataSet.DataSetName = "ItalyDataSet";
             this.italyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage4.Controls.Add(this.updatebtn);
+            this.tabPage4.Controls.Add(this.dataGridView2);
+            this.tabPage4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(833, 477);
+            this.tabPage4.TabIndex = 4;
+            this.tabPage4.Text = "Featured & Deboost";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(280, 7);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(550, 323);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // updatebtn
+            // 
+            this.updatebtn.Location = new System.Drawing.Point(171, 23);
+            this.updatebtn.Name = "updatebtn";
+            this.updatebtn.Size = new System.Drawing.Size(75, 23);
+            this.updatebtn.TabIndex = 1;
+            this.updatebtn.Text = "Update";
+            this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.loginbtn;
@@ -539,6 +576,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.config_geo_location_synonymBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.italyDataSet)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -558,7 +597,6 @@
         private System.Windows.Forms.CheckBox sacb;
         private System.Windows.Forms.Button deletebtn;
         private System.Windows.Forms.CheckedListBox checkbox;
-        private System.Windows.Forms.TabControl tabs;
         private System.Windows.Forms.Label sclbl;
         private ItalyDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TabPage tabPage3;
@@ -579,6 +617,10 @@
         private ItalyDataSetTableAdapters.config_geo_location_synonymTableAdapter config_geo_location_synonymTableAdapter;
         private System.Windows.Forms.BindingSource config_geo_location_synonymBindingSource;
         private ItalyDataSet italyDataSet;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabControl tabs;
+        private System.Windows.Forms.Button updatebtn;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 

@@ -18,7 +18,6 @@ namespace test2
     {
         private void Form1_Load(object sender, EventArgs e)
         {
-            //this.config_geo_location_synonymTableAdapter.Fill(this.italyDataSet.config_geo_location_synonym);
             System.Windows.Forms.ToolTip sctt = new System.Windows.Forms.ToolTip();
             sctt.SetToolTip(this.sclbl, "Select a country by checking an item from the list\n below or use Select ALL checkbox to select all countries.");
             System.Windows.Forms.ToolTip remembertt = new System.Windows.Forms.ToolTip();
@@ -414,7 +413,15 @@ namespace test2
             //select* from Config_CategoryTree_PremiumAds
             //    select* from[dbo].[Config_Customerv2_Campaign]
             //    select * from Config_Customerv2_Deboosting 
-    }
+            //try
+        //    {
+        //        this.tableAdapterManager.UpdateAll(this.italyDataSet);
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        MessageBox.Show("An error occurred " + ex.Message);
+        //    }
+            }
 
         private void Feature_deboost_combobox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -426,7 +433,7 @@ namespace test2
             if (Feature_deboost_combobox.SelectedItem == null)
             {
                 MessageBox.Show("Please select a country first!.");
-
+                deselect_all(fdo_clb, sa_fdo_cb);
             }
             else
             {
@@ -511,11 +518,6 @@ namespace test2
             }
             else
             {
-                //for (int i = 0; i < fdo_clb.Items.Count; i++)
-                //{
-                //    fdo_clb.SetItemChecked(i, false);
-                //}
-                //sa_fdo_cb.Text = "Select All";
                 deselect_all(fdo_clb, sa_fdo_cb);
             }
         }
@@ -527,6 +529,7 @@ namespace test2
                 checks.SetItemChecked(i, false);
             }
             setitems.Text = "Select All";
+            setitems.Checked = false;
         }
 
         //private void config_geo_location_synonymDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)

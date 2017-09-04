@@ -68,10 +68,6 @@
             this.Feature_deboost_combobox = new System.Windows.Forms.ComboBox();
             this.updatebtn = new System.Windows.Forms.Button();
             this.fd_dgv = new System.Windows.Forms.DataGridView();
-            this.tableAdapterManager = new test2.ItalyDataSetTableAdapters.TableAdapterManager();
-            this.config_geo_location_synonymTableAdapter = new test2.ItalyDataSetTableAdapters.config_geo_location_synonymTableAdapter();
-            this.config_geo_location_synonymBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.italyDataSet = new test2.ItalyDataSet();
             this.sa_fdo_cb = new System.Windows.Forms.CheckBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,8 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.override_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deboost_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.config_geo_location_synonymBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.italyDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -619,25 +613,7 @@
             this.fd_dgv.Size = new System.Drawing.Size(550, 153);
             this.fd_dgv.TabIndex = 0;
             // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.config_geo_location_synonymTableAdapter = this.config_geo_location_synonymTableAdapter;
-            this.tableAdapterManager.UpdateOrder = test2.ItalyDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // config_geo_location_synonymTableAdapter
-            // 
-            this.config_geo_location_synonymTableAdapter.ClearBeforeFill = true;
-            // 
-            // config_geo_location_synonymBindingSource
-            // 
-            this.config_geo_location_synonymBindingSource.DataMember = "config_geo_location_synonym";
-            // 
-            // italyDataSet
-            // 
-            this.italyDataSet.DataSetName = "ItalyDataSet";
-            this.italyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+
             // sa_fdo_cb
             // 
             this.sa_fdo_cb.AutoSize = true;
@@ -679,8 +655,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.override_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deboost_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.config_geo_location_synonymBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.italyDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -701,7 +675,6 @@
         private System.Windows.Forms.Button deletebtn;
         private System.Windows.Forms.CheckedListBox checkbox;
         private System.Windows.Forms.Label sclbl;
-        private ItalyDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label sclbl1;
@@ -717,9 +690,7 @@
         private System.Windows.Forms.RichTextBox emailtxtbox;
         private System.Windows.Forms.ComboBox tablecb;
         private System.Windows.Forms.CheckBox pmcb;
-        private ItalyDataSetTableAdapters.config_geo_location_synonymTableAdapter config_geo_location_synonymTableAdapter;
         private System.Windows.Forms.BindingSource config_geo_location_synonymBindingSource;
-        private ItalyDataSet italyDataSet;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabControl tabs;
         private System.Windows.Forms.Button updatebtn;

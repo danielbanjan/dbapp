@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -62,13 +61,14 @@
             this.sacbjt = new System.Windows.Forms.CheckBox();
             this.jobtitlecb = new System.Windows.Forms.CheckedListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.sa_fdo_cb = new System.Windows.Forms.CheckBox();
             this.override_dgv = new System.Windows.Forms.DataGridView();
             this.deboost_dgv = new System.Windows.Forms.DataGridView();
             this.fdo_clb = new System.Windows.Forms.CheckedListBox();
             this.Feature_deboost_combobox = new System.Windows.Forms.ComboBox();
             this.updatebtn = new System.Windows.Forms.Button();
             this.fd_dgv = new System.Windows.Forms.DataGridView();
-            this.sa_fdo_cb = new System.Windows.Forms.CheckBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -81,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.override_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deboost_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -503,6 +504,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.White;
+            this.tabPage4.Controls.Add(this.pictureBox3);
             this.tabPage4.Controls.Add(this.sa_fdo_cb);
             this.tabPage4.Controls.Add(this.override_dgv);
             this.tabPage4.Controls.Add(this.deboost_dgv);
@@ -518,8 +520,22 @@
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "Featured & Deboost";
             // 
+            // sa_fdo_cb
+            // 
+            this.sa_fdo_cb.AutoSize = true;
+            this.sa_fdo_cb.Location = new System.Drawing.Point(19, 60);
+            this.sa_fdo_cb.Name = "sa_fdo_cb";
+            this.sa_fdo_cb.Size = new System.Drawing.Size(70, 17);
+            this.sa_fdo_cb.TabIndex = 6;
+            this.sa_fdo_cb.Text = "Select All";
+            this.sa_fdo_cb.UseVisualStyleBackColor = true;
+            this.sa_fdo_cb.CheckedChanged += new System.EventHandler(this.sa_fdo_cb_CheckedChanged);
+            // 
             // override_dgv
             // 
+            this.override_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.override_dgv.BackgroundColor = System.Drawing.Color.White;
             this.override_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.override_dgv.Location = new System.Drawing.Point(280, 338);
@@ -529,6 +545,9 @@
             // 
             // deboost_dgv
             // 
+            this.deboost_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.deboost_dgv.BackgroundColor = System.Drawing.Color.White;
             this.deboost_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.deboost_dgv.Location = new System.Drawing.Point(280, 190);
@@ -538,6 +557,7 @@
             // 
             // fdo_clb
             // 
+            this.fdo_clb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fdo_clb.CheckOnClick = true;
             this.fdo_clb.FormattingEnabled = true;
             this.fdo_clb.Items.AddRange(new object[] {
@@ -546,7 +566,7 @@
             "Override Settings"});
             this.fdo_clb.Location = new System.Drawing.Point(18, 77);
             this.fdo_clb.Name = "fdo_clb";
-            this.fdo_clb.Size = new System.Drawing.Size(121, 64);
+            this.fdo_clb.Size = new System.Drawing.Size(121, 47);
             this.fdo_clb.TabIndex = 3;
             this.fdo_clb.SelectedIndexChanged += new System.EventHandler(this.fdo_clb_SelectedIndexChanged);
             // 
@@ -613,17 +633,15 @@
             this.fd_dgv.Size = new System.Drawing.Size(550, 153);
             this.fd_dgv.TabIndex = 0;
             // 
-
-            // sa_fdo_cb
+            // pictureBox3
             // 
-            this.sa_fdo_cb.AutoSize = true;
-            this.sa_fdo_cb.Location = new System.Drawing.Point(20, 54);
-            this.sa_fdo_cb.Name = "sa_fdo_cb";
-            this.sa_fdo_cb.Size = new System.Drawing.Size(70, 17);
-            this.sa_fdo_cb.TabIndex = 6;
-            this.sa_fdo_cb.Text = "Select All";
-            this.sa_fdo_cb.UseVisualStyleBackColor = true;
-            this.sa_fdo_cb.CheckedChanged += new System.EventHandler(this.sa_fdo_cb_CheckedChanged);
+            this.pictureBox3.Image = global::test2.Properties.Resources.dBTechnologies_logo;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 338);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(267, 141);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
             // 
             // Form1
             // 
@@ -655,6 +673,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.override_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deboost_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -700,6 +719,7 @@
         private System.Windows.Forms.DataGridView override_dgv;
         private System.Windows.Forms.DataGridView deboost_dgv;
         private System.Windows.Forms.CheckBox sa_fdo_cb;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

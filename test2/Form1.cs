@@ -407,22 +407,31 @@ namespace test2
         {
             tablecb.DroppedDown = true;
         }
-
         private void updatebtn_Click(object sender, EventArgs e)
         {
-            //select* from Config_CategoryTree_PremiumAds
-            //    select* from[dbo].[Config_Customerv2_Campaign]
-            //    select * from Config_Customerv2_Deboosting 
-            //try
-        //    {
-        //        this.tableAdapterManager.UpdateAll(this.italyDataSet);
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        MessageBox.Show("An error occurred " + ex.Message);
-        //    }
-            }
+            
+            DataTable dt = new DataTable();
+            DataTable dt2 = new DataTable();
+            DataTable dt3 = new DataTable();
 
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + Feature_deboost_combobox.SelectedItem.ToString()].ConnectionString);
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("select id,campaign_name,categorykey,domain,filter,status,boost,start_time from Config_Customerv2_Campaign", conn);
+                SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+                SqlDataAdapter sda2 = new SqlDataAdapter("select id,categorykey,domain,filter,status,start_time from Config_Customerv2_Deboosting", conn);
+                SqlCommandBuilder builder2 = new SqlCommandBuilder(sda2);
+                SqlDataAdapter sda3 = new SqlDataAdapter("select * from Config_CategoryTree_PremiumAds", conn);
+                SqlCommandBuilder builder3 = new SqlCommandBuilder(sda3);
+                sda.Update(dt);
+                sda2.Update(dt2);
+                sda3.Update(dt3);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("An error occurred " + ex.Message);
+            }
+        }
         private void Feature_deboost_combobox_SelectedIndexChanged(object sender, EventArgs e)
         {
             fdo_clb_SelectedIndexChanged(this, EventArgs.Empty);

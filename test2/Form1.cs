@@ -511,12 +511,22 @@ namespace test2
             }
             else
             {
-                for (int i = 0; i < fdo_clb.Items.Count; i++)
-                {
-                    fdo_clb.SetItemChecked(i, false);
-                }
-                sa_fdo_cb.Text = "Select All";
+                //for (int i = 0; i < fdo_clb.Items.Count; i++)
+                //{
+                //    fdo_clb.SetItemChecked(i, false);
+                //}
+                //sa_fdo_cb.Text = "Select All";
+                deselect_all(fdo_clb, sa_fdo_cb);
             }
+        }
+        public void deselect_all(CheckedListBox checks, CheckBox setitems)
+        {
+            MessageBox.Show("merge.");
+            for (int i = 0; i < checks.Items.Count; i++)
+            {
+                checks.SetItemChecked(i, false);
+            }
+            setitems.Text = "Select All";
         }
 
         //private void config_geo_location_synonymDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)

@@ -27,6 +27,8 @@ namespace test2
             dataGridView1.Hide();
             dgvlbl.Hide();
             fd_dgv.Hide();
+            deboost_dgv.Hide();
+            override_dgv.Hide();
         }
 
         public Form1()
@@ -416,73 +418,104 @@ namespace test2
 
         private void Feature_deboost_combobox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String st = "";
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + Feature_deboost_combobox.SelectedItem.ToString()].ConnectionString);
-            foreach (string s in fdo_clb.CheckedItems)
+            fdo_clb_SelectedIndexChanged(this, EventArgs.Empty);
+        }
+
+        private void fdo_clb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Feature_deboost_combobox.SelectedItem == null)
             {
-                if (s == "Featured Campaigns")
+                MessageBox.Show("Please select a country first!.");
+
+            }
+            else
+            {
+                String st = "";
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + Feature_deboost_combobox.SelectedItem.ToString()].ConnectionString);
+                foreach (string s in fdo_clb.CheckedItems)
                 {
-                    MessageBox.Show(s);
-                    st = "select id,campaign_name,categorykey,domain,filter,status,boost,start_time from Config_Customerv2_Campaign";
-                    SqlCommand sqlcom = new SqlCommand(st, conn);
-                    try
+                    if (s == "Featured Campaigns")
                     {
-                        conn.Open();
-                        SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
-                        DataTable dt = new DataTable();
-                        adp.Fill(dt);
-                        fd_dgv.DataSource = dt;
-                        fd_dgv.Show();
-                        fd_dgv.Show();
-                        conn.Close();
+                        st = "select id,campaign_name,categorykey,domain,filter,status,boost,start_time from Config_Customerv2_Campaign";
+                        SqlCommand sqlcom = new SqlCommand(st, conn);
+                        try
+                        {
+                            conn.Open();
+                            SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
+                            DataTable dt = new DataTable();
+                            adp.Fill(dt);
+                            fd_dgv.DataSource = dt;
+                            fd_dgv.Show();
+                            fd_dgv.Show();
+                            conn.Close();
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
-                    catch (SqlException ex)
+                    if (s == "Deboost Campaigns")
                     {
-                        MessageBox.Show(ex.Message);
+                        st = "select id,categorykey,domain,filter,status,start_time from Config_Customerv2_Deboosting";
+                        SqlCommand sqlcom = new SqlCommand(st, conn);
+                        try
+                        {
+                            conn.Open();
+                            SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
+                            DataTable dt = new DataTable();
+                            adp.Fill(dt);
+                            deboost_dgv.DataSource = dt;
+                            deboost_dgv.Show();
+                            deboost_dgv.Show();
+                            conn.Close();
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    if (s == "Override Settings")
+                    {
+                        st = "select * from Config_CategoryTree_PremiumAds";
+                        SqlCommand sqlcom = new SqlCommand(st, conn);
+                        try
+                        {
+                            conn.Open();
+                            SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
+                            DataTable dt = new DataTable();
+                            adp.Fill(dt);
+                            override_dgv.DataSource = dt;
+                            override_dgv.Show();
+                            override_dgv.Show();
+                            conn.Close();
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
                 }
-                if (s == "Deboost Campaigns")
+            }
+        }
+
+        private void sa_fdo_cb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sa_fdo_cb.Checked == true)
+            {
+                for (int i = 0; i < fdo_clb.Items.Count; i++)
                 {
-                    MessageBox.Show(s);
-                    st = "select id,categorykey,domain,filter,status,boost,start_time from Config_Customerv2_Deboosting";
-                    SqlCommand sqlcom = new SqlCommand(st, conn);
-                    try
-                    {
-                        conn.Open();
-                        SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
-                        DataTable dt = new DataTable();
-                        adp.Fill(dt);
-                        deboost_dgv.DataSource = dt;
-                        deboost_dgv.Show();
-                        deboost_dgv.Show();
-                        conn.Close();
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
+                    fdo_clb.SetItemChecked(i, true);
                 }
-                if (s == "Override Settings")
+                sa_fdo_cb.Text = "Deselect All";
+                fdo_clb_SelectedIndexChanged(this, EventArgs.Empty);
+            }
+            else
+            {
+                for (int i = 0; i < fdo_clb.Items.Count; i++)
                 {
-                    MessageBox.Show(s);
-                    st = "select * from Config_CategoryTree_PremiumAds";
-                    SqlCommand sqlcom = new SqlCommand(st, conn);
-                    try
-                    {
-                        conn.Open();
-                        SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
-                        DataTable dt = new DataTable();
-                        adp.Fill(dt);
-                        override_dgv.DataSource = dt;
-                        override_dgv.Show();
-                        override_dgv.Show();
-                        conn.Close();
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
+                    fdo_clb.SetItemChecked(i, false);
                 }
+                sa_fdo_cb.Text = "Select All";
             }
         }
 

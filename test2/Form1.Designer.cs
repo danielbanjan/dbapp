@@ -61,14 +61,17 @@
             this.sclbl1 = new System.Windows.Forms.Label();
             this.sacbjt = new System.Windows.Forms.CheckBox();
             this.jobtitlecb = new System.Windows.Forms.CheckedListBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.Feature_deboost_combobox = new System.Windows.Forms.ComboBox();
+            this.updatebtn = new System.Windows.Forms.Button();
+            this.fd_dgv = new System.Windows.Forms.DataGridView();
             this.tableAdapterManager = new test2.ItalyDataSetTableAdapters.TableAdapterManager();
             this.config_geo_location_synonymTableAdapter = new test2.ItalyDataSetTableAdapters.config_geo_location_synonymTableAdapter();
             this.config_geo_location_synonymBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.italyDataSet = new test2.ItalyDataSet();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.updatebtn = new System.Windows.Forms.Button();
-            this.Feature_deboost_combobox = new System.Windows.Forms.ComboBox();
+            this.fdo_clb = new System.Windows.Forms.CheckedListBox();
+            this.deboost_dgv = new System.Windows.Forms.DataGridView();
+            this.override_dgv = new System.Windows.Forms.DataGridView();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -77,10 +80,12 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.config_geo_location_synonymBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.italyDataSet)).BeginInit();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deboost_dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.override_dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -500,31 +505,15 @@
             this.jobtitlecb.Sorted = true;
             this.jobtitlecb.TabIndex = 10;
             // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.config_geo_location_synonymTableAdapter = this.config_geo_location_synonymTableAdapter;
-            this.tableAdapterManager.UpdateOrder = test2.ItalyDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // config_geo_location_synonymTableAdapter
-            // 
-            this.config_geo_location_synonymTableAdapter.ClearBeforeFill = true;
-            // 
-            // config_geo_location_synonymBindingSource
-            // 
-            this.config_geo_location_synonymBindingSource.DataMember = "config_geo_location_synonym";
-            // 
-            // italyDataSet
-            // 
-            this.italyDataSet.DataSetName = "ItalyDataSet";
-            this.italyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.White;
+            this.tabPage4.Controls.Add(this.override_dgv);
+            this.tabPage4.Controls.Add(this.deboost_dgv);
+            this.tabPage4.Controls.Add(this.fdo_clb);
             this.tabPage4.Controls.Add(this.Feature_deboost_combobox);
             this.tabPage4.Controls.Add(this.updatebtn);
-            this.tabPage4.Controls.Add(this.dataGridView2);
+            this.tabPage4.Controls.Add(this.fd_dgv);
             this.tabPage4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -532,25 +521,6 @@
             this.tabPage4.Size = new System.Drawing.Size(833, 477);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "Featured & Deboost";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(280, 7);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(550, 323);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // updatebtn
-            // 
-            this.updatebtn.Location = new System.Drawing.Point(171, 23);
-            this.updatebtn.Name = "updatebtn";
-            this.updatebtn.Size = new System.Drawing.Size(75, 23);
-            this.updatebtn.TabIndex = 1;
-            this.updatebtn.Text = "Update";
-            this.updatebtn.UseVisualStyleBackColor = true;
-            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
             // Feature_deboost_combobox
             // 
@@ -590,6 +560,77 @@
             this.Feature_deboost_combobox.Name = "Feature_deboost_combobox";
             this.Feature_deboost_combobox.Size = new System.Drawing.Size(121, 21);
             this.Feature_deboost_combobox.TabIndex = 2;
+            this.Feature_deboost_combobox.SelectedIndexChanged += new System.EventHandler(this.Feature_deboost_combobox_SelectedIndexChanged);
+            // 
+            // updatebtn
+            // 
+            this.updatebtn.Location = new System.Drawing.Point(171, 23);
+            this.updatebtn.Name = "updatebtn";
+            this.updatebtn.Size = new System.Drawing.Size(75, 23);
+            this.updatebtn.TabIndex = 1;
+            this.updatebtn.Text = "Update";
+            this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
+            // 
+            // fd_dgv
+            // 
+            this.fd_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fd_dgv.BackgroundColor = System.Drawing.Color.White;
+            this.fd_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.fd_dgv.Location = new System.Drawing.Point(280, 22);
+            this.fd_dgv.Name = "fd_dgv";
+            this.fd_dgv.RowHeadersWidth = 30;
+            this.fd_dgv.Size = new System.Drawing.Size(550, 153);
+            this.fd_dgv.TabIndex = 0;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.config_geo_location_synonymTableAdapter = this.config_geo_location_synonymTableAdapter;
+            this.tableAdapterManager.UpdateOrder = test2.ItalyDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // config_geo_location_synonymTableAdapter
+            // 
+            this.config_geo_location_synonymTableAdapter.ClearBeforeFill = true;
+            // 
+            // config_geo_location_synonymBindingSource
+            // 
+            this.config_geo_location_synonymBindingSource.DataMember = "config_geo_location_synonym";
+            // 
+            // italyDataSet
+            // 
+            this.italyDataSet.DataSetName = "ItalyDataSet";
+            this.italyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fdo_clb
+            // 
+            this.fdo_clb.FormattingEnabled = true;
+            this.fdo_clb.Items.AddRange(new object[] {
+            "Featured Campaigns",
+            "Deboost Campaigns",
+            "Override Settings"});
+            this.fdo_clb.Location = new System.Drawing.Point(18, 62);
+            this.fdo_clb.Name = "fdo_clb";
+            this.fdo_clb.Size = new System.Drawing.Size(121, 64);
+            this.fdo_clb.TabIndex = 3;
+            // 
+            // deboost_dgv
+            // 
+            this.deboost_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.deboost_dgv.Location = new System.Drawing.Point(280, 190);
+            this.deboost_dgv.Name = "deboost_dgv";
+            this.deboost_dgv.Size = new System.Drawing.Size(550, 133);
+            this.deboost_dgv.TabIndex = 4;
+            // 
+            // override_dgv
+            // 
+            this.override_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.override_dgv.Location = new System.Drawing.Point(280, 338);
+            this.override_dgv.Name = "override_dgv";
+            this.override_dgv.Size = new System.Drawing.Size(550, 131);
+            this.override_dgv.TabIndex = 5;
             // 
             // Form1
             // 
@@ -616,10 +657,12 @@
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.config_geo_location_synonymBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.italyDataSet)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deboost_dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.override_dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -662,8 +705,11 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabControl tabs;
         private System.Windows.Forms.Button updatebtn;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView fd_dgv;
         private System.Windows.Forms.ComboBox Feature_deboost_combobox;
+        private System.Windows.Forms.CheckedListBox fdo_clb;
+        private System.Windows.Forms.DataGridView override_dgv;
+        private System.Windows.Forms.DataGridView deboost_dgv;
     }
 }
 

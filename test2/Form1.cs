@@ -26,6 +26,7 @@ namespace test2
             if (tablecb.SelectedItem == null) { tablecb.SelectedItem = "Job Words Category Mapping"; }
             dataGridView1.Hide();
             dgvlbl.Hide();
+            fd_dgv.Hide();
         }
 
         public Form1()
@@ -37,6 +38,7 @@ namespace test2
             this.tabPage3.Hide();
             tabs.TabPages.Remove(tabPage2);
             tabs.TabPages.Remove(tabPage3);
+            tabs.TabPages.Remove(tabPage4);
             untxtbox.Text = Settings.Default["Username"].ToString();
             pwtxtbox.Text = Settings.Default["Password"].ToString();
             rmbr_cb.Checked = Convert.ToBoolean(Settings.Default["Remember"]);
@@ -49,8 +51,10 @@ namespace test2
                 this.ActiveControl = untxtbox;
                 tabs.TabPages.Remove(tabPage2);
                 tabs.TabPages.Remove(tabPage3);
+                tabs.TabPages.Remove(tabPage4);
                 this.tabPage2.Hide();
                 this.tabPage3.Hide();
+                this.tabPage4.Hide();
                 untxtbox.Text = "";
                 pwtxtbox.Text = "";
                 untxtbox.Focus();
@@ -85,8 +89,10 @@ namespace test2
             {
                 tabs.TabPages.Insert(1, tabPage2);
                 tabs.TabPages.Insert(2, tabPage3);
+                tabs.TabPages.Insert(3, tabPage4);
                 this.tabPage2.Show();
                 this.tabPage3.Show();
+                this.tabPage4.Show();
                 unlbl.ForeColor = System.Drawing.Color.Black;
                 pwlbl.ForeColor = System.Drawing.Color.Black;
                 unlbl.Text = "Username";
@@ -333,7 +339,6 @@ namespace test2
                             j = j + 2;
                         }
                         SqlCommand sqlcom = new SqlCommand(st, conn);
-                        MessageBox.Show(st.ToString());
                         try
                         {
                             conn.Open();
@@ -408,6 +413,78 @@ namespace test2
             //    select* from[dbo].[Config_Customerv2_Campaign]
             //    select * from Config_Customerv2_Deboosting 
     }
+
+        private void Feature_deboost_combobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String st = "";
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + Feature_deboost_combobox.SelectedItem.ToString()].ConnectionString);
+            foreach (string s in fdo_clb.CheckedItems)
+            {
+                if (s == "Featured Campaigns")
+                {
+                    MessageBox.Show(s);
+                    st = "select id,campaign_name,categorykey,domain,filter,status,boost,start_time from Config_Customerv2_Campaign";
+                    SqlCommand sqlcom = new SqlCommand(st, conn);
+                    try
+                    {
+                        conn.Open();
+                        SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
+                        DataTable dt = new DataTable();
+                        adp.Fill(dt);
+                        fd_dgv.DataSource = dt;
+                        fd_dgv.Show();
+                        fd_dgv.Show();
+                        conn.Close();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                if (s == "Deboost Campaigns")
+                {
+                    MessageBox.Show(s);
+                    st = "select id,categorykey,domain,filter,status,boost,start_time from Config_Customerv2_Deboosting";
+                    SqlCommand sqlcom = new SqlCommand(st, conn);
+                    try
+                    {
+                        conn.Open();
+                        SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
+                        DataTable dt = new DataTable();
+                        adp.Fill(dt);
+                        deboost_dgv.DataSource = dt;
+                        deboost_dgv.Show();
+                        deboost_dgv.Show();
+                        conn.Close();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                if (s == "Override Settings")
+                {
+                    MessageBox.Show(s);
+                    st = "select * from Config_CategoryTree_PremiumAds";
+                    SqlCommand sqlcom = new SqlCommand(st, conn);
+                    try
+                    {
+                        conn.Open();
+                        SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
+                        DataTable dt = new DataTable();
+                        adp.Fill(dt);
+                        override_dgv.DataSource = dt;
+                        override_dgv.Show();
+                        override_dgv.Show();
+                        conn.Close();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
 
         //private void config_geo_location_synonymDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         //{

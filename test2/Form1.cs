@@ -423,7 +423,7 @@ namespace test2
             {
                 SqlDataAdapter sda = new SqlDataAdapter("select id,campaign_name,categorykey,domain,filter,status,boost,start_time from Config_Customerv2_Campaign", conn);
                 SqlCommandBuilder builder = new SqlCommandBuilder(sda);
-                sda.Fill(ds1);
+                adp.Fill(ds1);
                 SqlDataAdapter sda2 = new SqlDataAdapter("select id,categorykey,domain,filter,status,start_time from Config_Customerv2_Deboosting", conn);
                 SqlCommandBuilder builder2 = new SqlCommandBuilder(sda2);
                 SqlDataAdapter sda3 = new SqlDataAdapter("select * from Config_CategoryTree_PremiumAds", conn);
@@ -527,6 +527,8 @@ namespace test2
                             override_dgv.DataSource = dt;
                             override_dgv.Show();
                             owlbl.Show();
+                            System.Threading.Thread.Sleep(50000);
+                            adp.Update(dt);
                             conn.Close();
                         }
                         catch (SqlException ex)

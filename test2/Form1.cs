@@ -417,12 +417,13 @@ namespace test2
             DataTable dt = new DataTable();
             DataTable dt2 = new DataTable();
             DataTable dt3 = new DataTable();
-
+            DataSet ds1 = new DataSet();
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + Feature_deboost_combobox.SelectedItem.ToString()].ConnectionString);
             try
             {
                 SqlDataAdapter sda = new SqlDataAdapter("select id,campaign_name,categorykey,domain,filter,status,boost,start_time from Config_Customerv2_Campaign", conn);
                 SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+                sda.Fill(ds1);
                 SqlDataAdapter sda2 = new SqlDataAdapter("select id,categorykey,domain,filter,status,start_time from Config_Customerv2_Deboosting", conn);
                 SqlCommandBuilder builder2 = new SqlCommandBuilder(sda2);
                 SqlDataAdapter sda3 = new SqlDataAdapter("select * from Config_CategoryTree_PremiumAds", conn);

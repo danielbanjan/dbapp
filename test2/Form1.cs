@@ -46,6 +46,13 @@ namespace test2
             tabs.TabPages.Remove(tabPage3);
             tabs.TabPages.Remove(tabPage4);
         }
+
+        public void showpages()
+        {
+            tabs.TabPages.Insert(1, tabPage2);
+            tabs.TabPages.Insert(2, tabPage3);
+            tabs.TabPages.Insert(3, tabPage4);
+        }
         private void loginbtn_Click(object sender, EventArgs e)
         {
             if (loginbtn.Text == "Logout")
@@ -84,12 +91,7 @@ namespace test2
             }
             else
             {
-                tabs.TabPages.Insert(1, tabPage2);
-                tabs.TabPages.Insert(2, tabPage3);
-                tabs.TabPages.Insert(3, tabPage4);
-                this.tabPage2.Show();
-                this.tabPage3.Show();
-                this.tabPage4.Show();
+                showpages();
                 unlbl.ForeColor = System.Drawing.Color.Black;
                 pwlbl.ForeColor = System.Drawing.Color.Black;
                 unlbl.Text = "Username";

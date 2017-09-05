@@ -25,11 +25,17 @@ namespace test2
             if (tablecb.SelectedItem == null) { tablecb.SelectedItem = "Job Words Category Mapping"; }
             dataGridView1.Hide();
             dgvlbl.Hide();
+            hidegridsandlabels();
+        }
+        public void hidegridsandlabels()
+        {
             fd_dgv.Hide();
             deboost_dgv.Hide();
             override_dgv.Hide();
+            fclbl.Hide();
+            deblbl.Hide();
+            owlbl.Hide();
         }
-
         public Form1()
         {
             InitializeComponent();
@@ -437,7 +443,26 @@ namespace test2
 
         private void fdo_clb_SelectedIndexChanged(object sender, EventArgs e)
         {
-                if (Feature_deboost_combobox.SelectedItem == null)
+            for (int i = 0; i < fdo_clb.Items.Count; i++)
+            {
+                if(fdo_clb.GetItemCheckState(0) == CheckState.Unchecked)
+                {
+                    fclbl.Hide();
+                    fd_dgv.Hide();
+                }
+                if (fdo_clb.GetItemCheckState(1) == CheckState.Unchecked)
+                {
+                    deblbl.Hide();
+                    deboost_dgv.Hide();
+                }
+                if (fdo_clb.GetItemCheckState(2) == CheckState.Unchecked)
+                {
+                    owlbl.Hide();
+                    override_dgv.Hide();
+                }
+            }
+                
+            if (Feature_deboost_combobox.SelectedItem == null)
             {
                 MessageBox.Show("Please select a country first!.");
                 deselect_all(fdo_clb, sa_fdo_cb);
@@ -460,7 +485,7 @@ namespace test2
                             adp.Fill(dt);
                             fd_dgv.DataSource = dt;
                             fd_dgv.Show();
-                            fd_dgv.Show();
+                            fclbl.Show();
                             conn.Close();
                         }
                         catch (SqlException ex)
@@ -480,7 +505,7 @@ namespace test2
                             adp.Fill(dt);
                             deboost_dgv.DataSource = dt;
                             deboost_dgv.Show();
-                            deboost_dgv.Show();
+                            deblbl.Show();
                             conn.Close();
                         }
                         catch (SqlException ex)
@@ -500,7 +525,7 @@ namespace test2
                             adp.Fill(dt);
                             override_dgv.DataSource = dt;
                             override_dgv.Show();
-                            override_dgv.Show();
+                            owlbl.Show();
                             conn.Close();
                         }
                         catch (SqlException ex)
@@ -530,16 +555,14 @@ namespace test2
         }
         public void deselect_all(CheckedListBox checks, CheckBox setitems)
         {
-            MessageBox.Show("merge.");
             for (int i = 0; i < checks.Items.Count; i++)
             {
                 checks.SetItemChecked(i, false);
             }
             setitems.Text = "Select All";
             setitems.Checked = false;
-            fd_dgv.Hide();
-            deboost_dgv.Hide();
-            override_dgv.Hide();
+            hidegridsandlabels();
+
         }
 
         //private void config_geo_location_synonymDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)

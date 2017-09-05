@@ -61,6 +61,10 @@
             this.sacbjt = new System.Windows.Forms.CheckBox();
             this.jobtitlecb = new System.Windows.Forms.CheckedListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.owlbl = new System.Windows.Forms.Label();
+            this.deblbl = new System.Windows.Forms.Label();
+            this.fclbl = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.sa_fdo_cb = new System.Windows.Forms.CheckBox();
             this.override_dgv = new System.Windows.Forms.DataGridView();
             this.deboost_dgv = new System.Windows.Forms.DataGridView();
@@ -68,7 +72,6 @@
             this.Feature_deboost_combobox = new System.Windows.Forms.ComboBox();
             this.updatebtn = new System.Windows.Forms.Button();
             this.fd_dgv = new System.Windows.Forms.DataGridView();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -78,10 +81,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.override_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deboost_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -106,9 +109,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::test2.Properties.Resources.dBTechnologies_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(379, 125);
+            this.pictureBox1.Location = new System.Drawing.Point(346, 43);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(230, 141);
+            this.pictureBox1.Size = new System.Drawing.Size(487, 302);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -504,6 +507,9 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.White;
+            this.tabPage4.Controls.Add(this.owlbl);
+            this.tabPage4.Controls.Add(this.deblbl);
+            this.tabPage4.Controls.Add(this.fclbl);
             this.tabPage4.Controls.Add(this.pictureBox3);
             this.tabPage4.Controls.Add(this.sa_fdo_cb);
             this.tabPage4.Controls.Add(this.override_dgv);
@@ -519,6 +525,43 @@
             this.tabPage4.Size = new System.Drawing.Size(833, 477);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "Featured & Deboost";
+            // 
+            // owlbl
+            // 
+            this.owlbl.AutoSize = true;
+            this.owlbl.Location = new System.Drawing.Point(280, 323);
+            this.owlbl.Name = "owlbl";
+            this.owlbl.Size = new System.Drawing.Size(88, 13);
+            this.owlbl.TabIndex = 17;
+            this.owlbl.Text = "Override Settings";
+            // 
+            // deblbl
+            // 
+            this.deblbl.AutoSize = true;
+            this.deblbl.Location = new System.Drawing.Point(277, 174);
+            this.deblbl.Name = "deblbl";
+            this.deblbl.Size = new System.Drawing.Size(102, 13);
+            this.deblbl.TabIndex = 16;
+            this.deblbl.Text = "Deboost Campaigns";
+            // 
+            // fclbl
+            // 
+            this.fclbl.AutoSize = true;
+            this.fclbl.Location = new System.Drawing.Point(277, 3);
+            this.fclbl.Name = "fclbl";
+            this.fclbl.Size = new System.Drawing.Size(104, 13);
+            this.fclbl.TabIndex = 15;
+            this.fclbl.Text = "Featured Campaigns";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::test2.Properties.Resources.dBTechnologies_logo;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 338);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(267, 141);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
             // 
             // sa_fdo_cb
             // 
@@ -536,6 +579,7 @@
             this.override_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.override_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.override_dgv.BackgroundColor = System.Drawing.Color.White;
             this.override_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.override_dgv.Location = new System.Drawing.Point(280, 338);
@@ -548,6 +592,7 @@
             this.deboost_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.deboost_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.deboost_dgv.BackgroundColor = System.Drawing.Color.White;
             this.deboost_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.deboost_dgv.Location = new System.Drawing.Point(280, 190);
@@ -625,23 +670,14 @@
             this.fd_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.fd_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.fd_dgv.BackgroundColor = System.Drawing.Color.White;
             this.fd_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.fd_dgv.Location = new System.Drawing.Point(280, 22);
+            this.fd_dgv.Location = new System.Drawing.Point(280, 18);
             this.fd_dgv.Name = "fd_dgv";
             this.fd_dgv.RowHeadersWidth = 30;
             this.fd_dgv.Size = new System.Drawing.Size(550, 153);
             this.fd_dgv.TabIndex = 0;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::test2.Properties.Resources.dBTechnologies_logo;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 338);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(267, 141);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
             // 
             // Form1
             // 
@@ -670,10 +706,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.override_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deboost_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -720,6 +756,9 @@
         private System.Windows.Forms.DataGridView deboost_dgv;
         private System.Windows.Forms.CheckBox sa_fdo_cb;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label owlbl;
+        private System.Windows.Forms.Label deblbl;
+        private System.Windows.Forms.Label fclbl;
     }
 }
 

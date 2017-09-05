@@ -35,27 +35,23 @@ namespace test2
             InitializeComponent();
             this.ActiveControl = untxtbox;
             untxtbox.Focus();
-            this.tabPage2.Hide();
-            this.tabPage3.Hide();
-            tabs.TabPages.Remove(tabPage2);
-            tabs.TabPages.Remove(tabPage3);
-            tabs.TabPages.Remove(tabPage4);
+            hidepages();
             untxtbox.Text = Settings.Default["Username"].ToString();
             pwtxtbox.Text = Settings.Default["Password"].ToString();
             rmbr_cb.Checked = Convert.ToBoolean(Settings.Default["Remember"]);
         }
-
+        public void hidepages()
+        {
+            tabs.TabPages.Remove(tabPage2);
+            tabs.TabPages.Remove(tabPage3);
+            tabs.TabPages.Remove(tabPage4);
+        }
         private void loginbtn_Click(object sender, EventArgs e)
         {
             if (loginbtn.Text == "Logout")
             {
                 this.ActiveControl = untxtbox;
-                tabs.TabPages.Remove(tabPage2);
-                tabs.TabPages.Remove(tabPage3);
-                tabs.TabPages.Remove(tabPage4);
-                this.tabPage2.Hide();
-                this.tabPage3.Hide();
-                this.tabPage4.Hide();
+                hidepages();
                 untxtbox.Text = "";
                 pwtxtbox.Text = "";
                 untxtbox.Focus();
@@ -439,7 +435,7 @@ namespace test2
 
         private void fdo_clb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Feature_deboost_combobox.SelectedItem == null)
+                if (Feature_deboost_combobox.SelectedItem == null)
             {
                 MessageBox.Show("Please select a country first!.");
                 deselect_all(fdo_clb, sa_fdo_cb);
@@ -539,6 +535,9 @@ namespace test2
             }
             setitems.Text = "Select All";
             setitems.Checked = false;
+            fd_dgv.Hide();
+            deboost_dgv.Hide();
+            override_dgv.Hide();
         }
 
         //private void config_geo_location_synonymDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)

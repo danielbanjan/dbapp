@@ -543,17 +543,6 @@ namespace test2
             setitems.Text = "Select All";
             setitems.Checked = false;
             hidegridsandlabels();
-
         }
-
-        //DataSet InventarDataSet;
-        //SqlDataAdapter FirmeAdapter;
-        //    SqlCommand FirmeSelect = new SqlCommand("SELECT nume,adresa,email,telefon FROM Firme", conn);
-        //    FirmeAdapter = new SqlDataAdapter(FirmeSelect);
-        //    InventarDataSet = new DataSet();
-        //    FirmeAdapter.Fill(InventarDataSet);
-        //    Gridtest.DataSource = InventarDataSet.Tables[0].DefaultView;
-        //    FirmeAdapter.Update(InventarDataSet);
-        //
     }
 }

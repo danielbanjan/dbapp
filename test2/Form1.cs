@@ -565,57 +565,14 @@ namespace test2
 
         }
 
-        //private void config_geo_location_synonymDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    try
-        //    {
-        //        this.tableAdapterManager.UpdateAll(this.italyDataSet);
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        MessageBox.Show("An error occurred " + ex.Message);
-        //    }
-        //}
-        //private void usersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        //{
-        //    this.Validate();
-        //}
-        //private void emailtxtbox_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    this.AcceptButton = deletebtn;
-        //}
         //DataSet InventarDataSet;
         //SqlDataAdapter FirmeAdapter;
-        //SqlConnection conn = new SqlConnection("Data Source=DaniPC;Initial Catalog=Inventar;Integrated Security=True");
-        //BindingSource tblmakersbs = new BindingSource();
-        //public Form1()
-        //{
-        //    InitializeComponent();
-
         //    SqlCommand FirmeSelect = new SqlCommand("SELECT nume,adresa,email,telefon FROM Firme", conn);
         //    FirmeAdapter = new SqlDataAdapter(FirmeSelect);
-        //}
-
-
-        //private void Form1_Load(object sender, EventArgs e)
-        //{
-
         //    InventarDataSet = new DataSet();
         //    FirmeAdapter.Fill(InventarDataSet);
         //    Gridtest.DataSource = InventarDataSet.Tables[0].DefaultView;
-        //    tblmakersbs.DataSource = InventarDataSet.Tables["Firme"];
-        //}
-
-        //private void weaponsBindingSource_CurrentChanged(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    this.Validate();
-        //    //commandBuilder = new SqlCommandBuilder(racersAdapter);
         //    FirmeAdapter.Update(InventarDataSet);
-        //}
+        //
     }
 }

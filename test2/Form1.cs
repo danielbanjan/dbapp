@@ -16,6 +16,17 @@ namespace test2
 {
     public partial class Form1 : Form
     {
+        SqlDataAdapter sda_sj;
+        SqlDataAdapter sda_f;
+        SqlDataAdapter sda_db;
+        SqlDataAdapter sda_o;
+        DataTable dt_sj;
+        DataTable dt_f;
+        DataTable dt_db;
+        DataTable dt_o;
+        SqlCommandBuilder scb_f;
+        SqlCommandBuilder scb_db;
+        SqlCommandBuilder scb_o;
         private void Form1_Load(object sender, EventArgs e)
         {
             System.Windows.Forms.ToolTip sctt = new System.Windows.Forms.ToolTip();
@@ -23,7 +34,7 @@ namespace test2
             System.Windows.Forms.ToolTip remembertt = new System.Windows.Forms.ToolTip();
             remembertt.SetToolTip(this.rmbr_cb, "Check this box if you want the application\n to save your login credentials.");
             if (tablecb.SelectedItem == null) { tablecb.SelectedItem = "Job Words Category Mapping"; }
-            dataGridView1.Hide();
+            sj_dgv.Hide();
             dgvlbl.Hide();
             hidegridsandlabels();
         }
@@ -300,11 +311,11 @@ namespace test2
                 try
                 {
                     conn.Open();
-                    SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
-                    DataTable dt = new DataTable();
-                    adp.Fill(dt);
-                    dataGridView1.DataSource = dt;
-                    dataGridView1.Show();
+                    sda_sj = new SqlDataAdapter(sqlcom);
+                    dt_sj= new DataTable();
+                    sda_sj.Fill(dt_sj);
+                    sj_dgv.DataSource = dt_sj;
+                    sj_dgv.Show();
                     dgvlbl.Show();
                     conn.Close();
                 }
@@ -413,7 +424,12 @@ namespace test2
         }
         private void updatebtn_Click(object sender, EventArgs e)
         {
-
+            scb_f = new SqlCommandBuilder(sda_f);
+            sda_f.Update(dt_f);
+            scb_db = new SqlCommandBuilder(sda_db);
+            sda_db.Update(dt_db);
+            scb_o = new SqlCommandBuilder(sda_o);
+            sda_o.Update(dt_o);
         }
         private void Feature_deboost_combobox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -461,10 +477,10 @@ namespace test2
                         try
                         {
                             conn.Open();
-                            SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
-                            DataTable dt = new DataTable();
-                            adp.Fill(dt);
-                            fd_dgv.DataSource = dt;
+                            sda_f = new SqlDataAdapter(sqlcom);
+                            dt_f = new DataTable();
+                            sda_f.Fill(dt_f);
+                            fd_dgv.DataSource = dt_f;
                             fd_dgv.Show();
                             fclbl.Show();
                             conn.Close();
@@ -481,10 +497,10 @@ namespace test2
                         try
                         {
                             conn.Open();
-                            SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
-                            DataTable dt = new DataTable();
-                            adp.Fill(dt);
-                            deboost_dgv.DataSource = dt;
+                            sda_db = new SqlDataAdapter(sqlcom);
+                            dt_db = new DataTable();
+                            sda_db.Fill(dt_db);
+                            deboost_dgv.DataSource = dt_db;
                             deboost_dgv.Show();
                             deblbl.Show();
                             conn.Close();
@@ -501,10 +517,10 @@ namespace test2
                         try
                         {
                             conn.Open();
-                            SqlDataAdapter adp = new SqlDataAdapter(sqlcom);
-                            DataTable dt = new DataTable();
-                            adp.Fill(dt);
-                            override_dgv.DataSource = dt;
+                            sda_o = new SqlDataAdapter(sqlcom);
+                            dt_o = new DataTable();
+                            sda_o.Fill(dt_o);
+                            override_dgv.DataSource = dt_o;
                             override_dgv.Show();
                             owlbl.Show();
                             conn.Close();

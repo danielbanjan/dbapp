@@ -52,7 +52,7 @@
             this.jttxtbox = new System.Windows.Forms.RichTextBox();
             this.jttxtboxlbl = new System.Windows.Forms.Label();
             this.dgvlbl = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sj_dgv = new System.Windows.Forms.DataGridView();
             this.Insertbtn = new System.Windows.Forms.Button();
             this.searchbtn = new System.Windows.Forms.Button();
             this.deletebtnjob = new System.Windows.Forms.Button();
@@ -78,7 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabs.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sj_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -317,7 +317,7 @@
             this.tabPage3.Controls.Add(this.jttxtbox);
             this.tabPage3.Controls.Add(this.jttxtboxlbl);
             this.tabPage3.Controls.Add(this.dgvlbl);
-            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.sj_dgv);
             this.tabPage3.Controls.Add(this.Insertbtn);
             this.tabPage3.Controls.Add(this.searchbtn);
             this.tabPage3.Controls.Add(this.deletebtnjob);
@@ -383,18 +383,18 @@
             this.dgvlbl.TabIndex = 20;
             this.dgvlbl.Text = "Search Results";
             // 
-            // dataGridView1
+            // sj_dgv
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.sj_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(273, 192);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(354, 276);
-            this.dataGridView1.TabIndex = 19;
+            this.sj_dgv.BackgroundColor = System.Drawing.Color.White;
+            this.sj_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sj_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sj_dgv.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.sj_dgv.Location = new System.Drawing.Point(273, 192);
+            this.sj_dgv.Name = "sj_dgv";
+            this.sj_dgv.Size = new System.Drawing.Size(354, 276);
+            this.sj_dgv.TabIndex = 19;
             // 
             // Insertbtn
             // 
@@ -699,7 +699,7 @@
             this.tabs.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sj_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
@@ -734,7 +734,7 @@
         private System.Windows.Forms.CheckedListBox jobtitlecb;
         private System.Windows.Forms.Button deletebtnjob;
         private System.Windows.Forms.Label dgvlbl;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView sj_dgv;
         private System.Windows.Forms.Button Insertbtn;
         private System.Windows.Forms.Button searchbtn;
         private System.Windows.Forms.Label jttxtboxlbl;

@@ -69,7 +69,7 @@ namespace test2
                 pwtxtbox.Text = "";
                 untxtbox.Focus();
                 rmbr_cb.Checked = false;
-                loginbtn.Text = "Login"; 
+                loginbtn.Text = "Login";
             }
             if (rmbr_cb.Checked == true)
             {
@@ -115,13 +115,13 @@ namespace test2
             var flag = 0;
             String st = "";
             String dss = "";
-            if(checkbox.SelectedItems.Count == 0 || string.IsNullOrWhiteSpace(emailtxtbox.Text))
+            if (checkbox.SelectedItems.Count == 0 || string.IsNullOrWhiteSpace(emailtxtbox.Text))
             {
                 sclbl.ForeColor = System.Drawing.Color.Red;
                 sclbl.Text = "Please select at least one country!";
             }
             foreach (string s in checkbox.CheckedItems)
-            { 
+            {
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + s].ConnectionString);
                 string[] lines = emailtxtbox.Text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
                 for (int j = 0; j < lines.Length; j++)
@@ -165,17 +165,17 @@ namespace test2
                     {
                         MessageBox.Show("No users with that email on " + s + " portal.");
                     }
-                } 
+                }
             }
             if (flag == 1)
             {
                 MessageBox.Show("Deleted users from all selected portals.");
-            } 
+            }
         }
 
         private void deletebtnjob_Click(object sender, EventArgs e)
         {
-            String st="";
+            String st = "";
             if (jobtitlecb.SelectedItems.Count == 0 || string.IsNullOrWhiteSpace(jttxtbox.Text))
             {
                 sclbl1.ForeColor = System.Drawing.Color.Red;
@@ -236,7 +236,7 @@ namespace test2
 
         private void searchbtn_Click(object sender, EventArgs e)
         {
-            String st="";
+            String st = "";
             int number;
             bool result = Int32.TryParse(jttxtbox.Text, out number);
             if (pmcb.Checked == true)
@@ -273,7 +273,7 @@ namespace test2
             {
                 st = "select * from JobTitles_JobWordsCategoryMapping where categoryID = " + jttxtbox.Text + "";
             }
-            if (string.IsNullOrWhiteSpace(jttxtbox.Text)&& tablecb.SelectedItem.ToString() == "Job Words Category Mapping")
+            if (string.IsNullOrWhiteSpace(jttxtbox.Text) && tablecb.SelectedItem.ToString() == "Job Words Category Mapping")
             {
                 st = "select * from JobTitles_JobWordsCategoryMapping";
             }
@@ -330,24 +330,24 @@ namespace test2
                     sclbl1.ForeColor = System.Drawing.Color.Black;
                     jttxtboxlbl.ForeColor = System.Drawing.Color.Black;
                     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + s].ConnectionString);
-                    string[] lines = jttxtbox.Text.Split(new string[] { "\r\n", "\n","\t" }, StringSplitOptions.None);
-                    for (int j = 0; j < lines.Length; j=j+1)
+                    string[] lines = jttxtbox.Text.Split(new string[] { "\r\n", "\n", "\t" }, StringSplitOptions.None);
+                    for (int j = 0; j < lines.Length; j = j + 1)
                     {
                         if (tablecb.SelectedItem.ToString() == "Job Words Category Mapping")
                         {
-                            st = "insert into JobTitles_JobWordsCategoryMapping (Phrase,CategoryID) values (N'" + lines[j] + "','"+lines[j+1]+"')";
+                            st = "insert into JobTitles_JobWordsCategoryMapping (Phrase,CategoryID) values (N'" + lines[j] + "','" + lines[j + 1] + "')";
                             j++;
                         }
                         if (tablecb.SelectedItem.ToString() == "Job Titles Local Job Category")
                         {
-                            st = "insert into JobTitles_LocalJobCategory (ID,LocalDisplayName,Keywords) values(N'" + lines[j] + "','" + lines[j + 1] + "','"+lines[j+2]+"')";
+                            st = "insert into JobTitles_LocalJobCategory (ID,LocalDisplayName,Keywords) values(N'" + lines[j] + "','" + lines[j + 1] + "','" + lines[j + 2] + "')";
                             j = j + 2;
                         }
                         SqlCommand sqlcom = new SqlCommand(st, conn);
                         try
                         {
                             conn.Open();
-                            sqlcom.ExecuteNonQuery();  
+                            sqlcom.ExecuteNonQuery();
                             conn.Close();
                         }
                         catch (SqlException ex)
@@ -413,18 +413,17 @@ namespace test2
         }
         private void updatebtn_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void Feature_deboost_combobox_SelectedIndexChanged(object sender, EventArgs e)
         {
             fdo_clb_SelectedIndexChanged(this, EventArgs.Empty);
         }
-
-        private void fdo_clb_SelectedIndexChanged(object sender, EventArgs e)
+        public void ascunsgrids()
         {
             for (int i = 0; i < fdo_clb.Items.Count; i++)
             {
-                if(fdo_clb.GetItemCheckState(0) == CheckState.Unchecked)
+                if (fdo_clb.GetItemCheckState(0) == CheckState.Unchecked)
                 {
                     fclbl.Hide();
                     fd_dgv.Hide();
@@ -440,7 +439,10 @@ namespace test2
                     override_dgv.Hide();
                 }
             }
-                
+        }
+        private void fdo_clb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ascunsgrids();
             if (Feature_deboost_combobox.SelectedItem == null)
             {
                 MessageBox.Show("Please select a country first!.");
@@ -505,8 +507,6 @@ namespace test2
                             override_dgv.DataSource = dt;
                             override_dgv.Show();
                             owlbl.Show();
-                            System.Threading.Thread.Sleep(50000);
-                            adp.Update(dt);
                             conn.Close();
                         }
                         catch (SqlException ex)

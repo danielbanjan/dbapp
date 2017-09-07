@@ -425,12 +425,18 @@ namespace test2
         }
         private void updatebtn_Click(object sender, EventArgs e)
         {
-            scb_f = new SqlCommandBuilder(sda_f);
-            sda_f.Update(dt_f);
-            scb_db = new SqlCommandBuilder(sda_db);
-            sda_db.Update(dt_db);
-            scb_o = new SqlCommandBuilder(sda_o);
-            sda_o.Update(dt_o);
+            var confirmResult = MessageBox.Show("Are you sure to Update the table?",
+                                     "Confirm Update!!",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                scb_f = new SqlCommandBuilder(sda_f);
+                sda_f.Update(dt_f);
+                scb_db = new SqlCommandBuilder(sda_db);
+                sda_db.Update(dt_db);
+                scb_o = new SqlCommandBuilder(sda_o);
+                sda_o.Update(dt_o);
+            }
         }
         private void Feature_deboost_combobox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -564,8 +570,14 @@ namespace test2
 
         private void upj_btn_Click(object sender, EventArgs e)
         {
-            scb_sj= new SqlCommandBuilder(sda_sj);
-            sda_sj.Update(dt_sj);
+            var confirmResult = MessageBox.Show("Are you sure to Update the table?",
+                                     "Confirm Update!!",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                scb_sj = new SqlCommandBuilder(sda_sj);
+                sda_sj.Update(dt_sj);
+            }
         }
     }
 }

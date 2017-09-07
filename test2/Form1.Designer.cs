@@ -47,6 +47,7 @@
             this.checkbox = new System.Windows.Forms.CheckedListBox();
             this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.upj_btn = new System.Windows.Forms.Button();
             this.pmcb = new System.Windows.Forms.CheckBox();
             this.tablecb = new System.Windows.Forms.ComboBox();
             this.jttxtbox = new System.Windows.Forms.RichTextBox();
@@ -72,7 +73,6 @@
             this.Feature_deboost_combobox = new System.Windows.Forms.ComboBox();
             this.updatebtn = new System.Windows.Forms.Button();
             this.fd_dgv = new System.Windows.Forms.DataGridView();
-            this.upj_btn = new System.Windows.Forms.Button();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -103,14 +103,14 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(833, 477);
+            this.tabPage1.Size = new System.Drawing.Size(907, 606);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::test2.Properties.Resources.dBTechnologies_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(346, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(328, 123);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(487, 302);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -120,7 +120,7 @@
             // rmbr_cb
             // 
             this.rmbr_cb.AutoSize = true;
-            this.rmbr_cb.Location = new System.Drawing.Point(246, 203);
+            this.rmbr_cb.Location = new System.Drawing.Point(228, 283);
             this.rmbr_cb.Name = "rmbr_cb";
             this.rmbr_cb.Size = new System.Drawing.Size(94, 17);
             this.rmbr_cb.TabIndex = 6;
@@ -130,7 +130,7 @@
             // pwlbl
             // 
             this.pwlbl.AutoSize = true;
-            this.pwlbl.Location = new System.Drawing.Point(104, 187);
+            this.pwlbl.Location = new System.Drawing.Point(86, 267);
             this.pwlbl.Name = "pwlbl";
             this.pwlbl.Size = new System.Drawing.Size(53, 13);
             this.pwlbl.TabIndex = 5;
@@ -139,7 +139,7 @@
             // unlbl
             // 
             this.unlbl.AutoSize = true;
-            this.unlbl.Location = new System.Drawing.Point(104, 145);
+            this.unlbl.Location = new System.Drawing.Point(86, 225);
             this.unlbl.Name = "unlbl";
             this.unlbl.Size = new System.Drawing.Size(55, 13);
             this.unlbl.TabIndex = 4;
@@ -147,7 +147,7 @@
             // 
             // pwtxtbox
             // 
-            this.pwtxtbox.Location = new System.Drawing.Point(107, 203);
+            this.pwtxtbox.Location = new System.Drawing.Point(89, 283);
             this.pwtxtbox.Name = "pwtxtbox";
             this.pwtxtbox.PasswordChar = '*';
             this.pwtxtbox.Size = new System.Drawing.Size(100, 20);
@@ -155,14 +155,14 @@
             // 
             // untxtbox
             // 
-            this.untxtbox.Location = new System.Drawing.Point(107, 161);
+            this.untxtbox.Location = new System.Drawing.Point(89, 241);
             this.untxtbox.Name = "untxtbox";
             this.untxtbox.Size = new System.Drawing.Size(100, 20);
             this.untxtbox.TabIndex = 2;
             // 
             // loginbtn
             // 
-            this.loginbtn.Location = new System.Drawing.Point(246, 161);
+            this.loginbtn.Location = new System.Drawing.Point(228, 241);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(75, 23);
             this.loginbtn.TabIndex = 0;
@@ -184,7 +184,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(833, 477);
+            this.tabPage2.Size = new System.Drawing.Size(907, 606);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Delete Users";
             // 
@@ -209,7 +209,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::test2.Properties.Resources.dBTechnologies_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 306);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 444);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(328, 156);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -288,7 +288,7 @@
             "Vietnam"});
             this.checkbox.Location = new System.Drawing.Point(480, 29);
             this.checkbox.Name = "checkbox";
-            this.checkbox.Size = new System.Drawing.Size(264, 422);
+            this.checkbox.Size = new System.Drawing.Size(175, 467);
             this.checkbox.TabIndex = 1;
             // 
             // tabs
@@ -307,7 +307,7 @@
             this.tabs.Padding = new System.Drawing.Point(0, 0);
             this.tabs.SelectedIndex = 0;
             this.tabs.ShowToolTips = true;
-            this.tabs.Size = new System.Drawing.Size(841, 503);
+            this.tabs.Size = new System.Drawing.Size(915, 632);
             this.tabs.TabIndex = 0;
             this.tabs.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -330,10 +330,20 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(833, 477);
+            this.tabPage3.Size = new System.Drawing.Size(907, 606);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Job Titles";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // upj_btn
+            // 
+            this.upj_btn.Location = new System.Drawing.Point(313, 113);
+            this.upj_btn.Name = "upj_btn";
+            this.upj_btn.Size = new System.Drawing.Size(75, 23);
+            this.upj_btn.TabIndex = 27;
+            this.upj_btn.Text = "Update";
+            this.upj_btn.UseVisualStyleBackColor = true;
+            this.upj_btn.Click += new System.EventHandler(this.upj_btn_Click);
             // 
             // pmcb
             // 
@@ -363,7 +373,7 @@
             this.jttxtbox.AcceptsTab = true;
             this.jttxtbox.Location = new System.Drawing.Point(0, 24);
             this.jttxtbox.Name = "jttxtbox";
-            this.jttxtbox.Size = new System.Drawing.Size(267, 288);
+            this.jttxtbox.Size = new System.Drawing.Size(267, 425);
             this.jttxtbox.TabIndex = 23;
             this.jttxtbox.Text = "";
             // 
@@ -393,9 +403,9 @@
             this.sj_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sj_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sj_dgv.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.sj_dgv.Location = new System.Drawing.Point(273, 192);
+            this.sj_dgv.Location = new System.Drawing.Point(276, 192);
             this.sj_dgv.Name = "sj_dgv";
-            this.sj_dgv.Size = new System.Drawing.Size(354, 276);
+            this.sj_dgv.Size = new System.Drawing.Size(351, 404);
             this.sj_dgv.TabIndex = 19;
             // 
             // Insertbtn
@@ -431,7 +441,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::test2.Properties.Resources.dBTechnologies_logo;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 318);
+            this.pictureBox4.Location = new System.Drawing.Point(-4, 455);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(267, 141);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -500,7 +510,7 @@
             "Vietnam"});
             this.jobtitlecb.Location = new System.Drawing.Point(633, 24);
             this.jobtitlecb.Name = "jobtitlecb";
-            this.jobtitlecb.Size = new System.Drawing.Size(196, 452);
+            this.jobtitlecb.Size = new System.Drawing.Size(165, 437);
             this.jobtitlecb.Sorted = true;
             this.jobtitlecb.TabIndex = 10;
             // 
@@ -522,14 +532,14 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(833, 477);
+            this.tabPage4.Size = new System.Drawing.Size(907, 606);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "Featured & Deboost";
             // 
             // owlbl
             // 
             this.owlbl.AutoSize = true;
-            this.owlbl.Location = new System.Drawing.Point(280, 323);
+            this.owlbl.Location = new System.Drawing.Point(277, 434);
             this.owlbl.Name = "owlbl";
             this.owlbl.Size = new System.Drawing.Size(88, 13);
             this.owlbl.TabIndex = 17;
@@ -538,7 +548,7 @@
             // deblbl
             // 
             this.deblbl.AutoSize = true;
-            this.deblbl.Location = new System.Drawing.Point(277, 174);
+            this.deblbl.Location = new System.Drawing.Point(279, 270);
             this.deblbl.Name = "deblbl";
             this.deblbl.Size = new System.Drawing.Size(102, 13);
             this.deblbl.TabIndex = 16;
@@ -556,7 +566,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::test2.Properties.Resources.dBTechnologies_logo;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 338);
+            this.pictureBox3.Location = new System.Drawing.Point(7, 457);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(267, 141);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -582,9 +592,9 @@
             this.override_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.override_dgv.BackgroundColor = System.Drawing.Color.White;
             this.override_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.override_dgv.Location = new System.Drawing.Point(280, 338);
+            this.override_dgv.Location = new System.Drawing.Point(280, 450);
             this.override_dgv.Name = "override_dgv";
-            this.override_dgv.Size = new System.Drawing.Size(550, 131);
+            this.override_dgv.Size = new System.Drawing.Size(624, 148);
             this.override_dgv.TabIndex = 5;
             // 
             // deboost_dgv
@@ -595,9 +605,9 @@
             this.deboost_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.deboost_dgv.BackgroundColor = System.Drawing.Color.White;
             this.deboost_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.deboost_dgv.Location = new System.Drawing.Point(280, 190);
+            this.deboost_dgv.Location = new System.Drawing.Point(280, 286);
             this.deboost_dgv.Name = "deboost_dgv";
-            this.deboost_dgv.Size = new System.Drawing.Size(550, 133);
+            this.deboost_dgv.Size = new System.Drawing.Size(624, 146);
             this.deboost_dgv.TabIndex = 4;
             // 
             // fdo_clb
@@ -675,18 +685,8 @@
             this.fd_dgv.Location = new System.Drawing.Point(280, 18);
             this.fd_dgv.Name = "fd_dgv";
             this.fd_dgv.RowHeadersWidth = 30;
-            this.fd_dgv.Size = new System.Drawing.Size(550, 153);
+            this.fd_dgv.Size = new System.Drawing.Size(624, 249);
             this.fd_dgv.TabIndex = 0;
-            // 
-            // upj_btn
-            // 
-            this.upj_btn.Location = new System.Drawing.Point(313, 113);
-            this.upj_btn.Name = "upj_btn";
-            this.upj_btn.Size = new System.Drawing.Size(75, 23);
-            this.upj_btn.TabIndex = 27;
-            this.upj_btn.Text = "Update";
-            this.upj_btn.UseVisualStyleBackColor = true;
-            this.upj_btn.Click += new System.EventHandler(this.upj_btn_Click);
             // 
             // Form1
             // 
@@ -695,7 +695,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(841, 503);
+            this.ClientSize = new System.Drawing.Size(915, 632);
             this.Controls.Add(this.tabs);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";

@@ -72,6 +72,7 @@
             this.Feature_deboost_combobox = new System.Windows.Forms.ComboBox();
             this.updatebtn = new System.Windows.Forms.Button();
             this.fd_dgv = new System.Windows.Forms.DataGridView();
+            this.upj_btn = new System.Windows.Forms.Button();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -312,6 +313,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.upj_btn);
             this.tabPage3.Controls.Add(this.pmcb);
             this.tabPage3.Controls.Add(this.tablecb);
             this.tabPage3.Controls.Add(this.jttxtbox);
@@ -350,7 +352,7 @@
             "Whitelisted Job Titles",
             "Job Words Category Mapping",
             "Job Titles Local Job Category"});
-            this.tablecb.Location = new System.Drawing.Point(313, 112);
+            this.tablecb.Location = new System.Drawing.Point(313, 142);
             this.tablecb.Name = "tablecb";
             this.tablecb.Size = new System.Drawing.Size(173, 21);
             this.tablecb.TabIndex = 25;
@@ -676,6 +678,16 @@
             this.fd_dgv.Size = new System.Drawing.Size(550, 153);
             this.fd_dgv.TabIndex = 0;
             // 
+            // upj_btn
+            // 
+            this.upj_btn.Location = new System.Drawing.Point(313, 113);
+            this.upj_btn.Name = "upj_btn";
+            this.upj_btn.Size = new System.Drawing.Size(75, 23);
+            this.upj_btn.TabIndex = 27;
+            this.upj_btn.Text = "Update";
+            this.upj_btn.UseVisualStyleBackColor = true;
+            this.upj_btn.Click += new System.EventHandler(this.upj_btn_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.loginbtn;
@@ -756,6 +768,7 @@
         private System.Windows.Forms.Label owlbl;
         private System.Windows.Forms.Label deblbl;
         private System.Windows.Forms.Label fclbl;
+        private System.Windows.Forms.Button upj_btn;
     }
 }
 

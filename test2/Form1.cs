@@ -27,6 +27,7 @@ namespace test2
         SqlCommandBuilder scb_f;
         SqlCommandBuilder scb_db;
         SqlCommandBuilder scb_o;
+        SqlCommandBuilder scb_sj;
         private void Form1_Load(object sender, EventArgs e)
         {
             System.Windows.Forms.ToolTip sctt = new System.Windows.Forms.ToolTip();
@@ -559,6 +560,12 @@ namespace test2
             setitems.Text = "Select All";
             setitems.Checked = false;
             hidegridsandlabels();
+        }
+
+        private void upj_btn_Click(object sender, EventArgs e)
+        {
+            scb_sj= new SqlCommandBuilder(sda_sj);
+            sda_sj.Update(dt_sj);
         }
     }
 }

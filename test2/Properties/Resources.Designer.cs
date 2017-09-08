@@ -63,9 +63,9 @@ namespace test2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dBTechnologies_logo {
+        internal static System.Drawing.Bitmap background {
             get {
-                object obj = ResourceManager.GetObject("dBTechnologies_logo", resourceCulture);
+                object obj = ResourceManager.GetObject("background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,10 +73,20 @@ namespace test2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon logo_icon_600x315_II0_icon {
+        internal static System.Drawing.Icon icon {
             get {
-                object obj = ResourceManager.GetObject("logo_icon_600x315_II0_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("icon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

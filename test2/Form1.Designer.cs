@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rmbr_cb = new System.Windows.Forms.CheckBox();
             this.pwlbl = new System.Windows.Forms.Label();
             this.unlbl = new System.Windows.Forms.Label();
             this.pwtxtbox = new System.Windows.Forms.TextBox();
             this.untxtbox = new System.Windows.Forms.TextBox();
             this.loginbtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.emailtxtbox = new System.Windows.Forms.RichTextBox();
             this.sclbl = new System.Windows.Forms.Label();
@@ -74,21 +74,30 @@
             this.updatebtn = new System.Windows.Forms.Button();
             this.fd_dgv = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.linkLabel12 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel11 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel10 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.ss_link10 = new System.Windows.Forms.LinkLabel();
+            this.ss_link9 = new System.Windows.Forms.LinkLabel();
+            this.emailto_tb = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.links_tb = new System.Windows.Forms.RichTextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.mail_send_btn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ss_link8 = new System.Windows.Forms.LinkLabel();
+            this.ss_link7 = new System.Windows.Forms.LinkLabel();
+            this.ss_link6 = new System.Windows.Forms.LinkLabel();
+            this.ss_link5 = new System.Windows.Forms.LinkLabel();
+            this.ss_link4 = new System.Windows.Forms.LinkLabel();
+            this.ss_link3 = new System.Windows.Forms.LinkLabel();
+            this.ss_link2 = new System.Windows.Forms.LinkLabel();
+            this.ss_link1 = new System.Windows.Forms.LinkLabel();
+            this.we_link4 = new System.Windows.Forms.LinkLabel();
+            this.we_link3 = new System.Windows.Forms.LinkLabel();
+            this.we_link2 = new System.Windows.Forms.LinkLabel();
+            this.we_link1 = new System.Windows.Forms.LinkLabel();
+            this.we_gb = new System.Windows.Forms.GroupBox();
+            this.ss_gb = new System.Windows.Forms.GroupBox();
+            this.emailto_lbl = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -103,19 +112,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.deboost_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).BeginInit();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.rmbr_cb);
             this.tabPage1.Controls.Add(this.pwlbl);
             this.tabPage1.Controls.Add(this.unlbl);
             this.tabPage1.Controls.Add(this.pwtxtbox);
             this.tabPage1.Controls.Add(this.untxtbox);
             this.tabPage1.Controls.Add(this.loginbtn);
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -123,16 +133,6 @@
             this.tabPage1.Size = new System.Drawing.Size(907, 606);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::test2.Properties.Resources.dBTechnologies_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(328, 123);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(487, 302);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // rmbr_cb
             // 
@@ -187,6 +187,16 @@
             this.loginbtn.UseVisualStyleBackColor = true;
             this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-47, -10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(954, 695);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
@@ -225,10 +235,10 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::test2.Properties.Resources.dBTechnologies_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 444);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1, 555);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(328, 156);
+            this.pictureBox2.Size = new System.Drawing.Size(265, 45);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -391,7 +401,7 @@
             this.jttxtbox.AcceptsTab = true;
             this.jttxtbox.Location = new System.Drawing.Point(0, 24);
             this.jttxtbox.Name = "jttxtbox";
-            this.jttxtbox.Size = new System.Drawing.Size(267, 425);
+            this.jttxtbox.Size = new System.Drawing.Size(267, 523);
             this.jttxtbox.TabIndex = 23;
             this.jttxtbox.Text = "";
             // 
@@ -423,7 +433,7 @@
             this.sj_dgv.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.sj_dgv.Location = new System.Drawing.Point(276, 192);
             this.sj_dgv.Name = "sj_dgv";
-            this.sj_dgv.Size = new System.Drawing.Size(351, 404);
+            this.sj_dgv.Size = new System.Drawing.Size(351, 355);
             this.sj_dgv.TabIndex = 19;
             // 
             // Insertbtn
@@ -458,10 +468,10 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::test2.Properties.Resources.dBTechnologies_logo;
-            this.pictureBox4.Location = new System.Drawing.Point(-4, 455);
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(1, 555);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(267, 141);
+            this.pictureBox4.Size = new System.Drawing.Size(265, 45);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
@@ -583,10 +593,10 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::test2.Properties.Resources.dBTechnologies_logo;
-            this.pictureBox3.Location = new System.Drawing.Point(7, 457);
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1, 555);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(267, 141);
+            this.pictureBox3.Size = new System.Drawing.Size(265, 45);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
@@ -708,21 +718,30 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.emailto_lbl);
+            this.tabPage5.Controls.Add(this.ss_link10);
+            this.tabPage5.Controls.Add(this.ss_link9);
+            this.tabPage5.Controls.Add(this.emailto_tb);
+            this.tabPage5.Controls.Add(this.label2);
+            this.tabPage5.Controls.Add(this.links_tb);
+            this.tabPage5.Controls.Add(this.pictureBox5);
+            this.tabPage5.Controls.Add(this.mail_send_btn);
             this.tabPage5.Controls.Add(this.button2);
             this.tabPage5.Controls.Add(this.button1);
-            this.tabPage5.Controls.Add(this.linkLabel12);
-            this.tabPage5.Controls.Add(this.linkLabel11);
-            this.tabPage5.Controls.Add(this.linkLabel10);
-            this.tabPage5.Controls.Add(this.linkLabel9);
-            this.tabPage5.Controls.Add(this.linkLabel8);
-            this.tabPage5.Controls.Add(this.linkLabel7);
-            this.tabPage5.Controls.Add(this.linkLabel6);
-            this.tabPage5.Controls.Add(this.linkLabel5);
-            this.tabPage5.Controls.Add(this.linkLabel4);
-            this.tabPage5.Controls.Add(this.linkLabel3);
-            this.tabPage5.Controls.Add(this.linkLabel2);
-            this.tabPage5.Controls.Add(this.linkLabel1);
+            this.tabPage5.Controls.Add(this.ss_link8);
+            this.tabPage5.Controls.Add(this.ss_link7);
+            this.tabPage5.Controls.Add(this.ss_link6);
+            this.tabPage5.Controls.Add(this.ss_link5);
+            this.tabPage5.Controls.Add(this.ss_link4);
+            this.tabPage5.Controls.Add(this.ss_link3);
+            this.tabPage5.Controls.Add(this.ss_link2);
+            this.tabPage5.Controls.Add(this.ss_link1);
+            this.tabPage5.Controls.Add(this.we_link4);
+            this.tabPage5.Controls.Add(this.we_link3);
+            this.tabPage5.Controls.Add(this.we_link2);
+            this.tabPage5.Controls.Add(this.we_link1);
+            this.tabPage5.Controls.Add(this.we_gb);
+            this.tabPage5.Controls.Add(this.ss_gb);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -731,141 +750,74 @@
             this.tabPage5.Text = "Emails";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // ss_link10
             // 
-            this.button1.Location = new System.Drawing.Point(460, 348);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ss_link10.AutoSize = true;
+            this.ss_link10.Location = new System.Drawing.Point(626, 355);
+            this.ss_link10.Name = "ss_link10";
+            this.ss_link10.Size = new System.Drawing.Size(137, 13);
+            this.ss_link10.TabIndex = 20;
+            this.ss_link10.TabStop = true;
+            this.ss_link10.Text = "Saved Search Unsubscribe";
             // 
-            // linkLabel12
+            // ss_link9
             // 
-            this.linkLabel12.AutoSize = true;
-            this.linkLabel12.Location = new System.Drawing.Point(467, 296);
-            this.linkLabel12.Name = "linkLabel12";
-            this.linkLabel12.Size = new System.Drawing.Size(61, 13);
-            this.linkLabel12.TabIndex = 11;
-            this.linkLabel12.TabStop = true;
-            this.linkLabel12.Text = "linkLabel12";
+            this.ss_link9.AutoSize = true;
+            this.ss_link9.Location = new System.Drawing.Point(626, 330);
+            this.ss_link9.Name = "ss_link9";
+            this.ss_link9.Size = new System.Drawing.Size(177, 13);
+            this.ss_link9.TabIndex = 19;
+            this.ss_link9.TabStop = true;
+            this.ss_link9.Text = "Saved Search Change Frequency 4";
             // 
-            // linkLabel11
+            // emailto_tb
             // 
-            this.linkLabel11.AutoSize = true;
-            this.linkLabel11.Location = new System.Drawing.Point(467, 269);
-            this.linkLabel11.Name = "linkLabel11";
-            this.linkLabel11.Size = new System.Drawing.Size(61, 13);
-            this.linkLabel11.TabIndex = 10;
-            this.linkLabel11.TabStop = true;
-            this.linkLabel11.Text = "linkLabel11";
+            this.emailto_tb.Location = new System.Drawing.Point(300, 19);
+            this.emailto_tb.Name = "emailto_tb";
+            this.emailto_tb.Size = new System.Drawing.Size(219, 20);
+            this.emailto_tb.TabIndex = 18;
+            this.emailto_tb.TextChanged += new System.EventHandler(this.emailto_tb_TextChanged);
             // 
-            // linkLabel10
+            // label2
             // 
-            this.linkLabel10.AutoSize = true;
-            this.linkLabel10.Location = new System.Drawing.Point(467, 245);
-            this.linkLabel10.Name = "linkLabel10";
-            this.linkLabel10.Size = new System.Drawing.Size(61, 13);
-            this.linkLabel10.TabIndex = 9;
-            this.linkLabel10.TabStop = true;
-            this.linkLabel10.Text = "linkLabel10";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(0, 2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Input the email links here:";
             // 
-            // linkLabel9
+            // links_tb
             // 
-            this.linkLabel9.AutoSize = true;
-            this.linkLabel9.Location = new System.Drawing.Point(467, 216);
-            this.linkLabel9.Name = "linkLabel9";
-            this.linkLabel9.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel9.TabIndex = 8;
-            this.linkLabel9.TabStop = true;
-            this.linkLabel9.Text = "linkLabel9";
+            this.links_tb.Location = new System.Drawing.Point(1, 19);
+            this.links_tb.Name = "links_tb";
+            this.links_tb.Size = new System.Drawing.Size(280, 349);
+            this.links_tb.TabIndex = 16;
+            this.links_tb.Text = "";
             // 
-            // linkLabel8
+            // pictureBox5
             // 
-            this.linkLabel8.AutoSize = true;
-            this.linkLabel8.Location = new System.Drawing.Point(467, 192);
-            this.linkLabel8.Name = "linkLabel8";
-            this.linkLabel8.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel8.TabIndex = 7;
-            this.linkLabel8.TabStop = true;
-            this.linkLabel8.Text = "linkLabel8";
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(1, 555);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(265, 45);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 15;
+            this.pictureBox5.TabStop = false;
             // 
-            // linkLabel7
+            // mail_send_btn
             // 
-            this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Location = new System.Drawing.Point(467, 170);
-            this.linkLabel7.Name = "linkLabel7";
-            this.linkLabel7.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel7.TabIndex = 6;
-            this.linkLabel7.TabStop = true;
-            this.linkLabel7.Text = "linkLabel7";
-            // 
-            // linkLabel6
-            // 
-            this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Location = new System.Drawing.Point(467, 144);
-            this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel6.TabIndex = 5;
-            this.linkLabel6.TabStop = true;
-            this.linkLabel6.Text = "linkLabel6";
-            // 
-            // linkLabel5
-            // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(467, 121);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel5.TabIndex = 4;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "linkLabel5";
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(467, 90);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel4.TabIndex = 3;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "linkLabel4";
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(467, 65);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel3.TabIndex = 2;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "linkLabel3";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(467, 41);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel2.TabIndex = 1;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "linkLabel2";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(467, 17);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(134, 13);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://www.allclassifieds.ie";
-            this.linkLabel1.Click += new System.EventHandler(this.linkLabel1_Click);
-            this.linkLabel1.DoubleClick += new System.EventHandler(this.linkLabel1_LinkClicked);
+            this.mail_send_btn.Location = new System.Drawing.Point(525, 17);
+            this.mail_send_btn.Name = "mail_send_btn";
+            this.mail_send_btn.Size = new System.Drawing.Size(75, 23);
+            this.mail_send_btn.TabIndex = 14;
+            this.mail_send_btn.Text = "Send Mail";
+            this.mail_send_btn.UseVisualStyleBackColor = true;
+            this.mail_send_btn.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(287, 65);
+            this.button2.Location = new System.Drawing.Point(525, 46);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
@@ -873,15 +825,164 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button1
             // 
-            this.button3.Location = new System.Drawing.Point(304, 17);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button1.Location = new System.Drawing.Point(456, 270);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ss_link8
+            // 
+            this.ss_link8.AutoSize = true;
+            this.ss_link8.Location = new System.Drawing.Point(626, 305);
+            this.ss_link8.Name = "ss_link8";
+            this.ss_link8.Size = new System.Drawing.Size(177, 13);
+            this.ss_link8.TabIndex = 11;
+            this.ss_link8.TabStop = true;
+            this.ss_link8.Text = "Saved Search Change Frequency 3";
+            // 
+            // ss_link7
+            // 
+            this.ss_link7.AutoSize = true;
+            this.ss_link7.Location = new System.Drawing.Point(626, 280);
+            this.ss_link7.Name = "ss_link7";
+            this.ss_link7.Size = new System.Drawing.Size(177, 13);
+            this.ss_link7.TabIndex = 10;
+            this.ss_link7.TabStop = true;
+            this.ss_link7.Text = "Saved Search Change Frequency 2";
+            // 
+            // ss_link6
+            // 
+            this.ss_link6.AutoSize = true;
+            this.ss_link6.Location = new System.Drawing.Point(626, 255);
+            this.ss_link6.Name = "ss_link6";
+            this.ss_link6.Size = new System.Drawing.Size(177, 13);
+            this.ss_link6.TabIndex = 9;
+            this.ss_link6.TabStop = true;
+            this.ss_link6.Text = "Saved Search Change Frequency 1";
+            // 
+            // ss_link5
+            // 
+            this.ss_link5.AutoSize = true;
+            this.ss_link5.Location = new System.Drawing.Point(626, 230);
+            this.ss_link5.Name = "ss_link5";
+            this.ss_link5.Size = new System.Drawing.Size(133, 13);
+            this.ss_link5.TabIndex = 8;
+            this.ss_link5.TabStop = true;
+            this.ss_link5.Text = "Saved Search Modify Alert";
+            // 
+            // ss_link4
+            // 
+            this.ss_link4.AutoSize = true;
+            this.ss_link4.Location = new System.Drawing.Point(626, 205);
+            this.ss_link4.Name = "ss_link4";
+            this.ss_link4.Size = new System.Drawing.Size(170, 13);
+            this.ss_link4.TabIndex = 7;
+            this.ss_link4.TabStop = true;
+            this.ss_link4.Text = "Saved Search Show More Results";
+            // 
+            // ss_link3
+            // 
+            this.ss_link3.AutoSize = true;
+            this.ss_link3.Location = new System.Drawing.Point(626, 180);
+            this.ss_link3.Name = "ss_link3";
+            this.ss_link3.Size = new System.Drawing.Size(165, 13);
+            this.ss_link3.TabIndex = 6;
+            this.ss_link3.TabStop = true;
+            this.ss_link3.Text = "Saved Search Ad View More Info";
+            // 
+            // ss_link2
+            // 
+            this.ss_link2.AutoSize = true;
+            this.ss_link2.Location = new System.Drawing.Point(626, 155);
+            this.ss_link2.Name = "ss_link2";
+            this.ss_link2.Size = new System.Drawing.Size(114, 13);
+            this.ss_link2.TabIndex = 5;
+            this.ss_link2.TabStop = true;
+            this.ss_link2.Text = "Saved Search Ad Title";
+            // 
+            // ss_link1
+            // 
+            this.ss_link1.AutoSize = true;
+            this.ss_link1.Location = new System.Drawing.Point(626, 130);
+            this.ss_link1.Name = "ss_link1";
+            this.ss_link1.Size = new System.Drawing.Size(122, 13);
+            this.ss_link1.TabIndex = 4;
+            this.ss_link1.TabStop = true;
+            this.ss_link1.Text = "Saved Search Alert Title";
+            // 
+            // we_link4
+            // 
+            this.we_link4.AutoSize = true;
+            this.we_link4.Location = new System.Drawing.Point(626, 95);
+            this.we_link4.Name = "we_link4";
+            this.we_link4.Size = new System.Drawing.Size(142, 13);
+            this.we_link4.TabIndex = 3;
+            this.we_link4.TabStop = true;
+            this.we_link4.Text = "Welcome Email Unsubscribe";
+            // 
+            // we_link3
+            // 
+            this.we_link3.AutoSize = true;
+            this.we_link3.Location = new System.Drawing.Point(626, 70);
+            this.we_link3.Name = "we_link3";
+            this.we_link3.Size = new System.Drawing.Size(144, 13);
+            this.we_link3.TabIndex = 2;
+            this.we_link3.TabStop = true;
+            this.we_link3.Text = "Welcome Email Search More";
+            // 
+            // we_link2
+            // 
+            this.we_link2.AutoSize = true;
+            this.we_link2.Location = new System.Drawing.Point(626, 45);
+            this.we_link2.Name = "we_link2";
+            this.we_link2.Size = new System.Drawing.Size(151, 13);
+            this.we_link2.TabIndex = 1;
+            this.we_link2.TabStop = true;
+            this.we_link2.Text = "Welcome Email Modify Search";
+            // 
+            // we_link1
+            // 
+            this.we_link1.AutoSize = true;
+            this.we_link1.Location = new System.Drawing.Point(626, 20);
+            this.we_link1.Name = "we_link1";
+            this.we_link1.Size = new System.Drawing.Size(99, 13);
+            this.we_link1.TabIndex = 0;
+            this.we_link1.TabStop = true;
+            this.we_link1.Text = "Welcome Email title";
+            this.we_link1.Click += new System.EventHandler(this.linkLabel1_Click);
+            this.we_link1.DoubleClick += new System.EventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // we_gb
+            // 
+            this.we_gb.Location = new System.Drawing.Point(624, 6);
+            this.we_gb.Name = "we_gb";
+            this.we_gb.Size = new System.Drawing.Size(187, 111);
+            this.we_gb.TabIndex = 21;
+            this.we_gb.TabStop = false;
+            this.we_gb.Text = "Welcome Emails";
+            // 
+            // ss_gb
+            // 
+            this.ss_gb.Location = new System.Drawing.Point(624, 116);
+            this.ss_gb.Name = "ss_gb";
+            this.ss_gb.Size = new System.Drawing.Size(187, 260);
+            this.ss_gb.TabIndex = 22;
+            this.ss_gb.TabStop = false;
+            this.ss_gb.Text = "Saved Search Emails";
+            // 
+            // emailto_lbl
+            // 
+            this.emailto_lbl.AutoSize = true;
+            this.emailto_lbl.Location = new System.Drawing.Point(297, 3);
+            this.emailto_lbl.Name = "emailto_lbl";
+            this.emailto_lbl.Size = new System.Drawing.Size(47, 13);
+            this.emailto_lbl.TabIndex = 23;
+            this.emailto_lbl.Text = "Email to:";
             // 
             // Form1
             // 
@@ -916,6 +1017,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -967,21 +1069,30 @@
         private System.Windows.Forms.Label fclbl;
         private System.Windows.Forms.Button upj_btn;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.LinkLabel linkLabel12;
-        private System.Windows.Forms.LinkLabel linkLabel11;
-        private System.Windows.Forms.LinkLabel linkLabel10;
-        private System.Windows.Forms.LinkLabel linkLabel9;
-        private System.Windows.Forms.LinkLabel linkLabel8;
-        private System.Windows.Forms.LinkLabel linkLabel7;
-        private System.Windows.Forms.LinkLabel linkLabel6;
-        private System.Windows.Forms.LinkLabel linkLabel5;
-        private System.Windows.Forms.LinkLabel linkLabel4;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel ss_link8;
+        private System.Windows.Forms.LinkLabel ss_link7;
+        private System.Windows.Forms.LinkLabel ss_link6;
+        private System.Windows.Forms.LinkLabel ss_link5;
+        private System.Windows.Forms.LinkLabel ss_link4;
+        private System.Windows.Forms.LinkLabel ss_link3;
+        private System.Windows.Forms.LinkLabel ss_link2;
+        private System.Windows.Forms.LinkLabel ss_link1;
+        private System.Windows.Forms.LinkLabel we_link4;
+        private System.Windows.Forms.LinkLabel we_link3;
+        private System.Windows.Forms.LinkLabel we_link2;
+        private System.Windows.Forms.LinkLabel we_link1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button mail_send_btn;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox links_tb;
+        private System.Windows.Forms.TextBox emailto_tb;
+        private System.Windows.Forms.LinkLabel ss_link10;
+        private System.Windows.Forms.LinkLabel ss_link9;
+        private System.Windows.Forms.GroupBox we_gb;
+        private System.Windows.Forms.GroupBox ss_gb;
+        private System.Windows.Forms.Label emailto_lbl;
     }
 }
 

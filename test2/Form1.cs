@@ -598,24 +598,24 @@ namespace test2
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Specify that the link was visited.
-            this.linkLabel1.LinkVisited = true;
+            this.we_link1.LinkVisited = true;
 
             // Navigate to a URL.
             System.Diagnostics.Process.Start("http://testch.hugintechnologies.com/login-saved-search");
         }
 
+        static bool IsValidMailAddress(string mailAddress)
+        {
+            return Regex.IsMatch(mailAddress, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            string str = "www.allclassifieds.ie";
-            if (linkLabel1.Text.ToLower().Contains(str.ToLower()))
-            {
-                linkLabel1.Text = "Http://testie.hugintechnologies.com";
-            }
+           
         }
 
         private void linkLabel1_LinkClicked(object sender, EventArgs e)
         {
-            this.linkLabel1.LinkVisited = true;
+            this.we_link1.LinkVisited = true;
 
             // Navigate to a URL.
             System.Diagnostics.Process.Start("www.google.ro");
@@ -641,54 +641,68 @@ namespace test2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string smtpAddress = "smtp.gmail.com";
-            int portNumber = 587;
-
-            string userName = "danitest";
-
-            string emailFrom = "danitestrubrikk@gmail.com";
-            string password = "Daniel.91";
-            string emailTo = "danitestrubrikk@gmail.com"; ;
-
-            // Here you can put subject of the mail
-            string subject = "Test Subject";
-            // Body of the mail
-            string body = "<div style='border: medium solid grey; width: 500px; height: 266px;font-family: arial,sans-serif; font-size: 17px;'>";
-            body += "<h3 style='background-color: blueviolet; margin-top:0px;'>Aspen Reporting Tool</h3>";
-            body += "<br />";
-            body += "Dear " + userName + ",";
-            body += "<br />";
-            body += "<p>";
-            body += "Thank you for registering </p>";
-            body += "<p><a href='Http://google.com'>Click Here</a>To finalize the registration process</p>";
-                body += " <br />";
-            body += "Thanks,";
-            body += "<br />";
-            body += "<b>The Team</b>";
-            body += "</div>";
-            // this is done using  using System.Net.Mail; & using System.Net; 
-            using (MailMessage mail = new MailMessage())
+            if (IsValidMailAddress(emailto_tb.Text)&& !string.IsNullOrWhiteSpace(links_tb.Text))
             {
-                mail.From = new MailAddress(emailFrom);
-                mail.To.Add(emailTo);
-                mail.Subject = subject;
-                mail.Body = body;
-                mail.IsBodyHtml = true;
-                // Can set to false, if you are sending pure text.
+                string smtpAddress = "smtp.gmail.com";
+                int portNumber = 587;
 
-                using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+                string userName = "danitest";
+
+                string emailFrom = "danitestrubrikk@gmail.com";
+                string password = "Daniel.91";
+                string emailTo = "danitestrubrikk@gmail.com"; ;
+
+                // Here you can put subject of the mail
+                string subject = "Test Subject";
+                // Body of the mail
+                string body = "<div style='border: medium solid grey; width: 500px; height: 266px;font-family: arial,sans-serif; font-size: 17px;'>";
+                body += "<h3 style='background-color: blueviolet; margin-top:0px;'>Aspen Reporting Tool</h3>";
+                body += "<br />";
+                body += "Dear " + userName + ",";
+                body += "<br />";
+                body += "<p>";
+                body += "Thank you for registering </p>";
+                body += "<p><a href='Http://google.com'>Click Here</a>To finalize the registration process</p>";
+                body += " <br />";
+                body += "Thanks,";
+                body += "<br />";
+                body += "<b>The Team</b>";
+                body += "</div>";
+                // this is done using  using System.Net.Mail; & using System.Net; 
+                using (MailMessage mail = new MailMessage())
                 {
-                    smtp.Credentials = new NetworkCredential(emailFrom, password);
-                    smtp.EnableSsl = true;
-                    smtp.Send(mail);
-                    smtp.Timeout = 10000;
+                    mail.From = new MailAddress(emailFrom);
+                    mail.To.Add(emailTo);
+                    mail.Subject = subject;
+                    mail.Body = body;
+                    mail.IsBodyHtml = true;
+                    // Can set to false, if you are sending pure text.
+
+                    using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+                    {
+                        smtp.Credentials = new NetworkCredential(emailFrom, password);
+                        smtp.EnableSsl = true;
+                        smtp.Send(mail);
+                        smtp.Timeout = 10000;
+                    }
                 }
+            }
+            else
+            {
+                emailto_lbl.ForeColor = System.Drawing.Color.Red;
+                emailto_lbl.Text = "Invalid email address!";
             }
         }
 
         private void linkLabel1_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(linkLabel1.Text);
+            Clipboard.SetText(we_link1.Text);
+        }
+
+        private void emailto_tb_TextChanged(object sender, EventArgs e)
+        {
+            emailto_lbl.ForeColor = System.Drawing.Color.Black;
+            emailto_lbl.Text = "Email to:";
         }
     }
 }

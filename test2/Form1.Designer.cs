@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -87,6 +88,8 @@
             this.linkLabel11 = new System.Windows.Forms.LinkLabel();
             this.linkLabel12 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copyToClickboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -101,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.deboost_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).BeginInit();
             this.tabPage5.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -737,6 +741,7 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "http://www.allclassifieds.ie";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.linkLabel1_MouseDown);
             // 
             // linkLabel2
             // 
@@ -858,6 +863,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyToClickboardToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(177, 48);
+            // 
+            // copyToClickboardToolStripMenuItem
+            // 
+            this.copyToClickboardToolStripMenuItem.Name = "copyToClickboardToolStripMenuItem";
+            this.copyToClickboardToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.copyToClickboardToolStripMenuItem.Text = "Copy To clickboard";
+            this.copyToClickboardToolStripMenuItem.Click += new System.EventHandler(this.copyToClickboardToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.loginbtn;
@@ -891,6 +910,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -955,6 +975,8 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem copyToClickboardToolStripMenuItem;
     }
 }
 

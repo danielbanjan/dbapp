@@ -610,5 +610,29 @@ namespace test2
                 linkLabel1.Text = "Http://testie.hugintechnologies.com";
             }
         }
+
+        private void linkLabel1_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            if (e.Button == MouseButtons.Right)
+            {
+                ContextMenu m = new ContextMenu();
+                m.MenuItems.Add(new MenuItem("Copy"));
+            }
+        }
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //if (dataGridView1.SelectedRows.Count < 1)
+            //    return;
+
+            //var cell = dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells["CellName"].Value;
+            //if (cell != null)
+            //    Clipboard.SetText(cell.ToString());
+        }
+
+        private void copyToClickboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

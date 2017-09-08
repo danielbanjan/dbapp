@@ -11,6 +11,8 @@ using test2.Properties;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Text.RegularExpressions;
+using System.Net.Mail;
+using System.Net;
 
 namespace test2
 {
@@ -611,28 +613,82 @@ namespace test2
             }
         }
 
-        private void linkLabel1_MouseDown(object sender, MouseEventArgs e)
+        private void linkLabel1_LinkClicked(object sender, EventArgs e)
         {
+            this.linkLabel1.LinkVisited = true;
 
-            if (e.Button == MouseButtons.Right)
+            // Navigate to a URL.
+            System.Diagnostics.Process.Start("www.google.ro");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SmtpClient client = new SmtpClient();
+            client.Port = 587;
+            client.Host = "smtp.gmail.com";
+            client.EnableSsl = true;
+            client.Timeout = 10000;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Credentials = new System.Net.NetworkCredential("danitestrubrikk@gmail.com", "Daniel.91");
+
+            MailMessage mm = new MailMessage("danitestrubrikk@gmail.com", "danitestrubrikk@gmail.com", "Ccaca", "http://testde.hugintechnologies.com\n http://testau.hugintechnologies.com\n");
+            mm.BodyEncoding = UTF8Encoding.UTF8;
+            mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+
+            client.Send(mm);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string smtpAddress = "smtp.gmail.com";
+            int portNumber = 587;
+
+            string userName = "danitest";
+
+            string emailFrom = "danitestrubrikk@gmail.com";
+            string password = "Daniel.91";
+            string emailTo = "danitestrubrikk@gmail.com"; ;
+
+            // Here you can put subject of the mail
+            string subject = "Test Subject";
+            // Body of the mail
+            string body = "<div style='border: medium solid grey; width: 500px; height: 266px;font-family: arial,sans-serif; font-size: 17px;'>";
+            body += "<h3 style='background-color: blueviolet; margin-top:0px;'>Aspen Reporting Tool</h3>";
+            body += "<br />";
+            body += "Dear " + userName + ",";
+            body += "<br />";
+            body += "<p>";
+            body += "Thank you for registering </p>";
+            body += "<p><a href='Http://google.com'>Click Here</a>To finalize the registration process</p>";
+                body += " <br />";
+            body += "Thanks,";
+            body += "<br />";
+            body += "<b>The Team</b>";
+            body += "</div>";
+            // this is done using  using System.Net.Mail; & using System.Net; 
+            using (MailMessage mail = new MailMessage())
             {
-                ContextMenu m = new ContextMenu();
-                m.MenuItems.Add(new MenuItem("Copy"));
+                mail.From = new MailAddress(emailFrom);
+                mail.To.Add(emailTo);
+                mail.Subject = subject;
+                mail.Body = body;
+                mail.IsBodyHtml = true;
+                // Can set to false, if you are sending pure text.
+
+                using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+                {
+                    smtp.Credentials = new NetworkCredential(emailFrom, password);
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                    smtp.Timeout = 10000;
+                }
             }
         }
-        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //if (dataGridView1.SelectedRows.Count < 1)
-            //    return;
 
-            //var cell = dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells["CellName"].Value;
-            //if (cell != null)
-            //    Clipboard.SetText(cell.ToString());
-        }
-
-        private void copyToClickboardToolStripMenuItem_Click(object sender, EventArgs e)
+        private void linkLabel1_Click(object sender, EventArgs e)
         {
-            
+            Clipboard.SetText(linkLabel1.Text);
         }
     }
 }

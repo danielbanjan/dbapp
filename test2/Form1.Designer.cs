@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -75,21 +74,21 @@
             this.updatebtn = new System.Windows.Forms.Button();
             this.fd_dgv = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel10 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel11 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel12 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.copyToClickboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linkLabel12 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel11 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel10 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -104,7 +103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.deboost_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).BeginInit();
             this.tabPage5.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -710,6 +708,8 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.button2);
             this.tabPage5.Controls.Add(this.button1);
             this.tabPage5.Controls.Add(this.linkLabel12);
             this.tabPage5.Controls.Add(this.linkLabel11);
@@ -731,117 +731,15 @@
             this.tabPage5.Text = "Emails";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // linkLabel1
+            // button1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(467, 17);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(134, 13);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://www.allclassifieds.ie";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            this.linkLabel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.linkLabel1_MouseDown);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(467, 41);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel2.TabIndex = 1;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "linkLabel2";
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(467, 65);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel3.TabIndex = 2;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "linkLabel3";
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(467, 90);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel4.TabIndex = 3;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "linkLabel4";
-            // 
-            // linkLabel5
-            // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(467, 121);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel5.TabIndex = 4;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "linkLabel5";
-            // 
-            // linkLabel6
-            // 
-            this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Location = new System.Drawing.Point(467, 144);
-            this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel6.TabIndex = 5;
-            this.linkLabel6.TabStop = true;
-            this.linkLabel6.Text = "linkLabel6";
-            // 
-            // linkLabel7
-            // 
-            this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Location = new System.Drawing.Point(467, 170);
-            this.linkLabel7.Name = "linkLabel7";
-            this.linkLabel7.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel7.TabIndex = 6;
-            this.linkLabel7.TabStop = true;
-            this.linkLabel7.Text = "linkLabel7";
-            // 
-            // linkLabel8
-            // 
-            this.linkLabel8.AutoSize = true;
-            this.linkLabel8.Location = new System.Drawing.Point(467, 192);
-            this.linkLabel8.Name = "linkLabel8";
-            this.linkLabel8.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel8.TabIndex = 7;
-            this.linkLabel8.TabStop = true;
-            this.linkLabel8.Text = "linkLabel8";
-            // 
-            // linkLabel9
-            // 
-            this.linkLabel9.AutoSize = true;
-            this.linkLabel9.Location = new System.Drawing.Point(467, 216);
-            this.linkLabel9.Name = "linkLabel9";
-            this.linkLabel9.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel9.TabIndex = 8;
-            this.linkLabel9.TabStop = true;
-            this.linkLabel9.Text = "linkLabel9";
-            // 
-            // linkLabel10
-            // 
-            this.linkLabel10.AutoSize = true;
-            this.linkLabel10.Location = new System.Drawing.Point(467, 245);
-            this.linkLabel10.Name = "linkLabel10";
-            this.linkLabel10.Size = new System.Drawing.Size(61, 13);
-            this.linkLabel10.TabIndex = 9;
-            this.linkLabel10.TabStop = true;
-            this.linkLabel10.Text = "linkLabel10";
-            // 
-            // linkLabel11
-            // 
-            this.linkLabel11.AutoSize = true;
-            this.linkLabel11.Location = new System.Drawing.Point(467, 269);
-            this.linkLabel11.Name = "linkLabel11";
-            this.linkLabel11.Size = new System.Drawing.Size(61, 13);
-            this.linkLabel11.TabIndex = 10;
-            this.linkLabel11.TabStop = true;
-            this.linkLabel11.Text = "linkLabel11";
+            this.button1.Location = new System.Drawing.Point(460, 348);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // linkLabel12
             // 
@@ -853,29 +751,137 @@
             this.linkLabel12.TabStop = true;
             this.linkLabel12.Text = "linkLabel12";
             // 
-            // button1
+            // linkLabel11
             // 
-            this.button1.Location = new System.Drawing.Point(460, 348);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.linkLabel11.AutoSize = true;
+            this.linkLabel11.Location = new System.Drawing.Point(467, 269);
+            this.linkLabel11.Name = "linkLabel11";
+            this.linkLabel11.Size = new System.Drawing.Size(61, 13);
+            this.linkLabel11.TabIndex = 10;
+            this.linkLabel11.TabStop = true;
+            this.linkLabel11.Text = "linkLabel11";
             // 
-            // contextMenuStrip1
+            // linkLabel10
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyToClickboardToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(177, 48);
+            this.linkLabel10.AutoSize = true;
+            this.linkLabel10.Location = new System.Drawing.Point(467, 245);
+            this.linkLabel10.Name = "linkLabel10";
+            this.linkLabel10.Size = new System.Drawing.Size(61, 13);
+            this.linkLabel10.TabIndex = 9;
+            this.linkLabel10.TabStop = true;
+            this.linkLabel10.Text = "linkLabel10";
             // 
-            // copyToClickboardToolStripMenuItem
+            // linkLabel9
             // 
-            this.copyToClickboardToolStripMenuItem.Name = "copyToClickboardToolStripMenuItem";
-            this.copyToClickboardToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.copyToClickboardToolStripMenuItem.Text = "Copy To clickboard";
-            this.copyToClickboardToolStripMenuItem.Click += new System.EventHandler(this.copyToClickboardToolStripMenuItem_Click);
+            this.linkLabel9.AutoSize = true;
+            this.linkLabel9.Location = new System.Drawing.Point(467, 216);
+            this.linkLabel9.Name = "linkLabel9";
+            this.linkLabel9.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel9.TabIndex = 8;
+            this.linkLabel9.TabStop = true;
+            this.linkLabel9.Text = "linkLabel9";
+            // 
+            // linkLabel8
+            // 
+            this.linkLabel8.AutoSize = true;
+            this.linkLabel8.Location = new System.Drawing.Point(467, 192);
+            this.linkLabel8.Name = "linkLabel8";
+            this.linkLabel8.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel8.TabIndex = 7;
+            this.linkLabel8.TabStop = true;
+            this.linkLabel8.Text = "linkLabel8";
+            // 
+            // linkLabel7
+            // 
+            this.linkLabel7.AutoSize = true;
+            this.linkLabel7.Location = new System.Drawing.Point(467, 170);
+            this.linkLabel7.Name = "linkLabel7";
+            this.linkLabel7.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel7.TabIndex = 6;
+            this.linkLabel7.TabStop = true;
+            this.linkLabel7.Text = "linkLabel7";
+            // 
+            // linkLabel6
+            // 
+            this.linkLabel6.AutoSize = true;
+            this.linkLabel6.Location = new System.Drawing.Point(467, 144);
+            this.linkLabel6.Name = "linkLabel6";
+            this.linkLabel6.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel6.TabIndex = 5;
+            this.linkLabel6.TabStop = true;
+            this.linkLabel6.Text = "linkLabel6";
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.Location = new System.Drawing.Point(467, 121);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel5.TabIndex = 4;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "linkLabel5";
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Location = new System.Drawing.Point(467, 90);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel4.TabIndex = 3;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "linkLabel4";
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Location = new System.Drawing.Point(467, 65);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel3.TabIndex = 2;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "linkLabel3";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(467, 41);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel2.TabIndex = 1;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "linkLabel2";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(467, 17);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(134, 13);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "http://www.allclassifieds.ie";
+            this.linkLabel1.Click += new System.EventHandler(this.linkLabel1_Click);
+            this.linkLabel1.DoubleClick += new System.EventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(287, 65);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(304, 17);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
@@ -910,7 +916,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -975,8 +980,8 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem copyToClickboardToolStripMenuItem;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

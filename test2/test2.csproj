@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\dBTechnologies_logo.png" />
+    <Content Include="Resources\Game-of-thrones-season-4-wallpapers-hd.jpg" />
     <Content Include="Resources\stark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

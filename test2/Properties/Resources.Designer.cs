@@ -63,9 +63,39 @@ namespace test2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2 {
+            get {
+                object obj = ResourceManager.GetObject("2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dBTechnologies_logo {
             get {
                 object obj = ResourceManager.GetObject("dBTechnologies_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dBTechnologies_logo1 {
+            get {
+                object obj = ResourceManager.GetObject("dBTechnologies_logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Game_of_thrones_season_4_wallpapers_hd {
+            get {
+                object obj = ResourceManager.GetObject("Game-of-thrones-season-4-wallpapers-hd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

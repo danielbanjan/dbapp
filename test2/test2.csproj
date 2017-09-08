@@ -146,6 +146,7 @@
     <None Include="Resources\logo_icon_600x315_II0_icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\2.png" />
     <Content Include="Resources\dBTechnologies_logo.png" />
     <Content Include="Resources\Game-of-thrones-season-4-wallpapers-hd.jpg" />
     <Content Include="Resources\stark.png" />

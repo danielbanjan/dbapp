@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rmbr_cb = new System.Windows.Forms.CheckBox();
             this.pwlbl = new System.Windows.Forms.Label();
             this.unlbl = new System.Windows.Forms.Label();
             this.pwtxtbox = new System.Windows.Forms.TextBox();
             this.untxtbox = new System.Windows.Forms.TextBox();
             this.loginbtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.emailtxtbox = new System.Windows.Forms.RichTextBox();
             this.sclbl = new System.Windows.Forms.Label();
@@ -75,6 +76,7 @@
             this.fd_dgv = new System.Windows.Forms.DataGridView();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabs.SuspendLayout();
@@ -92,13 +94,14 @@
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.rmbr_cb);
             this.tabPage1.Controls.Add(this.pwlbl);
             this.tabPage1.Controls.Add(this.unlbl);
             this.tabPage1.Controls.Add(this.pwtxtbox);
             this.tabPage1.Controls.Add(this.untxtbox);
             this.tabPage1.Controls.Add(this.loginbtn);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.pictureBox5);
             this.tabPage1.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -107,20 +110,10 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Login";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::test2.Properties.Resources.dBTechnologies_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(328, 123);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(487, 302);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // rmbr_cb
             // 
             this.rmbr_cb.AutoSize = true;
-            this.rmbr_cb.Location = new System.Drawing.Point(228, 283);
+            this.rmbr_cb.Location = new System.Drawing.Point(242, 311);
             this.rmbr_cb.Name = "rmbr_cb";
             this.rmbr_cb.Size = new System.Drawing.Size(94, 17);
             this.rmbr_cb.TabIndex = 6;
@@ -130,7 +123,7 @@
             // pwlbl
             // 
             this.pwlbl.AutoSize = true;
-            this.pwlbl.Location = new System.Drawing.Point(86, 267);
+            this.pwlbl.Location = new System.Drawing.Point(100, 295);
             this.pwlbl.Name = "pwlbl";
             this.pwlbl.Size = new System.Drawing.Size(53, 13);
             this.pwlbl.TabIndex = 5;
@@ -139,7 +132,7 @@
             // unlbl
             // 
             this.unlbl.AutoSize = true;
-            this.unlbl.Location = new System.Drawing.Point(86, 225);
+            this.unlbl.Location = new System.Drawing.Point(100, 253);
             this.unlbl.Name = "unlbl";
             this.unlbl.Size = new System.Drawing.Size(55, 13);
             this.unlbl.TabIndex = 4;
@@ -147,7 +140,7 @@
             // 
             // pwtxtbox
             // 
-            this.pwtxtbox.Location = new System.Drawing.Point(89, 283);
+            this.pwtxtbox.Location = new System.Drawing.Point(103, 311);
             this.pwtxtbox.Name = "pwtxtbox";
             this.pwtxtbox.PasswordChar = '*';
             this.pwtxtbox.Size = new System.Drawing.Size(100, 20);
@@ -155,20 +148,41 @@
             // 
             // untxtbox
             // 
-            this.untxtbox.Location = new System.Drawing.Point(89, 241);
+            this.untxtbox.Location = new System.Drawing.Point(103, 269);
             this.untxtbox.Name = "untxtbox";
             this.untxtbox.Size = new System.Drawing.Size(100, 20);
             this.untxtbox.TabIndex = 2;
             // 
             // loginbtn
             // 
-            this.loginbtn.Location = new System.Drawing.Point(228, 241);
+            this.loginbtn.Location = new System.Drawing.Point(242, 269);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(75, 23);
             this.loginbtn.TabIndex = 0;
             this.loginbtn.Text = "Login";
             this.loginbtn.UseVisualStyleBackColor = true;
             this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::test2.Properties.Resources._2;
+            this.pictureBox1.Location = new System.Drawing.Point(424, 304);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(487, 302);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::test2.Properties.Resources.Game_of_thrones_season_4_wallpapers_hd;
+            this.pictureBox5.Location = new System.Drawing.Point(-4, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(915, 704);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
             // 
             // tabPage2
             // 
@@ -705,6 +719,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -769,6 +784,7 @@
         private System.Windows.Forms.Label deblbl;
         private System.Windows.Forms.Label fclbl;
         private System.Windows.Forms.Button upj_btn;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
 

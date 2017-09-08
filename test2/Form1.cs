@@ -592,5 +592,23 @@ namespace test2
                 sda_sj.Update(dt_sj);
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Specify that the link was visited.
+            this.linkLabel1.LinkVisited = true;
+
+            // Navigate to a URL.
+            System.Diagnostics.Process.Start("http://testch.hugintechnologies.com/login-saved-search");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string str = "www.allclassifieds.ie";
+            if (linkLabel1.Text.ToLower().Contains(str.ToLower()))
+            {
+                linkLabel1.Text = "Http://testie.hugintechnologies.com";
+            }
+        }
     }
 }

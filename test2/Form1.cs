@@ -124,125 +124,138 @@ namespace test2
 
         private void deletebtn_Click(object sender, EventArgs e)
         {
-            var flag = 0;
-            String st = "";
-            String dss = "";
-            if (checkbox.SelectedItems.Count == 0 || string.IsNullOrWhiteSpace(emailtxtbox.Text))
+            var confirmResult = MessageBox.Show("Are you sure to Update the table?",
+                                     "Confirm Update!!",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
             {
-                sclbl.ForeColor = System.Drawing.Color.Red;
-                sclbl.Text = "Please select at least one country!";
-            }
-            foreach (string s in checkbox.CheckedItems)
-            {
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + s].ConnectionString);
-                string[] lines = emailtxtbox.Text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
-                for (int j = 0; j < lines.Length; j++)
+                var flag = 0;
+                String st = "";
+                String dss = "";
+                if (checkbox.SelectedItems.Count == 0 || string.IsNullOrWhiteSpace(emailtxtbox.Text))
                 {
-                    st = "DELETE FROM Users WHERE username = '" + lines[j] + "'";
-                    dss = "DELETE FROM SavedSearch WHERE contactemail = '" + lines[j] + "'";
-                    SqlCommand sqlcom = new SqlCommand(st, conn);
-                    SqlCommand sqlcom2 = new SqlCommand(dss, conn);
-                    SqlCommand sqlcheck = new SqlCommand("select userid from users where username = '" + lines[j] + "'", conn);
-                    conn.Open();
-                    var a = sqlcheck.ExecuteScalar();
-                    conn.Close();
-                    if (a != null)
+                    sclbl.ForeColor = System.Drawing.Color.Red;
+                    sclbl.Text = "Please select at least one country!";
+                }
+                foreach (string s in checkbox.CheckedItems)
+                {
+                    SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + s].ConnectionString);
+                    string[] lines = emailtxtbox.Text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
+                    for (int j = 0; j < lines.Length; j++)
                     {
+                        st = "DELETE FROM Users WHERE username = '" + lines[j] + "'";
+                        dss = "DELETE FROM SavedSearch WHERE contactemail = '" + lines[j] + "'";
+                        SqlCommand sqlcom = new SqlCommand(st, conn);
+                        SqlCommand sqlcom2 = new SqlCommand(dss, conn);
+                        SqlCommand sqlcheck = new SqlCommand("select userid from users where username = '" + lines[j] + "'", conn);
+                        conn.Open();
+                        var a = sqlcheck.ExecuteScalar();
                         conn.Close();
-                        try
+                        if (a != null)
                         {
-                            conn.Open();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("An error occurred " + ex.Message);
-                        }
-                        try
-                        {
-                            String res = Convert.ToString(sqlcheck.ExecuteScalar());
-                            String dm = "Delete from memberships where userid ='" + res + "'";
-                            SqlCommand sqlcom3 = new SqlCommand(dm, conn);
-                            sqlcom3.ExecuteNonQuery();
-                            sqlcom.ExecuteNonQuery();
-                            sqlcom2.ExecuteNonQuery();
                             conn.Close();
-                            flag = 1;
+                            try
+                            {
+                                conn.Open();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("An error occurred " + ex.Message);
+                            }
+                            try
+                            {
+                                String res = Convert.ToString(sqlcheck.ExecuteScalar());
+                                String dm = "Delete from memberships where userid ='" + res + "'";
+                                SqlCommand sqlcom3 = new SqlCommand(dm, conn);
+                                sqlcom3.ExecuteNonQuery();
+                                sqlcom.ExecuteNonQuery();
+                                sqlcom2.ExecuteNonQuery();
+                                conn.Close();
+                                flag = 1;
+                            }
+                            catch (SqlException ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
                         }
-                        catch (SqlException ex)
+                        else
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show("No users with that email on " + s + " portal.");
                         }
-                    }
-                    else
-                    {
-                        MessageBox.Show("No users with that email on " + s + " portal.");
                     }
                 }
-            }
-            if (flag == 1)
-            {
-                MessageBox.Show("Deleted users from all selected portals.");
+
+                if (flag == 1)
+                {
+                    MessageBox.Show("Deleted users from all selected portals.");
+                }
             }
         }
 
         private void deletebtnjob_Click(object sender, EventArgs e)
         {
-            String st = "";
-            if (jobtitlecb.SelectedItems.Count == 0 || string.IsNullOrWhiteSpace(jttxtbox.Text))
+            var confirmResult = MessageBox.Show("Are you sure to Update the table?",
+                                     "Confirm Update!!",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
             {
-                sclbl1.ForeColor = System.Drawing.Color.Red;
-                jttxtboxlbl.ForeColor = System.Drawing.Color.Red;
-            }
-            else
-            {
-                foreach (string s in jobtitlecb.CheckedItems)
+                String st = "";
+                if (jobtitlecb.SelectedItems.Count == 0 || string.IsNullOrWhiteSpace(jttxtbox.Text))
                 {
-                    sclbl1.ForeColor = System.Drawing.Color.Black;
-                    jttxtboxlbl.ForeColor = System.Drawing.Color.Black;
-                    SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + s].ConnectionString);
-                    string[] lines = jttxtbox.Text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
-                    for (int j = 0; j < lines.Length; j++)
+                    sclbl1.ForeColor = System.Drawing.Color.Red;
+                    jttxtboxlbl.ForeColor = System.Drawing.Color.Red;
+                }
+                else
+                {
+                    foreach (string s in jobtitlecb.CheckedItems)
                     {
-                        if (tablecb.SelectedItem.ToString() == "Job Words Category Mapping")
+                        sclbl1.ForeColor = System.Drawing.Color.Black;
+                        jttxtboxlbl.ForeColor = System.Drawing.Color.Black;
+                        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + s].ConnectionString);
+                        string[] lines = jttxtbox.Text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
+                        for (int j = 0; j < lines.Length; j++)
                         {
-                            if (pmcb.Checked == true)
+                            if (tablecb.SelectedItem.ToString() == "Job Words Category Mapping")
                             {
-                                st = "DELETE FROM JobTitles_JobWordsCategoryMapping WHERE phrase like '%" + lines[j] + "%'";
+                                if (pmcb.Checked == true)
+                                {
+                                    st = "DELETE FROM JobTitles_JobWordsCategoryMapping WHERE phrase like '%" + lines[j] + "%'";
+                                }
+
+                                else st = "DELETE FROM JobTitles_JobWordsCategoryMapping WHERE phrase = '" + lines[j] + "'";
+                            }
+                            if (tablecb.SelectedItem.ToString() == "Whitelisted Job Titles")
+                            {
+                                if (pmcb.Checked == true)
+                                {
+                                    st = "DELETE FROM JobTitles_WhitelistedJobTitles where JobTitle like '%" + jttxtbox.Text + "%'";
+                                }
+                                else st = "DELETE FROM JobTitles_WhitelistedJobTitles where JobTitle = '" + jttxtbox.Text + "'";
+                            }
+                            if (tablecb.SelectedItem.ToString() == "Job Titles Local Job Category")
+                            {
+                                if (pmcb.Checked == true)
+                                {
+                                    st = "DELETE FROM JobTitles_LocalJobCategory where LocalDisplayName like '%" + jttxtbox.Text + "%'";
+                                }
+                                else st = "DELETE FROM JobTitles_LocalJobCategory where LocalDisplayName = '" + jttxtbox.Text + "'";
+                            }
+                            SqlCommand sqlcom = new SqlCommand(st, conn);
+                            try
+                            {
+                                conn.Open();
+                                sqlcom.ExecuteNonQuery();
+                                conn.Close();
                             }
 
-                            else st = "DELETE FROM JobTitles_JobWordsCategoryMapping WHERE phrase = '" + lines[j] + "'";
-                        }
-                        if (tablecb.SelectedItem.ToString() == "Whitelisted Job Titles")
-                        {
-                            if (pmcb.Checked == true)
+                            catch (SqlException ex)
                             {
-                                st = "DELETE FROM JobTitles_WhitelistedJobTitles where JobTitle like '%" + jttxtbox.Text + "%'";
+                                MessageBox.Show(ex.Message);
                             }
-                            else st = "DELETE FROM JobTitles_WhitelistedJobTitles where JobTitle = '" + jttxtbox.Text + "'";
-                        }
-                        if (tablecb.SelectedItem.ToString() == "Job Titles Local Job Category")
-                        {
-                            if (pmcb.Checked == true)
-                            {
-                                st = "DELETE FROM JobTitles_LocalJobCategory where LocalDisplayName like '%" + jttxtbox.Text + "%'";
-                            }
-                            else st = "DELETE FROM JobTitles_LocalJobCategory where LocalDisplayName = '" + jttxtbox.Text + "'";
-                        }
-                        SqlCommand sqlcom = new SqlCommand(st, conn);
-                        try
-                        {
-                            conn.Open();
-                            sqlcom.ExecuteNonQuery();
-                            conn.Close();
-                        }
-
-                        catch (SqlException ex)
-                        {
-                            MessageBox.Show(ex.Message);
                         }
                     }
+                    MessageBox.Show("Mappings deleted!");
                 }
-                MessageBox.Show("Mappings deleted!");
             }
         }
 

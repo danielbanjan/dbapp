@@ -65,6 +65,7 @@ namespace test2
             tabs.TabPages.Remove(tabPage2);
             tabs.TabPages.Remove(tabPage3);
             tabs.TabPages.Remove(tabPage4);
+            tabs.TabPages.Remove(tabPage5);
         }
 
         public void showpages()
@@ -72,6 +73,7 @@ namespace test2
             tabs.TabPages.Insert(1, tabPage2);
             tabs.TabPages.Insert(2, tabPage3);
             tabs.TabPages.Insert(3, tabPage4);
+            tabs.TabPages.Insert(4, tabPage5);
         }
         private void loginbtn_Click(object sender, EventArgs e)
         {
@@ -608,11 +610,20 @@ namespace test2
         {
             return Regex.IsMatch(mailAddress, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
         }
+        public string Changelinkstotest(string link)
+        {
+            link = link.Replace("www.oferte360.ro", "test.ro");
+            return link;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            string[] lines = links_tb.Text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
+            for (int j = 0; j < lines.Length; j++)
+            {
+                Changelinkstotest(lines[j]);
+                MessageBox.Show(Changelinkstotest(lines[j]));
+            }
         }
-
         private void linkLabel1_LinkClicked(object sender, EventArgs e)
         {
             this.we_link1.LinkVisited = true;

@@ -74,6 +74,7 @@
             this.updatebtn = new System.Windows.Forms.Button();
             this.fd_dgv = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.emailto_lbl = new System.Windows.Forms.Label();
             this.ss_link10 = new System.Windows.Forms.LinkLabel();
             this.ss_link9 = new System.Windows.Forms.LinkLabel();
             this.emailto_tb = new System.Windows.Forms.TextBox();
@@ -97,7 +98,6 @@
             this.we_link1 = new System.Windows.Forms.LinkLabel();
             this.we_gb = new System.Windows.Forms.GroupBox();
             this.ss_gb = new System.Windows.Forms.GroupBox();
-            this.emailto_lbl = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -750,6 +750,15 @@
             this.tabPage5.Text = "Emails";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // emailto_lbl
+            // 
+            this.emailto_lbl.AutoSize = true;
+            this.emailto_lbl.Location = new System.Drawing.Point(297, 3);
+            this.emailto_lbl.Name = "emailto_lbl";
+            this.emailto_lbl.Size = new System.Drawing.Size(47, 13);
+            this.emailto_lbl.TabIndex = 23;
+            this.emailto_lbl.Text = "Email to:";
+            // 
             // ss_link10
             // 
             this.ss_link10.AutoSize = true;
@@ -789,6 +798,7 @@
             // 
             // links_tb
             // 
+            this.links_tb.AcceptsTab = true;
             this.links_tb.Location = new System.Drawing.Point(1, 19);
             this.links_tb.Name = "links_tb";
             this.links_tb.Size = new System.Drawing.Size(280, 349);
@@ -974,15 +984,6 @@
             this.ss_gb.TabIndex = 22;
             this.ss_gb.TabStop = false;
             this.ss_gb.Text = "Saved Search Emails";
-            // 
-            // emailto_lbl
-            // 
-            this.emailto_lbl.AutoSize = true;
-            this.emailto_lbl.Location = new System.Drawing.Point(297, 3);
-            this.emailto_lbl.Name = "emailto_lbl";
-            this.emailto_lbl.Size = new System.Drawing.Size(47, 13);
-            this.emailto_lbl.TabIndex = 23;
-            this.emailto_lbl.Text = "Email to:";
             // 
             // Form1
             // 

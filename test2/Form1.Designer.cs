@@ -75,8 +75,8 @@
             this.fd_dgv = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.emailto_lbl = new System.Windows.Forms.Label();
-            this.ss_link10 = new System.Windows.Forms.LinkLabel();
-            this.ss_link9 = new System.Windows.Forms.LinkLabel();
+            this.link14 = new System.Windows.Forms.LinkLabel();
+            this.link13 = new System.Windows.Forms.LinkLabel();
             this.emailto_tb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.links_tb = new System.Windows.Forms.RichTextBox();
@@ -84,18 +84,18 @@
             this.mail_send_btn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.ss_link8 = new System.Windows.Forms.LinkLabel();
-            this.ss_link7 = new System.Windows.Forms.LinkLabel();
-            this.ss_link6 = new System.Windows.Forms.LinkLabel();
-            this.ss_link5 = new System.Windows.Forms.LinkLabel();
-            this.ss_link4 = new System.Windows.Forms.LinkLabel();
-            this.ss_link3 = new System.Windows.Forms.LinkLabel();
-            this.ss_link2 = new System.Windows.Forms.LinkLabel();
-            this.ss_link1 = new System.Windows.Forms.LinkLabel();
-            this.we_link4 = new System.Windows.Forms.LinkLabel();
-            this.we_link3 = new System.Windows.Forms.LinkLabel();
-            this.we_link2 = new System.Windows.Forms.LinkLabel();
-            this.we_link1 = new System.Windows.Forms.LinkLabel();
+            this.link12 = new System.Windows.Forms.LinkLabel();
+            this.link11 = new System.Windows.Forms.LinkLabel();
+            this.link10 = new System.Windows.Forms.LinkLabel();
+            this.link9 = new System.Windows.Forms.LinkLabel();
+            this.link8 = new System.Windows.Forms.LinkLabel();
+            this.link7 = new System.Windows.Forms.LinkLabel();
+            this.link6 = new System.Windows.Forms.LinkLabel();
+            this.link5 = new System.Windows.Forms.LinkLabel();
+            this.link4 = new System.Windows.Forms.LinkLabel();
+            this.link3 = new System.Windows.Forms.LinkLabel();
+            this.link2 = new System.Windows.Forms.LinkLabel();
+            this.link1 = new System.Windows.Forms.LinkLabel();
             this.we_gb = new System.Windows.Forms.GroupBox();
             this.ss_gb = new System.Windows.Forms.GroupBox();
             this.tabPage1.SuspendLayout();
@@ -719,8 +719,8 @@
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.emailto_lbl);
-            this.tabPage5.Controls.Add(this.ss_link10);
-            this.tabPage5.Controls.Add(this.ss_link9);
+            this.tabPage5.Controls.Add(this.link14);
+            this.tabPage5.Controls.Add(this.link13);
             this.tabPage5.Controls.Add(this.emailto_tb);
             this.tabPage5.Controls.Add(this.label2);
             this.tabPage5.Controls.Add(this.links_tb);
@@ -728,18 +728,18 @@
             this.tabPage5.Controls.Add(this.mail_send_btn);
             this.tabPage5.Controls.Add(this.button2);
             this.tabPage5.Controls.Add(this.button1);
-            this.tabPage5.Controls.Add(this.ss_link8);
-            this.tabPage5.Controls.Add(this.ss_link7);
-            this.tabPage5.Controls.Add(this.ss_link6);
-            this.tabPage5.Controls.Add(this.ss_link5);
-            this.tabPage5.Controls.Add(this.ss_link4);
-            this.tabPage5.Controls.Add(this.ss_link3);
-            this.tabPage5.Controls.Add(this.ss_link2);
-            this.tabPage5.Controls.Add(this.ss_link1);
-            this.tabPage5.Controls.Add(this.we_link4);
-            this.tabPage5.Controls.Add(this.we_link3);
-            this.tabPage5.Controls.Add(this.we_link2);
-            this.tabPage5.Controls.Add(this.we_link1);
+            this.tabPage5.Controls.Add(this.link12);
+            this.tabPage5.Controls.Add(this.link11);
+            this.tabPage5.Controls.Add(this.link10);
+            this.tabPage5.Controls.Add(this.link9);
+            this.tabPage5.Controls.Add(this.link8);
+            this.tabPage5.Controls.Add(this.link7);
+            this.tabPage5.Controls.Add(this.link6);
+            this.tabPage5.Controls.Add(this.link5);
+            this.tabPage5.Controls.Add(this.link4);
+            this.tabPage5.Controls.Add(this.link3);
+            this.tabPage5.Controls.Add(this.link2);
+            this.tabPage5.Controls.Add(this.link1);
             this.tabPage5.Controls.Add(this.we_gb);
             this.tabPage5.Controls.Add(this.ss_gb);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
@@ -759,25 +759,29 @@
             this.emailto_lbl.TabIndex = 23;
             this.emailto_lbl.Text = "Email to:";
             // 
-            // ss_link10
+            // link14
             // 
-            this.ss_link10.AutoSize = true;
-            this.ss_link10.Location = new System.Drawing.Point(626, 355);
-            this.ss_link10.Name = "ss_link10";
-            this.ss_link10.Size = new System.Drawing.Size(137, 13);
-            this.ss_link10.TabIndex = 20;
-            this.ss_link10.TabStop = true;
-            this.ss_link10.Text = "Saved Search Unsubscribe";
+            this.link14.AutoSize = true;
+            this.link14.Location = new System.Drawing.Point(626, 355);
+            this.link14.Name = "link14";
+            this.link14.Size = new System.Drawing.Size(137, 13);
+            this.link14.TabIndex = 20;
+            this.link14.TabStop = true;
+            this.link14.Text = "Saved Search Unsubscribe";
+            this.link14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link14_MouseClick);
+            this.link14.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link14_MouseDoubleClick);
             // 
-            // ss_link9
+            // link13
             // 
-            this.ss_link9.AutoSize = true;
-            this.ss_link9.Location = new System.Drawing.Point(626, 330);
-            this.ss_link9.Name = "ss_link9";
-            this.ss_link9.Size = new System.Drawing.Size(177, 13);
-            this.ss_link9.TabIndex = 19;
-            this.ss_link9.TabStop = true;
-            this.ss_link9.Text = "Saved Search Change Frequency 4";
+            this.link13.AutoSize = true;
+            this.link13.Location = new System.Drawing.Point(626, 330);
+            this.link13.Name = "link13";
+            this.link13.Size = new System.Drawing.Size(177, 13);
+            this.link13.TabIndex = 19;
+            this.link13.TabStop = true;
+            this.link13.Text = "Saved Search Change Frequency 4";
+            this.link13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link13_MouseClick);
+            this.link13.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link13_MouseDoubleClick);
             // 
             // emailto_tb
             // 
@@ -845,127 +849,149 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ss_link8
+            // link12
             // 
-            this.ss_link8.AutoSize = true;
-            this.ss_link8.Location = new System.Drawing.Point(626, 305);
-            this.ss_link8.Name = "ss_link8";
-            this.ss_link8.Size = new System.Drawing.Size(177, 13);
-            this.ss_link8.TabIndex = 11;
-            this.ss_link8.TabStop = true;
-            this.ss_link8.Text = "Saved Search Change Frequency 3";
+            this.link12.AutoSize = true;
+            this.link12.Location = new System.Drawing.Point(626, 305);
+            this.link12.Name = "link12";
+            this.link12.Size = new System.Drawing.Size(177, 13);
+            this.link12.TabIndex = 11;
+            this.link12.TabStop = true;
+            this.link12.Text = "Saved Search Change Frequency 3";
+            this.link12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link12_MouseClick);
+            this.link12.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link12_MouseDoubleClick);
             // 
-            // ss_link7
+            // link11
             // 
-            this.ss_link7.AutoSize = true;
-            this.ss_link7.Location = new System.Drawing.Point(626, 280);
-            this.ss_link7.Name = "ss_link7";
-            this.ss_link7.Size = new System.Drawing.Size(177, 13);
-            this.ss_link7.TabIndex = 10;
-            this.ss_link7.TabStop = true;
-            this.ss_link7.Text = "Saved Search Change Frequency 2";
+            this.link11.AutoSize = true;
+            this.link11.Location = new System.Drawing.Point(626, 280);
+            this.link11.Name = "link11";
+            this.link11.Size = new System.Drawing.Size(177, 13);
+            this.link11.TabIndex = 10;
+            this.link11.TabStop = true;
+            this.link11.Text = "Saved Search Change Frequency 2";
+            this.link11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link11_MouseClick);
+            this.link11.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link11_MouseDoubleClick);
             // 
-            // ss_link6
+            // link10
             // 
-            this.ss_link6.AutoSize = true;
-            this.ss_link6.Location = new System.Drawing.Point(626, 255);
-            this.ss_link6.Name = "ss_link6";
-            this.ss_link6.Size = new System.Drawing.Size(177, 13);
-            this.ss_link6.TabIndex = 9;
-            this.ss_link6.TabStop = true;
-            this.ss_link6.Text = "Saved Search Change Frequency 1";
+            this.link10.AutoSize = true;
+            this.link10.Location = new System.Drawing.Point(626, 255);
+            this.link10.Name = "link10";
+            this.link10.Size = new System.Drawing.Size(177, 13);
+            this.link10.TabIndex = 9;
+            this.link10.TabStop = true;
+            this.link10.Text = "Saved Search Change Frequency 1";
+            this.link10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link10_MouseClick);
+            this.link10.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link10_MouseDoubleClick);
             // 
-            // ss_link5
+            // link9
             // 
-            this.ss_link5.AutoSize = true;
-            this.ss_link5.Location = new System.Drawing.Point(626, 230);
-            this.ss_link5.Name = "ss_link5";
-            this.ss_link5.Size = new System.Drawing.Size(133, 13);
-            this.ss_link5.TabIndex = 8;
-            this.ss_link5.TabStop = true;
-            this.ss_link5.Text = "Saved Search Modify Alert";
+            this.link9.AutoSize = true;
+            this.link9.Location = new System.Drawing.Point(626, 230);
+            this.link9.Name = "link9";
+            this.link9.Size = new System.Drawing.Size(133, 13);
+            this.link9.TabIndex = 8;
+            this.link9.TabStop = true;
+            this.link9.Text = "Saved Search Modify Alert";
+            this.link9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link9_MouseClick);
+            this.link9.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link9_MouseDoubleClick);
             // 
-            // ss_link4
+            // link8
             // 
-            this.ss_link4.AutoSize = true;
-            this.ss_link4.Location = new System.Drawing.Point(626, 205);
-            this.ss_link4.Name = "ss_link4";
-            this.ss_link4.Size = new System.Drawing.Size(170, 13);
-            this.ss_link4.TabIndex = 7;
-            this.ss_link4.TabStop = true;
-            this.ss_link4.Text = "Saved Search Show More Results";
+            this.link8.AutoSize = true;
+            this.link8.Location = new System.Drawing.Point(626, 205);
+            this.link8.Name = "link8";
+            this.link8.Size = new System.Drawing.Size(170, 13);
+            this.link8.TabIndex = 7;
+            this.link8.TabStop = true;
+            this.link8.Text = "Saved Search Show More Results";
+            this.link8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link8_MouseClick);
+            this.link8.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link8_MouseDoubleClick);
             // 
-            // ss_link3
+            // link7
             // 
-            this.ss_link3.AutoSize = true;
-            this.ss_link3.Location = new System.Drawing.Point(626, 180);
-            this.ss_link3.Name = "ss_link3";
-            this.ss_link3.Size = new System.Drawing.Size(165, 13);
-            this.ss_link3.TabIndex = 6;
-            this.ss_link3.TabStop = true;
-            this.ss_link3.Text = "Saved Search Ad View More Info";
+            this.link7.AutoSize = true;
+            this.link7.Location = new System.Drawing.Point(626, 180);
+            this.link7.Name = "link7";
+            this.link7.Size = new System.Drawing.Size(165, 13);
+            this.link7.TabIndex = 6;
+            this.link7.TabStop = true;
+            this.link7.Text = "Saved Search Ad View More Info";
+            this.link7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link7_MouseClick);
+            this.link7.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link7_MouseDoubleClick);
             // 
-            // ss_link2
+            // link6
             // 
-            this.ss_link2.AutoSize = true;
-            this.ss_link2.Location = new System.Drawing.Point(626, 155);
-            this.ss_link2.Name = "ss_link2";
-            this.ss_link2.Size = new System.Drawing.Size(114, 13);
-            this.ss_link2.TabIndex = 5;
-            this.ss_link2.TabStop = true;
-            this.ss_link2.Text = "Saved Search Ad Title";
+            this.link6.AutoSize = true;
+            this.link6.Location = new System.Drawing.Point(626, 155);
+            this.link6.Name = "link6";
+            this.link6.Size = new System.Drawing.Size(114, 13);
+            this.link6.TabIndex = 5;
+            this.link6.TabStop = true;
+            this.link6.Text = "Saved Search Ad Title";
+            this.link6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link6_MouseClick);
+            this.link6.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link6_MouseDoubleClick);
             // 
-            // ss_link1
+            // link5
             // 
-            this.ss_link1.AutoSize = true;
-            this.ss_link1.Location = new System.Drawing.Point(626, 130);
-            this.ss_link1.Name = "ss_link1";
-            this.ss_link1.Size = new System.Drawing.Size(122, 13);
-            this.ss_link1.TabIndex = 4;
-            this.ss_link1.TabStop = true;
-            this.ss_link1.Text = "Saved Search Alert Title";
+            this.link5.AutoSize = true;
+            this.link5.Location = new System.Drawing.Point(626, 130);
+            this.link5.Name = "link5";
+            this.link5.Size = new System.Drawing.Size(122, 13);
+            this.link5.TabIndex = 4;
+            this.link5.TabStop = true;
+            this.link5.Text = "Saved Search Alert Title";
+            this.link5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link5_MouseClick);
+            this.link5.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link5_MouseDoubleClick);
             // 
-            // we_link4
+            // link4
             // 
-            this.we_link4.AutoSize = true;
-            this.we_link4.Location = new System.Drawing.Point(626, 95);
-            this.we_link4.Name = "we_link4";
-            this.we_link4.Size = new System.Drawing.Size(142, 13);
-            this.we_link4.TabIndex = 3;
-            this.we_link4.TabStop = true;
-            this.we_link4.Text = "Welcome Email Unsubscribe";
+            this.link4.AutoSize = true;
+            this.link4.Location = new System.Drawing.Point(626, 95);
+            this.link4.Name = "link4";
+            this.link4.Size = new System.Drawing.Size(142, 13);
+            this.link4.TabIndex = 3;
+            this.link4.TabStop = true;
+            this.link4.Text = "Welcome Email Unsubscribe";
+            this.link4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link4_MouseClick);
+            this.link4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link4_MouseDoubleClick);
             // 
-            // we_link3
+            // link3
             // 
-            this.we_link3.AutoSize = true;
-            this.we_link3.Location = new System.Drawing.Point(626, 70);
-            this.we_link3.Name = "we_link3";
-            this.we_link3.Size = new System.Drawing.Size(144, 13);
-            this.we_link3.TabIndex = 2;
-            this.we_link3.TabStop = true;
-            this.we_link3.Text = "Welcome Email Search More";
+            this.link3.AutoSize = true;
+            this.link3.Location = new System.Drawing.Point(626, 70);
+            this.link3.Name = "link3";
+            this.link3.Size = new System.Drawing.Size(144, 13);
+            this.link3.TabIndex = 2;
+            this.link3.TabStop = true;
+            this.link3.Text = "Welcome Email Search More";
+            this.link3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link3_MouseClick);
+            this.link3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link3_MouseDoubleClick);
             // 
-            // we_link2
+            // link2
             // 
-            this.we_link2.AutoSize = true;
-            this.we_link2.Location = new System.Drawing.Point(626, 45);
-            this.we_link2.Name = "we_link2";
-            this.we_link2.Size = new System.Drawing.Size(151, 13);
-            this.we_link2.TabIndex = 1;
-            this.we_link2.TabStop = true;
-            this.we_link2.Text = "Welcome Email Modify Search";
+            this.link2.AutoSize = true;
+            this.link2.Location = new System.Drawing.Point(626, 45);
+            this.link2.Name = "link2";
+            this.link2.Size = new System.Drawing.Size(151, 13);
+            this.link2.TabIndex = 1;
+            this.link2.TabStop = true;
+            this.link2.Text = "Welcome Email Modify Search";
+            this.link2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link2_MouseClick);
+            this.link2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link2_MouseDoubleClick);
             // 
-            // we_link1
+            // link1
             // 
-            this.we_link1.AutoSize = true;
-            this.we_link1.Location = new System.Drawing.Point(626, 20);
-            this.we_link1.Name = "we_link1";
-            this.we_link1.Size = new System.Drawing.Size(99, 13);
-            this.we_link1.TabIndex = 0;
-            this.we_link1.TabStop = true;
-            this.we_link1.Text = "Welcome Email title";
-            this.we_link1.Click += new System.EventHandler(this.linkLabel1_Click);
-            this.we_link1.DoubleClick += new System.EventHandler(this.linkLabel1_LinkClicked);
+            this.link1.AutoSize = true;
+            this.link1.Location = new System.Drawing.Point(626, 20);
+            this.link1.Name = "link1";
+            this.link1.Size = new System.Drawing.Size(99, 13);
+            this.link1.TabIndex = 0;
+            this.link1.TabStop = true;
+            this.link1.Text = "Welcome Email title";
+            this.link1.Click += new System.EventHandler(this.linkLabel1_Click);
+            this.link1.DoubleClick += new System.EventHandler(this.linkLabel1_LinkClicked);
             // 
             // we_gb
             // 
@@ -1070,18 +1096,18 @@
         private System.Windows.Forms.Label fclbl;
         private System.Windows.Forms.Button upj_btn;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.LinkLabel ss_link8;
-        private System.Windows.Forms.LinkLabel ss_link7;
-        private System.Windows.Forms.LinkLabel ss_link6;
-        private System.Windows.Forms.LinkLabel ss_link5;
-        private System.Windows.Forms.LinkLabel ss_link4;
-        private System.Windows.Forms.LinkLabel ss_link3;
-        private System.Windows.Forms.LinkLabel ss_link2;
-        private System.Windows.Forms.LinkLabel ss_link1;
-        private System.Windows.Forms.LinkLabel we_link4;
-        private System.Windows.Forms.LinkLabel we_link3;
-        private System.Windows.Forms.LinkLabel we_link2;
-        private System.Windows.Forms.LinkLabel we_link1;
+        private System.Windows.Forms.LinkLabel link12;
+        private System.Windows.Forms.LinkLabel link11;
+        private System.Windows.Forms.LinkLabel link10;
+        private System.Windows.Forms.LinkLabel link9;
+        private System.Windows.Forms.LinkLabel link8;
+        private System.Windows.Forms.LinkLabel link7;
+        private System.Windows.Forms.LinkLabel link6;
+        private System.Windows.Forms.LinkLabel link5;
+        private System.Windows.Forms.LinkLabel link4;
+        private System.Windows.Forms.LinkLabel link3;
+        private System.Windows.Forms.LinkLabel link2;
+        private System.Windows.Forms.LinkLabel link1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button mail_send_btn;
@@ -1089,8 +1115,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox links_tb;
         private System.Windows.Forms.TextBox emailto_tb;
-        private System.Windows.Forms.LinkLabel ss_link10;
-        private System.Windows.Forms.LinkLabel ss_link9;
+        private System.Windows.Forms.LinkLabel link14;
+        private System.Windows.Forms.LinkLabel link13;
         private System.Windows.Forms.GroupBox we_gb;
         private System.Windows.Forms.GroupBox ss_gb;
         private System.Windows.Forms.Label emailto_lbl;

@@ -600,7 +600,7 @@ namespace test2
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Specify that the link was visited.
-            this.we_link1.LinkVisited = true;
+            this.link1.LinkVisited = true;
 
             // Navigate to a URL.
             System.Diagnostics.Process.Start("http://testch.hugintechnologies.com/login-saved-search");
@@ -610,23 +610,72 @@ namespace test2
         {
             return Regex.IsMatch(mailAddress, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
         }
-        public string Changelinkstotest(string link)
+        public string[] Changelinkstotest()
         {
-            link = link.Replace("www.oferte360.ro", "test.ro");
-            return link;
+            string[] links = links_tb.Text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
+            for (int j = 0; j < links.Length; j++)
+            {
+                links[j] = links[j].Replace("www.oferte360.ro", "testro.hugintechnologies.com");
+                links[j] = links[j].Replace("www.allekleinanzeigen.at", "testat.hugintechnologies.com");
+                links[j] = links[j].Replace("www.alleannoncer.dk", "testdk.hugintechnologies.com");
+                links[j] = links[j].Replace("www.ilmoitusopas.fi", "testfi.hugintechnologies.com");
+                links[j] = links[j].Replace("www.liquida.it/annunci", "testit.hugintechnologies.com/annunci");
+                links[j] = links[j].Replace("kleinanzeige.focus.de", "testde.hugintechnologies.com");
+                links[j] = links[j].Replace("www.rubrikk.no", "testno.hugintechnologies.com");
+                links[j] = links[j].Replace("www.misclasificados.es", "testes.hugintechnologies.com");
+                links[j] = links[j].Replace("www.annonsguide.se", "testse.hugintechnologies.com");
+                links[j] = links[j].Replace("www.allekleinanzeigen.ch", "testch.hugintechnologies.com");
+                links[j] = links[j].Replace("www.newsnow.co.uk/classifieds", "testuk.hugintechnologies.com/classifieds");
+                links[j] = links[j].Replace("www.mesannoncesfrance.fr", "testfr.hugintechnologies.com");
+                links[j] = links[j].Replace("www.zbiorogloszen.pl", "testpl.hugintechnologies.com");
+                links[j] = links[j].Replace("www.allclassifieds.ie", "testie.hugintechnologies.com");
+                links[j] = links[j].Replace("www.allezoekertjes.be", "testbe.hugintechnologies.com");
+                links[j] = links[j].Replace("www.the-star.co.ke/classifieds", "testke.hugintechnologies.com/classifieds");
+                links[j] = links[j].Replace("www.ananzi.co.za/ads", "testza.hugintechnologies.com/ads");
+                links[j] = links[j].Replace("www.todoanuncios.com.ar", "testar.hugintechnologies.com");
+                links[j] = links[j].Replace("www.acheiclassificado.com.br", "testbr.hugintechnologies.com");
+                links[j] = links[j].Replace("www.allclassifieds.ca", "testca.hugintechnologies.com");
+                links[j] = links[j].Replace("www.todoclasificados.mx", "testmx.hugintechnologies.com");
+                links[j] = links[j].Replace("www.todoclasificados.co", "testco.hugintechnologies.com");
+                links[j] = links[j].Replace("www.todoclasificados.cl", "testcl.hugintechnologies.com");
+                links[j] = links[j].Replace("bdnews24.com/classifieds", "testbd.hugintechnologies.com/classifieds");
+                links[j] = links[j].Replace("www.vietnamplus.vn/raovat", "testvn.hugintechnologies.com/raovat");
+                links[j] = links[j].Replace("www.findads.com.au", "testau.hugintechnologies.com");
+                links[j] = links[j].Replace("www.adsafari.in", "testin.hugintechnologies.com");
+                links[j] = links[j].Replace("www.ilanbul.com.tr", "testtr.hugintechnologies.com");
+            }
+            return links;
+        }
+        public void hidessmailstuff()
+        {
+            ss_gb.Hide();
+            link5.Hide();
+            link6.Hide();
+            link7.Hide();
+            link8.Hide();
+            link9.Hide();
+            link10.Hide();
+            link11.Hide();
+            link12.Hide();
+            link13.Hide();
+            link14.Hide();
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] lines = links_tb.Text.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
-            for (int j = 0; j < lines.Length; j++)
+            string [] links = Changelinkstotest();
+            if (links.Length < 5)
             {
-                Changelinkstotest(lines[j]);
-                MessageBox.Show(Changelinkstotest(lines[j]));
+                hidessmailstuff();
+
             }
+            for (int j = 0; j < links.Length; j++)
+            {
+                MessageBox.Show(links[j]);
+            }            
         }
         private void linkLabel1_LinkClicked(object sender, EventArgs e)
         {
-            this.we_link1.LinkVisited = true;
+            this.link1.LinkVisited = true;
 
             // Navigate to a URL.
             System.Diagnostics.Process.Start("www.google.ro");
@@ -707,13 +756,143 @@ namespace test2
 
         private void linkLabel1_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(we_link1.Text);
+            Clipboard.SetText(link1.Text);
         }
 
         private void emailto_tb_TextChanged(object sender, EventArgs e)
         {
             emailto_lbl.ForeColor = System.Drawing.Color.Black;
             emailto_lbl.Text = "Email to:";
+        }
+
+        private void link2_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link3_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link3_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link4_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link4_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link5_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link5_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link6_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link6_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link7_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link7_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link8_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link8_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link9_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link9_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link10_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link10_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link11_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link11_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link12_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link12_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link13_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link13_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link14_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void link14_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

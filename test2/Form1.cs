@@ -13,6 +13,7 @@ using System.Configuration;
 using System.Text.RegularExpressions;
 using System.Net.Mail;
 using System.Net;
+using System.Reflection;
 
 namespace test2
 {
@@ -30,6 +31,7 @@ namespace test2
         SqlCommandBuilder scb_db;
         SqlCommandBuilder scb_o;
         SqlCommandBuilder scb_sj;
+   
         private void Form1_Load(object sender, EventArgs e)
         {
             System.Windows.Forms.ToolTip sctt = new System.Windows.Forms.ToolTip();
@@ -660,45 +662,93 @@ namespace test2
             link13.Hide();
             link14.Hide();
         }
+        public void showssmailstuff()
+        {
+            ss_gb.Show();
+            link5.Show();
+            link6.Show();
+            link7.Show();
+            link8.Show();
+            link9.Show();
+            link10.Show();
+            link11.Show();
+            link12.Show();
+            link13.Show();
+            link14.Show();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
+            showssmailstuff();
             string [] links = Changelinkstotest();
+            links_tb.Clear();
             if (links.Length < 5)
             {
                 hidessmailstuff();
-
             }
             for (int j = 0; j < links.Length; j++)
             {
-                MessageBox.Show(links[j]);
+                links_tb.AppendText(links[j]+"\n");
             }            
         }
-        private void linkLabel1_LinkClicked(object sender, EventArgs e)
-        {
-            this.link1.LinkVisited = true;
 
-            // Navigate to a URL.
-            System.Diagnostics.Process.Start("www.google.ro");
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SmtpClient client = new SmtpClient();
-            client.Port = 587;
-            client.Host = "smtp.gmail.com";
-            client.EnableSsl = true;
-            client.Timeout = 10000;
-            client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.UseDefaultCredentials = false;
-            client.Credentials = new System.Net.NetworkCredential("danitestrubrikk@gmail.com", "Daniel.91");
-
-            MailMessage mm = new MailMessage("danitestrubrikk@gmail.com", "danitestrubrikk@gmail.com", "Ccaca", "http://testde.hugintechnologies.com\n http://testau.hugintechnologies.com\n");
-            mm.BodyEncoding = UTF8Encoding.UTF8;
-            mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-
-            client.Send(mm);
+            string Themessage = @"<html>
+                              <body>
+                                <table width=""100%"">
+                                <tr>
+                                    <td style=""font-style:arial; color:maroon; font-weight:bold"">
+                                   Hi! <br>
+                                    <img src=cid:myImageID>
+                                    </td>
+                                </tr>
+                                </table>
+                                </body>
+                                </html>";
+            sendHtmlEmail("danitestrubrikk@gmail.com", "danitestrubrikk@gmail.com", Themessage, "Test1", "Test HTML Email", "smtp.gmail.com", 25);
+            
         }
+        protected void sendHtmlEmail(string from_Email, string to_Email, string body, string from_Name, string Subject, string SMTP_IP, Int32 SMTP_Server_Port)
+        {
+            //create an instance of new mail message
+            MailMessage mail = new MailMessage();
 
+            //set the HTML format to true
+            mail.IsBodyHtml = true;
+
+            //create Alrternative HTML view
+            AlternateView htmlView = AlternateView.CreateAlternateViewFromString(body, null, "text/html");
+
+            //Add Image
+            LinkedResource theEmailImage = new LinkedResource("../../Resources/logo.png");
+            theEmailImage.ContentId = "myImageID";
+
+            //Add the Image to the Alternate view
+            htmlView.LinkedResources.Add(theEmailImage);
+
+            //Add view to the Email Message
+            mail.AlternateViews.Add(htmlView);
+
+            //set the "from email" address and specify a friendly 'from' name
+            mail.From = new MailAddress(from_Email, from_Name);
+
+            //set the "to" email address
+            mail.To.Add(to_Email);
+
+            //set the Email subject
+            mail.Subject = Subject;
+
+            //set the SMTP info
+            System.Net.NetworkCredential cred = new System.Net.NetworkCredential("danitestrubrikk@gmail.com", "Daniel.91");
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.EnableSsl = true;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = cred;
+            //send the email
+            smtp.Send(mail);
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             if (IsValidMailAddress(emailto_tb.Text)&& !string.IsNullOrWhiteSpace(links_tb.Text))
@@ -715,8 +765,9 @@ namespace test2
                 // Here you can put subject of the mail
                 string subject = "Test Subject";
                 // Body of the mail
-                string body = "<div style='border: medium solid grey; width: 500px; height: 266px;font-family: arial,sans-serif; font-size: 17px;'>";
+                string body = "<div style='width: 500px; height: 266px;font-family: arial,sans-serif; font-size: 17px;'>";
                 body += "<h3 style='background-color: blueviolet; margin-top:0px;'>Aspen Reporting Tool</h3>";
+                //body += "<img src ="/Resources/logo.png">";
                 body += "<br />";
                 body += "Dear " + userName + ",";
                 body += "<br />";
@@ -754,6 +805,10 @@ namespace test2
             }
         }
 
+        private void linkLabel1_LinkClicked(object sender, EventArgs e)
+        {
+
+        }
         private void linkLabel1_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(link1.Text);
@@ -765,134 +820,29 @@ namespace test2
             emailto_lbl.Text = "Email to:";
         }
 
-        private void link2_MouseClick(object sender, MouseEventArgs e)
+        public void openinbrowser(int linknr)
+        {
+            string[] links = Changelinkstotest();
+            string numelink = "link" + linknr;
+            ((LinkLabel)this.Controls.Find(numelink, true)[0]).LinkVisited = true;
+            // Navigate to a URL.
+            System.Diagnostics.Process.Start('"' +links[linknr] + '"');
+        }
+
+        public void copytoclip(int nr)
+        {
+            string[] links = Changelinkstotest();
+            Clipboard.SetText(links[nr]);
+        }
+
+        private void link2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void link2_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void link2_DoubleClick(object sender, EventArgs e)
         {
-
-        }
-
-        private void link3_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link3_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link4_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link4_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link5_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link5_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link6_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link6_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link7_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link7_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link8_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link8_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link9_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link9_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link10_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link10_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link11_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link11_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link12_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link12_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link13_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link13_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link14_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void link14_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
+            Clipboard.SetText(sender.ToString());
         }
     }
 }

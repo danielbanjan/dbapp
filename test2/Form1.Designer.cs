@@ -768,8 +768,6 @@
             this.link14.TabIndex = 20;
             this.link14.TabStop = true;
             this.link14.Text = "Saved Search Unsubscribe";
-            this.link14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link14_MouseClick);
-            this.link14.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link14_MouseDoubleClick);
             // 
             // link13
             // 
@@ -780,8 +778,6 @@
             this.link13.TabIndex = 19;
             this.link13.TabStop = true;
             this.link13.Text = "Saved Search Change Frequency 4";
-            this.link13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link13_MouseClick);
-            this.link13.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link13_MouseDoubleClick);
             // 
             // emailto_tb
             // 
@@ -858,8 +854,6 @@
             this.link12.TabIndex = 11;
             this.link12.TabStop = true;
             this.link12.Text = "Saved Search Change Frequency 3";
-            this.link12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link12_MouseClick);
-            this.link12.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link12_MouseDoubleClick);
             // 
             // link11
             // 
@@ -870,8 +864,6 @@
             this.link11.TabIndex = 10;
             this.link11.TabStop = true;
             this.link11.Text = "Saved Search Change Frequency 2";
-            this.link11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link11_MouseClick);
-            this.link11.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link11_MouseDoubleClick);
             // 
             // link10
             // 
@@ -882,8 +874,6 @@
             this.link10.TabIndex = 9;
             this.link10.TabStop = true;
             this.link10.Text = "Saved Search Change Frequency 1";
-            this.link10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link10_MouseClick);
-            this.link10.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link10_MouseDoubleClick);
             // 
             // link9
             // 
@@ -894,8 +884,6 @@
             this.link9.TabIndex = 8;
             this.link9.TabStop = true;
             this.link9.Text = "Saved Search Modify Alert";
-            this.link9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link9_MouseClick);
-            this.link9.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link9_MouseDoubleClick);
             // 
             // link8
             // 
@@ -906,8 +894,6 @@
             this.link8.TabIndex = 7;
             this.link8.TabStop = true;
             this.link8.Text = "Saved Search Show More Results";
-            this.link8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link8_MouseClick);
-            this.link8.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link8_MouseDoubleClick);
             // 
             // link7
             // 
@@ -918,8 +904,6 @@
             this.link7.TabIndex = 6;
             this.link7.TabStop = true;
             this.link7.Text = "Saved Search Ad View More Info";
-            this.link7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link7_MouseClick);
-            this.link7.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link7_MouseDoubleClick);
             // 
             // link6
             // 
@@ -930,8 +914,6 @@
             this.link6.TabIndex = 5;
             this.link6.TabStop = true;
             this.link6.Text = "Saved Search Ad Title";
-            this.link6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link6_MouseClick);
-            this.link6.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link6_MouseDoubleClick);
             // 
             // link5
             // 
@@ -942,8 +924,6 @@
             this.link5.TabIndex = 4;
             this.link5.TabStop = true;
             this.link5.Text = "Saved Search Alert Title";
-            this.link5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link5_MouseClick);
-            this.link5.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link5_MouseDoubleClick);
             // 
             // link4
             // 
@@ -954,8 +934,6 @@
             this.link4.TabIndex = 3;
             this.link4.TabStop = true;
             this.link4.Text = "Welcome Email Unsubscribe";
-            this.link4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link4_MouseClick);
-            this.link4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link4_MouseDoubleClick);
             // 
             // link3
             // 
@@ -966,8 +944,6 @@
             this.link3.TabIndex = 2;
             this.link3.TabStop = true;
             this.link3.Text = "Welcome Email Search More";
-            this.link3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link3_MouseClick);
-            this.link3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link3_MouseDoubleClick);
             // 
             // link2
             // 
@@ -978,8 +954,8 @@
             this.link2.TabIndex = 1;
             this.link2.TabStop = true;
             this.link2.Text = "Welcome Email Modify Search";
-            this.link2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link2_MouseClick);
-            this.link2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link2_MouseDoubleClick);
+            this.link2.Click += new System.EventHandler(this.link2_Click);
+            this.link2.DoubleClick += new System.EventHandler(this.link2_DoubleClick);
             // 
             // link1
             // 

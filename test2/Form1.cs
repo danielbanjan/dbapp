@@ -31,7 +31,6 @@ namespace test2
         SqlCommandBuilder scb_db;
         SqlCommandBuilder scb_o;
         SqlCommandBuilder scb_sj;
-   
         private void Form1_Load(object sender, EventArgs e)
         {
             System.Windows.Forms.ToolTip sctt = new System.Windows.Forms.ToolTip();
@@ -69,7 +68,6 @@ namespace test2
             tabs.TabPages.Remove(tabPage4);
             tabs.TabPages.Remove(tabPage5);
         }
-
         public void showpages()
         {
             tabs.TabPages.Insert(1, tabPage2);
@@ -127,7 +125,6 @@ namespace test2
                 tabs.SelectedTab = tabPage2;
             }
         }
-
         private void deletebtn_Click(object sender, EventArgs e)
         {
             var confirmResult = MessageBox.Show("Are you sure to Update the table?",
@@ -197,7 +194,6 @@ namespace test2
                 }
             }
         }
-
         private void deletebtnjob_Click(object sender, EventArgs e)
         {
             var confirmResult = MessageBox.Show("Are you sure to Update the table?",
@@ -264,7 +260,6 @@ namespace test2
                 }
             }
         }
-
         private void searchbtn_Click(object sender, EventArgs e)
         {
             String st = "";
@@ -345,7 +340,6 @@ namespace test2
                 }
             }
         }
-
         private void Insertbtn_Click(object sender, EventArgs e)
         {
             String st = "";
@@ -390,7 +384,6 @@ namespace test2
                 MessageBox.Show("Mappings Added!");
             }
         }
-
         private void sacb_CheckedChanged(object sender, EventArgs e)
         {
             if (sacb.Checked == true)
@@ -410,7 +403,6 @@ namespace test2
                 sacb.Text = "Select All";
             }
         }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (sacbjt.Checked == true)
@@ -437,7 +429,6 @@ namespace test2
                 jttxtbox.Focus();
             }
         }
-
         private void tablecb_SelectedIndexChanged(object sender, MouseEventArgs e)
         {
             tablecb.DroppedDown = true;
@@ -559,7 +550,6 @@ namespace test2
                 }
             }
         }
-
         private void sa_fdo_cb_CheckedChanged(object sender, EventArgs e)
         {
             if (sa_fdo_cb.Checked == true)
@@ -586,7 +576,6 @@ namespace test2
             setitems.Checked = false;
             hidegridsandlabels();
         }
-
         private void upj_btn_Click(object sender, EventArgs e)
         {
             var confirmResult = MessageBox.Show("Are you sure to Update the table?",
@@ -598,7 +587,6 @@ namespace test2
                 sda_sj.Update(dt_sj);
             }
         }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Specify that the link was visited.
@@ -607,7 +595,6 @@ namespace test2
             // Navigate to a URL.
             System.Diagnostics.Process.Start("http://testch.hugintechnologies.com/login-saved-search");
         }
-
         static bool IsValidMailAddress(string mailAddress)
         {
             return Regex.IsMatch(mailAddress, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");

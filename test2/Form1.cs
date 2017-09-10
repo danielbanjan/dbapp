@@ -721,13 +721,13 @@ namespace test2
                 string smtpAddress = "smtp.gmail.com";
                 int portNumber = 587;
                 string emailTo = emailto_tb.Text;
-                string subject = "Test Emails";
+                string subject = "Test Emails "+ DateTime.Now.ToString("dd.MM.yyyy HH:mm");
                 string body = "<div style = 'width: 50%'>";
                 body += "<img src=http://i.imgur.com/jFekwMW.png>";
                 body += "<br />";
                 for (int j = 0; j < links.Length; j++)
                 {
-                    body += "<p><a href='" + links[j] + "'><b>Email Link nr" + j+ "</b></a></p>";
+                    body += "<p><a rel='nofollow'; target='_blank'; href='" + links[j] + "'><b>Email Link nr" +j+"</b></a></p>";
                 }
                 body += "Thanks,";
                 body += "<br />";

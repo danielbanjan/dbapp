@@ -602,7 +602,7 @@ namespace test2
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Specify that the link was visited.
-            this.link1.LinkVisited = true;
+            this.link0.LinkVisited = true;
 
             // Navigate to a URL.
             System.Diagnostics.Process.Start("http://testch.hugintechnologies.com/login-saved-search");
@@ -611,6 +611,32 @@ namespace test2
         static bool IsValidMailAddress(string mailAddress)
         {
             return Regex.IsMatch(mailAddress, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+        }
+        public void Validatelinkstb()
+        {
+            if (string.IsNullOrWhiteSpace(links_tb.Text))
+            {
+                linkstb_lbl.Text = "Invalid or empty link list!";
+                linkstb_lbl.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                linkstb_lbl.Text = "Input the email links here:";
+                linkstb_lbl.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+        public void validateemailtb()
+        {
+            if (IsValidMailAddress(emailto_tb.Text) == false)
+            {
+                emailto_lbl.ForeColor = System.Drawing.Color.Red;
+                emailto_lbl.Text = "Invalid email address!";
+            }
+            else
+            {
+                emailto_lbl.ForeColor = System.Drawing.Color.Black;
+                emailto_lbl.Text = "Email to:";
+            }
         }
         public string[] Changelinkstotest()
         {
@@ -651,6 +677,7 @@ namespace test2
         public void hidessmailstuff()
         {
             ss_gb.Hide();
+            link4.Hide();
             link5.Hide();
             link6.Hide();
             link7.Hide();
@@ -660,11 +687,11 @@ namespace test2
             link11.Hide();
             link12.Hide();
             link13.Hide();
-            link14.Hide();
         }
         public void showssmailstuff()
         {
             ss_gb.Show();
+            link4.Show();
             link5.Show();
             link6.Show();
             link7.Show();
@@ -674,12 +701,11 @@ namespace test2
             link11.Show();
             link12.Show();
             link13.Show();
-            link14.Show();
         }
-        private void button1_Click(object sender, EventArgs e)
+        public void changetblinks_hidess()
         {
+            string[] links = Changelinkstotest();
             showssmailstuff();
-            string [] links = Changelinkstotest();
             links_tb.Clear();
             if (links.Length < 5)
             {
@@ -687,12 +713,12 @@ namespace test2
             }
             for (int j = 0; j < links.Length; j++)
             {
-                links_tb.AppendText(links[j]+"\n");
-            }            
+                links_tb.AppendText(links[j] + "\n");
+            }
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-        
+            changetblinks_hidess();
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -731,23 +757,14 @@ namespace test2
                         smtp.Timeout = 10000;
                     }
                 }
+                changetblinks_hidess();
             }
             else
             {
-                emailto_lbl.ForeColor = System.Drawing.Color.Red;
-                emailto_lbl.Text = "Invalid email address!";
+                validateemailtb();
+                Validatelinkstb();
             }
         }
-
-        private void linkLabel1_LinkClicked(object sender, EventArgs e)
-        {
-
-        }
-        private void linkLabel1_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(link1.Text);
-        }
-
         private void emailto_tb_TextChanged(object sender, EventArgs e)
         {
             emailto_lbl.ForeColor = System.Drawing.Color.Black;
@@ -769,14 +786,38 @@ namespace test2
             Clipboard.SetText(links[nr]);
         }
 
+        private void linkLabel1_LinkClicked(object sender, EventArgs e)
+        {
+            copytoclip(0);
+        }
+        private void linkLabel1_Click(object sender, EventArgs e)
+        {
+            openinbrowser(0);
+        }
         private void link2_Click(object sender, EventArgs e)
         {
-
+            openinbrowser(1);
         }
 
         private void link2_DoubleClick(object sender, EventArgs e)
         {
-            Clipboard.SetText(sender.ToString());
+            copytoclip(1);
+        }
+
+        private void links_tb_TextChanged(object sender, EventArgs e)
+        {
+            linkstb_lbl.ForeColor = System.Drawing.Color.Black;
+            linkstb_lbl.Text = "Input the email links here:";
+        }
+
+        private void link2_MouseClick(object sender, MouseEventArgs e)
+        {
+            openinbrowser(2);
+        }
+
+        private void link2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            copytoclip(2);
         }
     }
 }

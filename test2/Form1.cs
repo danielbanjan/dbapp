@@ -690,108 +690,42 @@ namespace test2
                 links_tb.AppendText(links[j]+"\n");
             }            
         }
-
-
         private void button2_Click(object sender, EventArgs e)
         {
-            string Themessage = @"<html>
-                              <body>
-                                <table width=""100%"">
-                                <tr>
-                                    <td style=""font-style:arial; color:maroon; font-weight:bold"">
-                                   Hi! <br>
-                                    <img src=cid:myImageID>
-                                    </td>
-                                </tr>
-                                </table>
-                                </body>
-                                </html>";
-            sendHtmlEmail("danitestrubrikk@gmail.com", "danitestrubrikk@gmail.com", Themessage, "Test1", "Test HTML Email", "smtp.gmail.com", 25);
-            
-        }
-        protected void sendHtmlEmail(string from_Email, string to_Email, string body, string from_Name, string Subject, string SMTP_IP, Int32 SMTP_Server_Port)
-        {
-            //create an instance of new mail message
-            MailMessage mail = new MailMessage();
-
-            //set the HTML format to true
-            mail.IsBodyHtml = true;
-
-            //create Alrternative HTML view
-            AlternateView htmlView = AlternateView.CreateAlternateViewFromString(body, null, "text/html");
-
-            //Add Image
-            LinkedResource theEmailImage = new LinkedResource("../../Resources/logo.png");
-            theEmailImage.ContentId = "myImageID";
-
-            //Add the Image to the Alternate view
-            htmlView.LinkedResources.Add(theEmailImage);
-
-            //Add view to the Email Message
-            mail.AlternateViews.Add(htmlView);
-
-            //set the "from email" address and specify a friendly 'from' name
-            mail.From = new MailAddress(from_Email, from_Name);
-
-            //set the "to" email address
-            mail.To.Add(to_Email);
-
-            //set the Email subject
-            mail.Subject = Subject;
-
-            //set the SMTP info
-            System.Net.NetworkCredential cred = new System.Net.NetworkCredential("danitestrubrikk@gmail.com", "Daniel.91");
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-            smtp.EnableSsl = true;
-            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtp.UseDefaultCredentials = false;
-            smtp.Credentials = cred;
-            //send the email
-            smtp.Send(mail);
+        
         }
         private void button3_Click(object sender, EventArgs e)
         {
             if (IsValidMailAddress(emailto_tb.Text)&& !string.IsNullOrWhiteSpace(links_tb.Text))
             {
+                string[] links = Changelinkstotest();
+                LinkedResource theEmailImage = new LinkedResource("../../Resources/logo.png");
+                theEmailImage.ContentId = "myImageID";
                 string smtpAddress = "smtp.gmail.com";
                 int portNumber = 587;
-
-                string userName = "danitest";
-
-                string emailFrom = "danitestrubrikk@gmail.com";
-                string password = "Daniel.91";
-                string emailTo = "danitestrubrikk@gmail.com"; ;
-
-                // Here you can put subject of the mail
-                string subject = "Test Subject";
-                // Body of the mail
-                string body = "<div style='width: 500px; height: 266px;font-family: arial,sans-serif; font-size: 17px;'>";
-                body += "<h3 style='background-color: blueviolet; margin-top:0px;'>Aspen Reporting Tool</h3>";
-                //body += "<img src ="/Resources/logo.png">";
+                string emailTo = emailto_tb.Text;
+                string subject = "Test Emails";
+                string body = "<div style = 'width: 50%'>";
+                body += "<img src=http://i.imgur.com/jFekwMW.png>";
                 body += "<br />";
-                body += "Dear " + userName + ",";
-                body += "<br />";
-                body += "<p>";
-                body += "Thank you for registering </p>";
-                body += "<p><a href='Http://google.com'>Click Here</a>To finalize the registration process</p>";
-                body += " <br />";
+                for (int j = 0; j < links.Length; j++)
+                {
+                    body += "<p><a href='" + links[j] + "'><b>Email Link nr" + j+ "</b></a></p>";
+                }
                 body += "Thanks,";
                 body += "<br />";
-                body += "<b>The Team</b>";
+                body += "<b>dBTechnologies</b>";
                 body += "</div>";
-                // this is done using  using System.Net.Mail; & using System.Net; 
                 using (MailMessage mail = new MailMessage())
                 {
-                    mail.From = new MailAddress(emailFrom);
+                    mail.From = new MailAddress("danitestrubrikk@gmail.com", "dBTechnologies");
                     mail.To.Add(emailTo);
                     mail.Subject = subject;
                     mail.Body = body;
                     mail.IsBodyHtml = true;
-                    // Can set to false, if you are sending pure text.
-
                     using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
                     {
-                        smtp.Credentials = new NetworkCredential(emailFrom, password);
+                        smtp.Credentials = new NetworkCredential("danitestrubrikk@gmail.com", "Daniel.91");
                         smtp.EnableSsl = true;
                         smtp.Send(mail);
                         smtp.Timeout = 10000;

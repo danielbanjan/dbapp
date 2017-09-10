@@ -677,30 +677,21 @@ namespace test2
         public void hidessmailstuff()
         {
             ss_gb.Hide();
-            link4.Hide();
-            link5.Hide();
-            link6.Hide();
-            link7.Hide();
-            link8.Hide();
-            link9.Hide();
-            link10.Hide();
-            link11.Hide();
-            link12.Hide();
-            link13.Hide();
+            for(int i = 4; i <= 13; i++)
+            {
+                ((LinkLabel)this.Controls.Find("link"+i, true)[0]).Hide();
+                ((LinkLabel)this.Controls.Find("copylink"+i, true)[0]).Hide();
+            }
+            
         }
         public void showssmailstuff()
         {
             ss_gb.Show();
-            link4.Show();
-            link5.Show();
-            link6.Show();
-            link7.Show();
-            link8.Show();
-            link9.Show();
-            link10.Show();
-            link11.Show();
-            link12.Show();
-            link13.Show();
+            for (int i = 4; i <= 13; i++)
+            {
+                ((LinkLabel)this.Controls.Find("link" + i, true)[0]).Show();
+                ((LinkLabel)this.Controls.Find("copylink" + i, true)[0]).Show();
+            }
         }
         public void changetblinks_hidess()
         {
@@ -770,7 +761,6 @@ namespace test2
             emailto_lbl.ForeColor = System.Drawing.Color.Black;
             emailto_lbl.Text = "Email to:";
         }
-
         public void openinbrowser(int linknr)
         {
             string[] links = Changelinkstotest();
@@ -779,16 +769,10 @@ namespace test2
             // Navigate to a URL.
             System.Diagnostics.Process.Start('"' +links[linknr] + '"');
         }
-
         public void copytoclip(int nr)
         {
             string[] links = Changelinkstotest();
             Clipboard.SetText(links[nr]);
-        }
-
-        private void linkLabel1_LinkClicked(object sender, EventArgs e)
-        {
-            copytoclip(0);
         }
         private void linkLabel1_Click(object sender, EventArgs e)
         {
@@ -798,26 +782,130 @@ namespace test2
         {
             openinbrowser(1);
         }
-
-        private void link2_DoubleClick(object sender, EventArgs e)
-        {
-            copytoclip(1);
-        }
-
         private void links_tb_TextChanged(object sender, EventArgs e)
         {
             linkstb_lbl.ForeColor = System.Drawing.Color.Black;
             linkstb_lbl.Text = "Input the email links here:";
         }
-
         private void link2_MouseClick(object sender, MouseEventArgs e)
         {
             openinbrowser(2);
         }
-
-        private void link2_MouseDoubleClick(object sender, MouseEventArgs e)
+        public void stuffforcopy(int nr)
         {
-            copytoclip(2);
+            for (int i = 0; i <= 13; i++)
+            {
+                if (i== nr)
+                {
+                    ((LinkLabel)this.Controls.Find("copylink" + i, true)[0]).Text="Link Copied.";
+                    copytoclip(i);
+                    ((LinkLabel)this.Controls.Find("copylink" + i, true)[0]).ForeColor = System.Drawing.Color.Blue;
+                }
+                else
+                {
+                    ((LinkLabel)this.Controls.Find("copylink" + i, true)[0]).Text = "Copy Link";
+                }
+            }
+        }
+        private void copylink0_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(0);
+        }
+        private void link3_Click(object sender, EventArgs e)
+        {
+            openinbrowser(3);
+        }
+        private void link4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            openinbrowser(4);
+        }
+        private void link5_Click(object sender, EventArgs e)
+        {
+            openinbrowser(5);
+        }
+        private void link6_Click(object sender, EventArgs e)
+        {
+            openinbrowser(6);
+        }
+        private void link7_Click(object sender, EventArgs e)
+        {
+            openinbrowser(7);
+        }
+        private void link8_Click(object sender, EventArgs e)
+        {
+            openinbrowser(8);
+        }
+        private void link9_Click(object sender, EventArgs e)
+        {
+            openinbrowser(9);
+        }
+        private void link10_Click(object sender, EventArgs e)
+        {
+            openinbrowser(10);
+        }
+        private void link11_Click(object sender, EventArgs e)
+        {
+            openinbrowser(11);
+        }
+        private void link12_Click(object sender, EventArgs e)
+        {
+            openinbrowser(12);
+        }
+        private void link13_Click(object sender, EventArgs e)
+        {
+            openinbrowser(13);
+        }
+        private void copylink1_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(1);
+        }
+        private void copylink2_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(2);
+        }
+        private void copylink3_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(3);
+        }
+        private void copylink4_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(4);
+        }
+        private void copylink5_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(5);
+        }
+        private void copylink6_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(6);
+        }
+        private void copylink7_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(7);
+        }
+        private void copylink8_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(8);
+        }
+        private void copylink9_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(4);
+        }
+        private void copylink10_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(10);
+        }
+        private void copylink11_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(11);
+        }
+        private void copylink12_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(12);
+        }
+        private void copylink13_Click(object sender, EventArgs e)
+        {
+            stuffforcopy(13);
         }
     }
 }

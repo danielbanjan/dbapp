@@ -74,6 +74,20 @@
             this.updatebtn = new System.Windows.Forms.Button();
             this.fd_dgv = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.copylink13 = new System.Windows.Forms.LinkLabel();
+            this.copylink12 = new System.Windows.Forms.LinkLabel();
+            this.copylink11 = new System.Windows.Forms.LinkLabel();
+            this.copylink10 = new System.Windows.Forms.LinkLabel();
+            this.copylink9 = new System.Windows.Forms.LinkLabel();
+            this.copylink8 = new System.Windows.Forms.LinkLabel();
+            this.copylink7 = new System.Windows.Forms.LinkLabel();
+            this.copylink6 = new System.Windows.Forms.LinkLabel();
+            this.copylink5 = new System.Windows.Forms.LinkLabel();
+            this.copylink4 = new System.Windows.Forms.LinkLabel();
+            this.copylink3 = new System.Windows.Forms.LinkLabel();
+            this.copylink2 = new System.Windows.Forms.LinkLabel();
+            this.copylink1 = new System.Windows.Forms.LinkLabel();
+            this.copylink0 = new System.Windows.Forms.LinkLabel();
             this.emailto_lbl = new System.Windows.Forms.Label();
             this.link13 = new System.Windows.Forms.LinkLabel();
             this.link12 = new System.Windows.Forms.LinkLabel();
@@ -717,6 +731,20 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.copylink13);
+            this.tabPage5.Controls.Add(this.copylink12);
+            this.tabPage5.Controls.Add(this.copylink11);
+            this.tabPage5.Controls.Add(this.copylink10);
+            this.tabPage5.Controls.Add(this.copylink9);
+            this.tabPage5.Controls.Add(this.copylink8);
+            this.tabPage5.Controls.Add(this.copylink7);
+            this.tabPage5.Controls.Add(this.copylink6);
+            this.tabPage5.Controls.Add(this.copylink5);
+            this.tabPage5.Controls.Add(this.copylink4);
+            this.tabPage5.Controls.Add(this.copylink3);
+            this.tabPage5.Controls.Add(this.copylink2);
+            this.tabPage5.Controls.Add(this.copylink1);
+            this.tabPage5.Controls.Add(this.copylink0);
             this.tabPage5.Controls.Add(this.emailto_lbl);
             this.tabPage5.Controls.Add(this.link13);
             this.tabPage5.Controls.Add(this.link12);
@@ -748,6 +776,160 @@
             this.tabPage5.Text = "Emails";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // copylink13
+            // 
+            this.copylink13.AutoSize = true;
+            this.copylink13.Location = new System.Drawing.Point(818, 355);
+            this.copylink13.Name = "copylink13";
+            this.copylink13.Size = new System.Drawing.Size(54, 13);
+            this.copylink13.TabIndex = 37;
+            this.copylink13.TabStop = true;
+            this.copylink13.Text = "Copy Link";
+            this.copylink13.Click += new System.EventHandler(this.copylink13_Click);
+            // 
+            // copylink12
+            // 
+            this.copylink12.AutoSize = true;
+            this.copylink12.Location = new System.Drawing.Point(818, 330);
+            this.copylink12.Name = "copylink12";
+            this.copylink12.Size = new System.Drawing.Size(54, 13);
+            this.copylink12.TabIndex = 36;
+            this.copylink12.TabStop = true;
+            this.copylink12.Text = "Copy Link";
+            this.copylink12.Click += new System.EventHandler(this.copylink12_Click);
+            // 
+            // copylink11
+            // 
+            this.copylink11.AutoSize = true;
+            this.copylink11.Location = new System.Drawing.Point(818, 305);
+            this.copylink11.Name = "copylink11";
+            this.copylink11.Size = new System.Drawing.Size(54, 13);
+            this.copylink11.TabIndex = 35;
+            this.copylink11.TabStop = true;
+            this.copylink11.Text = "Copy Link";
+            this.copylink11.Click += new System.EventHandler(this.copylink11_Click);
+            // 
+            // copylink10
+            // 
+            this.copylink10.AutoSize = true;
+            this.copylink10.Location = new System.Drawing.Point(818, 280);
+            this.copylink10.Name = "copylink10";
+            this.copylink10.Size = new System.Drawing.Size(54, 13);
+            this.copylink10.TabIndex = 34;
+            this.copylink10.TabStop = true;
+            this.copylink10.Text = "Copy Link";
+            this.copylink10.Click += new System.EventHandler(this.copylink10_Click);
+            // 
+            // copylink9
+            // 
+            this.copylink9.AutoSize = true;
+            this.copylink9.Location = new System.Drawing.Point(817, 255);
+            this.copylink9.Name = "copylink9";
+            this.copylink9.Size = new System.Drawing.Size(54, 13);
+            this.copylink9.TabIndex = 33;
+            this.copylink9.TabStop = true;
+            this.copylink9.Text = "Copy Link";
+            this.copylink9.Click += new System.EventHandler(this.copylink9_Click);
+            // 
+            // copylink8
+            // 
+            this.copylink8.AutoSize = true;
+            this.copylink8.Location = new System.Drawing.Point(817, 230);
+            this.copylink8.Name = "copylink8";
+            this.copylink8.Size = new System.Drawing.Size(54, 13);
+            this.copylink8.TabIndex = 32;
+            this.copylink8.TabStop = true;
+            this.copylink8.Text = "Copy Link";
+            this.copylink8.Click += new System.EventHandler(this.copylink8_Click);
+            // 
+            // copylink7
+            // 
+            this.copylink7.AutoSize = true;
+            this.copylink7.Location = new System.Drawing.Point(818, 205);
+            this.copylink7.Name = "copylink7";
+            this.copylink7.Size = new System.Drawing.Size(54, 13);
+            this.copylink7.TabIndex = 31;
+            this.copylink7.TabStop = true;
+            this.copylink7.Text = "Copy Link";
+            this.copylink7.Click += new System.EventHandler(this.copylink7_Click);
+            // 
+            // copylink6
+            // 
+            this.copylink6.AutoSize = true;
+            this.copylink6.Location = new System.Drawing.Point(818, 180);
+            this.copylink6.Name = "copylink6";
+            this.copylink6.Size = new System.Drawing.Size(54, 13);
+            this.copylink6.TabIndex = 30;
+            this.copylink6.TabStop = true;
+            this.copylink6.Text = "Copy Link";
+            this.copylink6.Click += new System.EventHandler(this.copylink6_Click);
+            // 
+            // copylink5
+            // 
+            this.copylink5.AutoSize = true;
+            this.copylink5.Location = new System.Drawing.Point(818, 155);
+            this.copylink5.Name = "copylink5";
+            this.copylink5.Size = new System.Drawing.Size(54, 13);
+            this.copylink5.TabIndex = 29;
+            this.copylink5.TabStop = true;
+            this.copylink5.Text = "Copy Link";
+            this.copylink5.Click += new System.EventHandler(this.copylink5_Click);
+            // 
+            // copylink4
+            // 
+            this.copylink4.AutoSize = true;
+            this.copylink4.Location = new System.Drawing.Point(817, 130);
+            this.copylink4.Name = "copylink4";
+            this.copylink4.Size = new System.Drawing.Size(54, 13);
+            this.copylink4.TabIndex = 28;
+            this.copylink4.TabStop = true;
+            this.copylink4.Text = "Copy Link";
+            this.copylink4.Click += new System.EventHandler(this.copylink4_Click);
+            // 
+            // copylink3
+            // 
+            this.copylink3.AutoSize = true;
+            this.copylink3.Location = new System.Drawing.Point(818, 95);
+            this.copylink3.Name = "copylink3";
+            this.copylink3.Size = new System.Drawing.Size(54, 13);
+            this.copylink3.TabIndex = 27;
+            this.copylink3.TabStop = true;
+            this.copylink3.Text = "Copy Link";
+            this.copylink3.Click += new System.EventHandler(this.copylink3_Click);
+            // 
+            // copylink2
+            // 
+            this.copylink2.AutoSize = true;
+            this.copylink2.Location = new System.Drawing.Point(817, 70);
+            this.copylink2.Name = "copylink2";
+            this.copylink2.Size = new System.Drawing.Size(54, 13);
+            this.copylink2.TabIndex = 26;
+            this.copylink2.TabStop = true;
+            this.copylink2.Text = "Copy Link";
+            this.copylink2.Click += new System.EventHandler(this.copylink2_Click);
+            // 
+            // copylink1
+            // 
+            this.copylink1.AutoSize = true;
+            this.copylink1.Location = new System.Drawing.Point(818, 45);
+            this.copylink1.Name = "copylink1";
+            this.copylink1.Size = new System.Drawing.Size(54, 13);
+            this.copylink1.TabIndex = 25;
+            this.copylink1.TabStop = true;
+            this.copylink1.Text = "Copy Link";
+            this.copylink1.Click += new System.EventHandler(this.copylink1_Click);
+            // 
+            // copylink0
+            // 
+            this.copylink0.AutoSize = true;
+            this.copylink0.Location = new System.Drawing.Point(818, 19);
+            this.copylink0.Name = "copylink0";
+            this.copylink0.Size = new System.Drawing.Size(54, 13);
+            this.copylink0.TabIndex = 24;
+            this.copylink0.TabStop = true;
+            this.copylink0.Text = "Copy Link";
+            this.copylink0.Click += new System.EventHandler(this.copylink0_Click);
+            // 
             // emailto_lbl
             // 
             this.emailto_lbl.AutoSize = true;
@@ -766,6 +948,7 @@
             this.link13.TabIndex = 20;
             this.link13.TabStop = true;
             this.link13.Text = "Saved Search Unsubscribe";
+            this.link13.Click += new System.EventHandler(this.link13_Click);
             // 
             // link12
             // 
@@ -776,6 +959,7 @@
             this.link12.TabIndex = 19;
             this.link12.TabStop = true;
             this.link12.Text = "Saved Search Change Frequency 4";
+            this.link12.Click += new System.EventHandler(this.link12_Click);
             // 
             // emailto_tb
             // 
@@ -843,6 +1027,7 @@
             this.link11.TabIndex = 11;
             this.link11.TabStop = true;
             this.link11.Text = "Saved Search Change Frequency 3";
+            this.link11.Click += new System.EventHandler(this.link11_Click);
             // 
             // link10
             // 
@@ -853,6 +1038,7 @@
             this.link10.TabIndex = 10;
             this.link10.TabStop = true;
             this.link10.Text = "Saved Search Change Frequency 2";
+            this.link10.Click += new System.EventHandler(this.link10_Click);
             // 
             // link9
             // 
@@ -863,6 +1049,7 @@
             this.link9.TabIndex = 9;
             this.link9.TabStop = true;
             this.link9.Text = "Saved Search Change Frequency 1";
+            this.link9.Click += new System.EventHandler(this.link9_Click);
             // 
             // link8
             // 
@@ -873,6 +1060,7 @@
             this.link8.TabIndex = 8;
             this.link8.TabStop = true;
             this.link8.Text = "Saved Search Modify Alert";
+            this.link8.Click += new System.EventHandler(this.link8_Click);
             // 
             // link7
             // 
@@ -883,6 +1071,7 @@
             this.link7.TabIndex = 7;
             this.link7.TabStop = true;
             this.link7.Text = "Saved Search Show More Results";
+            this.link7.Click += new System.EventHandler(this.link7_Click);
             // 
             // link6
             // 
@@ -893,6 +1082,7 @@
             this.link6.TabIndex = 6;
             this.link6.TabStop = true;
             this.link6.Text = "Saved Search Ad View More Info";
+            this.link6.Click += new System.EventHandler(this.link6_Click);
             // 
             // link5
             // 
@@ -903,6 +1093,7 @@
             this.link5.TabIndex = 5;
             this.link5.TabStop = true;
             this.link5.Text = "Saved Search Ad Title";
+            this.link5.Click += new System.EventHandler(this.link5_Click);
             // 
             // link4
             // 
@@ -913,6 +1104,7 @@
             this.link4.TabIndex = 4;
             this.link4.TabStop = true;
             this.link4.Text = "Saved Search Alert Title";
+            this.link4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link4_LinkClicked);
             // 
             // link3
             // 
@@ -923,6 +1115,7 @@
             this.link3.TabIndex = 3;
             this.link3.TabStop = true;
             this.link3.Text = "Welcome Email Unsubscribe";
+            this.link3.Click += new System.EventHandler(this.link3_Click);
             // 
             // link2
             // 
@@ -934,7 +1127,6 @@
             this.link2.TabStop = true;
             this.link2.Text = "Welcome Email Search More";
             this.link2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.link2_MouseClick);
-            this.link2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.link2_MouseDoubleClick);
             // 
             // link1
             // 
@@ -946,7 +1138,6 @@
             this.link1.TabStop = true;
             this.link1.Text = "Welcome Email Modify Search";
             this.link1.Click += new System.EventHandler(this.link2_Click);
-            this.link1.DoubleClick += new System.EventHandler(this.link2_DoubleClick);
             // 
             // link0
             // 
@@ -958,7 +1149,6 @@
             this.link0.TabStop = true;
             this.link0.Text = "Welcome Email title";
             this.link0.Click += new System.EventHandler(this.linkLabel1_Click);
-            this.link0.DoubleClick += new System.EventHandler(this.linkLabel1_LinkClicked);
             // 
             // we_gb
             // 
@@ -1047,7 +1237,6 @@
         private System.Windows.Forms.RichTextBox emailtxtbox;
         private System.Windows.Forms.ComboBox tablecb;
         private System.Windows.Forms.CheckBox pmcb;
-        private System.Windows.Forms.BindingSource config_geo_location_synonymBindingSource;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabControl tabs;
         private System.Windows.Forms.Button updatebtn;
@@ -1086,6 +1275,20 @@
         private System.Windows.Forms.GroupBox we_gb;
         private System.Windows.Forms.GroupBox ss_gb;
         private System.Windows.Forms.Label emailto_lbl;
+        private System.Windows.Forms.LinkLabel copylink0;
+        private System.Windows.Forms.LinkLabel copylink13;
+        private System.Windows.Forms.LinkLabel copylink12;
+        private System.Windows.Forms.LinkLabel copylink11;
+        private System.Windows.Forms.LinkLabel copylink10;
+        private System.Windows.Forms.LinkLabel copylink9;
+        private System.Windows.Forms.LinkLabel copylink8;
+        private System.Windows.Forms.LinkLabel copylink7;
+        private System.Windows.Forms.LinkLabel copylink6;
+        private System.Windows.Forms.LinkLabel copylink5;
+        private System.Windows.Forms.LinkLabel copylink4;
+        private System.Windows.Forms.LinkLabel copylink3;
+        private System.Windows.Forms.LinkLabel copylink2;
+        private System.Windows.Forms.LinkLabel copylink1;
     }
 }
 

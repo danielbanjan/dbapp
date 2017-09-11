@@ -127,7 +127,7 @@ namespace test2
         }
         private void deletebtn_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Are you sure to Update the table?",
+            var confirmResult = MessageBox.Show("Are you sure to Delete these users?",
                                      "Confirm Update!!",
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
@@ -196,7 +196,7 @@ namespace test2
         }
         private void deletebtnjob_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Are you sure to Update the table?",
+            var confirmResult = MessageBox.Show("Are you sure to Delete these jobs?",
                                      "Confirm Update!!",
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
@@ -586,14 +586,6 @@ namespace test2
                 scb_sj = new SqlCommandBuilder(sda_sj);
                 sda_sj.Update(dt_sj);
             }
-        }
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            // Specify that the link was visited.
-            this.link0.LinkVisited = true;
-
-            // Navigate to a URL.
-            System.Diagnostics.Process.Start("http://testch.hugintechnologies.com/login-saved-search");
         }
         static bool IsValidMailAddress(string mailAddress)
         {

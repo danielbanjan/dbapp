@@ -695,8 +695,6 @@ namespace test2
             if (IsValidMailAddress(emailto_tb.Text)&& !string.IsNullOrWhiteSpace(links_tb.Text))
             {
                 string[] links = Changelinkstotest();
-                LinkedResource theEmailImage = new LinkedResource("../../Resources/logo.png");
-                theEmailImage.ContentId = "myImageID";
                 string smtpAddress = "smtp.gmail.com";
                 int portNumber = 587;
                 string emailTo = emailto_tb.Text;

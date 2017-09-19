@@ -13,8 +13,7 @@ using System.Configuration;
 using System.Text.RegularExpressions;
 using System.Net.Mail;
 using System.Net;
-using System.Reflection;
-
+using System.Runtime.InteropServices;
 namespace test2
 {
     public partial class Form1 : Form
@@ -31,6 +30,8 @@ namespace test2
         SqlCommandBuilder scb_db;
         SqlCommandBuilder scb_o;
         SqlCommandBuilder scb_sj;
+        [DllImport("advapi32.dll")]
+        public static extern bool LogonUser(string name, string domain, string pass, int logType, int logpv, ref IntPtr pht);
         private void Form1_Load(object sender, EventArgs e)
         {
             System.Windows.Forms.ToolTip sctt = new System.Windows.Forms.ToolTip();
@@ -77,6 +78,8 @@ namespace test2
         }
         private void loginbtn_Click(object sender, EventArgs e)
         {
+            IntPtr th = IntPtr.Zero;
+            bool log = LogonUser(untxtbox.Text, "WORKGROUP", pwtxtbox.Text, 2, 0, ref th);
             if (loginbtn.Text == "Logout")
             {
                 this.ActiveControl = untxtbox;
@@ -101,17 +104,7 @@ namespace test2
                 Settings.Default["Remember"] = false;
                 Settings.Default.Save();
             }
-            if ("admin" != untxtbox.Text && "admin" != pwtxtbox.Text)
-            {
-                unlbl.ForeColor = System.Drawing.Color.Red;
-                unlbl.Text = "Invalid username!";
-                pwlbl.ForeColor = System.Drawing.Color.Red;
-                pwlbl.Text = "Invalid password!";
-                untxtbox.Clear();
-                pwtxtbox.Clear();
-                untxtbox.Focus();
-            }
-            else
+            if (log)
             {
                 showpages();
                 unlbl.ForeColor = System.Drawing.Color.Black;
@@ -123,6 +116,17 @@ namespace test2
                 rmbr_cb.Checked = Convert.ToBoolean(Settings.Default["Remember"]);
                 loginbtn.Text = "Logout";
                 tabs.SelectedTab = tabPage2;
+            }
+            else
+            {
+                
+                unlbl.ForeColor = System.Drawing.Color.Red;
+                unlbl.Text = "Invalid username!";
+                pwlbl.ForeColor = System.Drawing.Color.Red;
+                pwlbl.Text = "Invalid password!";
+                untxtbox.Clear();
+                pwtxtbox.Clear();
+                untxtbox.Focus();
             }
         }
         private void deletebtn_Click(object sender, EventArgs e)

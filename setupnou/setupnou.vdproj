@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_6E8AAF28F3074518934946A2E5BCBAE5"
+        "MsmKey" = "8:_340654F136A740FE8ACD7FA2F20B5B6D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -23,12 +23,6 @@
         {
         "MsmKey" = "8:_9F26A8633732762E28074D2FBE597010"
         "OwnerKey" = "8:_C2C72341073640B9A694EF726E7E2E64"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_AFCF71E4618E4F56B279CD1A208F0032"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -144,17 +138,17 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6E8AAF28F3074518934946A2E5BCBAE5"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_340654F136A740FE8ACD7FA2F20B5B6D"
             {
-            "SourcePath" = "8:..\\test2\\Resources\\arpi.ico"
-            "TargetName" = "8:arpi.ico"
+            "SourcePath" = "8:..\\test2\\Resources\\icon1.ico"
+            "TargetName" = "8:icon1.ico"
             "Tag" = "8:"
             "Folder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:TRUE"
+            "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -193,26 +187,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AFCF71E4618E4F56B279CD1A208F0032"
-            {
-            "SourcePath" = "8:..\\test2\\Icons\\logo_icon_600x315_II0_icon.ico"
-            "TargetName" = "8:logo_icon_600x315_II0_icon.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:TRUE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -289,7 +263,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:for work"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_6E8AAF28F3074518934946A2E5BCBAE5"
+        "ARPPRODUCTICON" = "8:_340654F136A740FE8ACD7FA2F20B5B6D"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -403,7 +377,7 @@
             "Target" = "8:_C2C72341073640B9A694EF726E7E2E64"
             "Folder" = "8:_0B5D3017E53040F4AD6F8894A2A0AE1A"
             "WorkingFolder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
-            "Icon" = "8:_AFCF71E4618E4F56B279CD1A208F0032"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_AC74F45698E44DCD8C7A34BD731AE4F3"
@@ -417,7 +391,7 @@
             "Target" = "8:_C2C72341073640B9A694EF726E7E2E64"
             "Folder" = "8:_A108A6D715A54B628BD6E302260D642D"
             "WorkingFolder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
-            "Icon" = "8:_AFCF71E4618E4F56B279CD1A208F0032"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }

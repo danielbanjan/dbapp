@@ -165,11 +165,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_9F26A8633732762E28074D2FBE597010"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:514"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -391,7 +386,7 @@
             "Target" = "8:_C2C72341073640B9A694EF726E7E2E64"
             "Folder" = "8:_A108A6D715A54B628BD6E302260D642D"
             "WorkingFolder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
-            "Icon" = "8:"
+            "Icon" = "8:_340654F136A740FE8ACD7FA2F20B5B6D"
             "Feature" = "8:"
             }
         }

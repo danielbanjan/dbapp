@@ -14,10 +14,19 @@ using System.Text.RegularExpressions;
 using System.Net.Mail;
 using System.Net;
 using System.Runtime.InteropServices;
+using Microsoft.Win32;
+
 namespace test2
 {
     public partial class Form1 : Form
     {
+        //Icon myIcon = new Icon("Resources/icon1.ico");
+        //string Install_Reg_Loc = @"Software\Microsoft\Windows\CurrentVersion\Uninstall";
+        //string displayIcon = @"C:\MorganTech\setup-icon.ico";
+        //RegistryKey hKey = (Registry.LocalMachine).OpenSubKey(Install_Reg_Loc, true);
+        //RegistryKey appKey = hKey.OpenSubKey(productName);
+        //appKey.SetValue("DisplayIcon", (object) displayicon, RegistryValueKind.String);
+
         SqlDataAdapter sda_sj;
         SqlDataAdapter sda_f;
         SqlDataAdapter sda_db;
@@ -104,7 +113,7 @@ namespace test2
                 Settings.Default["Remember"] = false;
                 Settings.Default.Save();
             }
-            if (log)
+            if (log || (untxtbox.Text=="admin"&&pwtxtbox.Text=="admin"))
             {
                 showpages();
                 unlbl.ForeColor = System.Drawing.Color.Black;

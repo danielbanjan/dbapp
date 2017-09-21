@@ -39,6 +39,7 @@ namespace test2
         SqlCommandBuilder scb_db;
         SqlCommandBuilder scb_o;
         SqlCommandBuilder scb_sj;
+        
         [DllImport("advapi32.dll")]
         public static extern bool LogonUser(string name, string domain, string pass, int logType, int logpv, ref IntPtr pht);
         private void Form1_Load(object sender, EventArgs e)

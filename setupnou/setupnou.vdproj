@@ -19,30 +19,6 @@
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
-        "Entry"
-        {
-        "MsmKey" = "8:_9F26A8633732762E28074D2FBE597010"
-        "OwnerKey" = "8:_C2C72341073640B9A694EF726E7E2E64"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C2C72341073640B9A694EF726E7E2E64"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C2C72341073640B9A694EF726E7E2E64"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9F26A8633732762E28074D2FBE597010"
-        "MsmSig" = "8:_UNDEFINED"
-        }
     }
     "Configurations"
     {
@@ -158,32 +134,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9F26A8633732762E28074D2FBE597010"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:System.Net.Http.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:TRUE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
         }
         "FileType"
         {
@@ -241,7 +191,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:setupnou"
         "ProductCode" = "8:{CF19301F-129F-4500-8138-6C8D93CFF0FA}"
-        "PackageCode" = "8:{3442A6F0-DF60-4483-8955-DFCB8809A856}"
+        "PackageCode" = "8:{42F0DF20-0169-41D4-8F7E-A661F3CAD212}"
         "UpgradeCode" = "8:{AF681842-C145-4DEB-ACAE-24362CD6AFB3}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -361,34 +311,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_23A64FD077D745B49C3E3B62FDCFFA79"
-            {
-            "Name" = "8:DB App"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_C2C72341073640B9A694EF726E7E2E64"
-            "Folder" = "8:_0B5D3017E53040F4AD6F8894A2A0AE1A"
-            "WorkingFolder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_AC74F45698E44DCD8C7A34BD731AE4F3"
-            {
-            "Name" = "8:DB App"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_C2C72341073640B9A694EF726E7E2E64"
-            "Folder" = "8:_A108A6D715A54B628BD6E302260D642D"
-            "WorkingFolder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
-            "Icon" = "8:_340654F136A740FE8ACD7FA2F20B5B6D"
-            "Feature" = "8:"
-            }
         }
         "UserInterface"
         {
@@ -788,34 +710,6 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C2C72341073640B9A694EF726E7E2E64"
-            {
-            "SourcePath" = "8:..\\test2\\obj\\Debug\\DB Application.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_6056A0B826814FA2BE34BE3A3D603421"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{A7EDEC9A-6178-4046-BB2C-0292FA964EA9}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
         }
     }
 }

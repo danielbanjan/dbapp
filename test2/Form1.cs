@@ -31,10 +31,12 @@ namespace test2
         SqlDataAdapter sda_f;
         SqlDataAdapter sda_db;
         SqlDataAdapter sda_o;
+        SqlDataAdapter sda_g;
         DataTable dt_sj;
         DataTable dt_f;
         DataTable dt_db;
         DataTable dt_o;
+        DataTable dt_g;
         SqlCommandBuilder scb_f;
         SqlCommandBuilder scb_db;
         SqlCommandBuilder scb_o;
@@ -60,6 +62,8 @@ namespace test2
             fclbl.Hide();
             deblbl.Hide();
             owlbl.Hide();
+            yesnolbl.Hide();
+            dgv_g.Hide();
         }
         public Form1()
         {
@@ -77,6 +81,7 @@ namespace test2
             tabs.TabPages.Remove(tabPage3);
             tabs.TabPages.Remove(tabPage4);
             tabs.TabPages.Remove(tabPage5);
+            tabs.TabPages.Remove(tabPage6);
         }
         public void showpages()
         {
@@ -84,6 +89,7 @@ namespace test2
             tabs.TabPages.Insert(2, tabPage3);
             tabs.TabPages.Insert(3, tabPage4);
             tabs.TabPages.Insert(4, tabPage5);
+            tabs.TabPages.Insert(5, tabPage6);
         }
         private void loginbtn_Click(object sender, EventArgs e)
         {
@@ -897,5 +903,42 @@ namespace test2
         {
             stuffforcopy(13);
         }
+
+        private void ccbextra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgv_g.Hide();
+            yesnolbl.Hide();
+            String st = "";
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + ccbextra.SelectedItem.ToString()].ConnectionString);
+            st = "select geo1name,geo2name,geo3name from config_geo_portalstructure where geo3name is not null";
+            SqlCommand sqlcom = new SqlCommand(st, conn);
+            try
+            {
+            conn.Open();
+            object maxCode = sqlcom.ExecuteScalar();
+            if (maxCode == null)
+            {
+                yesnolbl.Text = "NO!";
+                yesnolbl.ForeColor = System.Drawing.Color.Red;
+                yesnolbl.Show();
+            }
+            else
+            {
+                yesnolbl.Text = "Yes!";
+                yesnolbl.ForeColor = System.Drawing.Color.Green;
+                sda_g = new SqlDataAdapter(sqlcom);
+                dt_g = new DataTable();
+                sda_g.Fill(dt_g);
+                dgv_g.DataSource = dt_g;
+                dgv_g.Show();
+                yesnolbl.Show();
+            }
+                conn.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            }
     }
 }

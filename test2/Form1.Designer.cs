@@ -111,6 +111,12 @@
             this.link0 = new System.Windows.Forms.LinkLabel();
             this.we_gb = new System.Windows.Forms.GroupBox();
             this.ss_gb = new System.Windows.Forms.GroupBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.ccbextra = new System.Windows.Forms.ComboBox();
+            this.dgv_g = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.yesnolbl = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -126,6 +132,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.fd_dgv)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_g)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -342,6 +351,7 @@
             this.tabs.Controls.Add(this.tabPage3);
             this.tabs.Controls.Add(this.tabPage4);
             this.tabs.Controls.Add(this.tabPage5);
+            this.tabs.Controls.Add(this.tabPage6);
             this.tabs.HotTrack = true;
             this.tabs.Location = new System.Drawing.Point(0, 0);
             this.tabs.Name = "tabs";
@@ -1168,6 +1178,97 @@
             this.ss_gb.TabStop = false;
             this.ss_gb.Text = "Saved Search Emails";
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.yesnolbl);
+            this.tabPage6.Controls.Add(this.label2);
+            this.tabPage6.Controls.Add(this.dgv_g);
+            this.tabPage6.Controls.Add(this.ccbextra);
+            this.tabPage6.Controls.Add(this.pictureBox6);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(907, 606);
+            this.tabPage6.TabIndex = 6;
+            this.tabPage6.Text = "Extra";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(1, 555);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(265, 45);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 16;
+            this.pictureBox6.TabStop = false;
+            // 
+            // ccbextra
+            // 
+            this.ccbextra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ccbextra.FormattingEnabled = true;
+            this.ccbextra.Items.AddRange(new object[] {
+            "Argentina",
+            "Australia",
+            "Austria",
+            "Bangladesh",
+            "Belgium",
+            "Brazil",
+            "Canada",
+            "Chile",
+            "Colombia",
+            "Denmark",
+            "Finland",
+            "France",
+            "Germany",
+            "India",
+            "Ireland",
+            "Italy",
+            "Kenya",
+            "Mexico",
+            "Norway",
+            "Poland",
+            "Romania",
+            "SouthAfrica",
+            "Spain",
+            "Sweden",
+            "Switzerland",
+            "Turkey",
+            "UK",
+            "Vietnam"});
+            this.ccbextra.Location = new System.Drawing.Point(8, 22);
+            this.ccbextra.Name = "ccbextra";
+            this.ccbextra.Size = new System.Drawing.Size(121, 21);
+            this.ccbextra.TabIndex = 17;
+            this.ccbextra.SelectedIndexChanged += new System.EventHandler(this.ccbextra_SelectedIndexChanged);
+            // 
+            // dgv_g
+            // 
+            this.dgv_g.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_g.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_g.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_g.Location = new System.Drawing.Point(161, 53);
+            this.dgv_g.Name = "dgv_g";
+            this.dgv_g.Size = new System.Drawing.Size(539, 252);
+            this.dgv_g.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(158, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Does the country have geo3?";
+            // 
+            // yesnolbl
+            // 
+            this.yesnolbl.AutoSize = true;
+            this.yesnolbl.Location = new System.Drawing.Point(312, 25);
+            this.yesnolbl.Name = "yesnolbl";
+            this.yesnolbl.Size = new System.Drawing.Size(0, 13);
+            this.yesnolbl.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AcceptButton = this.loginbtn;
@@ -1202,6 +1303,10 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_g)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1289,6 +1394,12 @@
         private System.Windows.Forms.LinkLabel copylink3;
         private System.Windows.Forms.LinkLabel copylink2;
         private System.Windows.Forms.LinkLabel copylink1;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgv_g;
+        private System.Windows.Forms.ComboBox ccbextra;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label yesnolbl;
     }
 }
 

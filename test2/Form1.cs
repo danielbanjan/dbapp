@@ -40,16 +40,13 @@ namespace test2
         public static extern bool LogonUser(string name, string domain, string pass, int logType, int logpv, ref IntPtr pht);
         private static void SetAddRemoveProgramsIcon()
         {
-            //only run if deployed 
-            if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed
-               && ApplicationDeployment.CurrentDeployment.IsFirstRun)
+            if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed && ApplicationDeployment.CurrentDeployment.IsFirstRun)
             {
                 try
                 {
                     string iconSourcePath = Path.Combine(System.Windows.Forms.Application.StartupPath, "icon1.ico");
                     if (!File.Exists(iconSourcePath))
                         return;
-
                     RegistryKey myUninstallKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Uninstall");
                     string[] mySubKeyNames = myUninstallKey.GetSubKeyNames();
                     for (int i = 0; i < mySubKeyNames.Length; i++)

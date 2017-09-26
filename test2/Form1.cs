@@ -20,13 +20,6 @@ namespace test2
 {
     public partial class Form1 : Form
     {
-        //Icon myIcon = new Icon("Resources/icon1.ico");
-        //string Install_Reg_Loc = @"Software\Microsoft\Windows\CurrentVersion\Uninstall";
-        //string displayIcon = @"C:\MorganTech\setup-icon.ico";
-        //RegistryKey hKey = (Registry.LocalMachine).OpenSubKey(Install_Reg_Loc, true);
-        //RegistryKey appKey = hKey.OpenSubKey(productName);
-        //appKey.SetValue("DisplayIcon", (object) displayicon, RegistryValueKind.String);
-
         SqlDataAdapter sda_sj;
         SqlDataAdapter sda_f;
         SqlDataAdapter sda_db;

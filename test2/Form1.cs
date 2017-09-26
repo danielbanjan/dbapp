@@ -15,6 +15,8 @@ using System.Net.Mail;
 using System.Net;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
+using System.Deployment.Application;
+using System.IO;
 
 namespace test2
 {
@@ -36,6 +38,37 @@ namespace test2
         SqlCommandBuilder scb_sj;
         [DllImport("advapi32.dll")]
         public static extern bool LogonUser(string name, string domain, string pass, int logType, int logpv, ref IntPtr pht);
+        private static void SetAddRemoveProgramsIcon()
+        {
+            //only run if deployed 
+            if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed
+               && ApplicationDeployment.CurrentDeployment.IsFirstRun)
+            {
+                try
+                {
+                    string iconSourcePath = Path.Combine(System.Windows.Forms.Application.StartupPath, "icon1.ico");
+                    if (!File.Exists(iconSourcePath))
+                        return;
+
+                    RegistryKey myUninstallKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Uninstall");
+                    string[] mySubKeyNames = myUninstallKey.GetSubKeyNames();
+                    for (int i = 0; i < mySubKeyNames.Length; i++)
+                    {
+                        RegistryKey myKey = myUninstallKey.OpenSubKey(mySubKeyNames[i], true);
+                        object myValue = myKey.GetValue("DisplayName");
+                        if (myValue != null && myValue.ToString() == "DB Application")
+                        {
+                            myKey.SetValue("DisplayIcon", iconSourcePath);
+                            break;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             System.Windows.Forms.ToolTip sctt = new System.Windows.Forms.ToolTip();
@@ -46,6 +79,7 @@ namespace test2
             sj_dgv.Hide();
             dgvlbl.Hide();
             hidegridsandlabels();
+            SetAddRemoveProgramsIcon();
         }
         public void hidegridsandlabels()
         {

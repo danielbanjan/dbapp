@@ -27,15 +27,21 @@ namespace test2
         SqlDataAdapter sda_db;
         SqlDataAdapter sda_o;
         SqlDataAdapter sda_g;
+        SqlDataAdapter sda_h;
+        SqlDataAdapter sda_ff;
         DataTable dt_sj;
         DataTable dt_f;
         DataTable dt_db;
         DataTable dt_o;
         DataTable dt_g;
+        DataTable dt_h;
+        DataTable dt_ff;
         SqlCommandBuilder scb_f;
         SqlCommandBuilder scb_db;
         SqlCommandBuilder scb_o;
         SqlCommandBuilder scb_sj;
+        SqlCommandBuilder scb_h;
+        SqlCommandBuilder scb_ff;
         [DllImport("advapi32.dll")]
         public static extern bool LogonUser(string name, string domain, string pass, int logType, int logpv, ref IntPtr pht);
         private static void SetAddRemoveProgramsIcon()
@@ -88,6 +94,10 @@ namespace test2
             owlbl.Hide();
             yesnolbl.Hide();
             dgv_g.Hide();
+            h_lbl.Hide();
+            h_dgv.Hide();
+            ff_lbl.Hide();
+            ff_dgv.Hide();
         }
         public Form1()
         {
@@ -106,14 +116,17 @@ namespace test2
             tabs.TabPages.Remove(tabPage4);
             tabs.TabPages.Remove(tabPage5);
             tabs.TabPages.Remove(tabPage6);
+            tabs.TabPages.Remove(tabPage7);
         }
         public void showpages()
         {
             tabs.TabPages.Insert(1, tabPage2);
             tabs.TabPages.Insert(2, tabPage3);
             tabs.TabPages.Insert(3, tabPage4);
-            tabs.TabPages.Insert(4, tabPage5);
-            tabs.TabPages.Insert(5, tabPage6);
+            tabs.TabPages.Insert(4, tabPage7);
+            tabs.TabPages.Insert(5, tabPage5);
+            tabs.TabPages.Insert(6, tabPage6);
+
         }
         private void loginbtn_Click(object sender, EventArgs e)
         {
@@ -934,7 +947,8 @@ namespace test2
             yesnolbl.Hide();
             String st = "";
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + ccbextra.SelectedItem.ToString()].ConnectionString);
-            st = "select geo1name,geo2name,geo3name from config_geo_portalstructure where geo3name is not null";
+            //st = "select geo1name,geo2name,geo3name from config_geo_portalstructure where geo3name is not null";
+            st = query_txtb.Text;
             SqlCommand sqlcom = new SqlCommand(st, conn);
             try
             {
@@ -964,5 +978,125 @@ namespace test2
                 MessageBox.Show(ex.Message);
             }
             }
+
+        private void hff_combobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hff_clb_SelectedIndexChanged(this, EventArgs.Empty);
+        }
+
+        public void hff_ascunsgrids()
+        {
+            for (int i = 0; i < hff_clb.Items.Count; i++)
+            {
+                if (hff_clb.GetItemCheckState(0) == CheckState.Unchecked)
+                {
+                    h_lbl.Hide();
+                    h_dgv.Hide();
+                }
+                if (hff_clb.GetItemCheckState(1) == CheckState.Unchecked)
+                {
+                    ff_lbl.Hide();
+                    ff_dgv.Hide();
+                }
+            }
+        }
+        private void hff_clb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hff_ascunsgrids();
+            if (hff_combobox.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a country first!.");
+                deselect_all(hff_clb, sa_hff_cb);
+            }
+            else
+            {
+                String st = "";
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + hff_combobox.SelectedItem.ToString()].ConnectionString);
+                foreach (string s in hff_clb.CheckedItems)
+                {
+                    if (s == "Highlight Settings")
+                    {
+                        st = "select * from Config_Freshness";
+                        SqlCommand sqlcom = new SqlCommand(st, conn);
+                        try
+                        {
+                            conn.Open();
+                            sda_h = new SqlDataAdapter(sqlcom);
+                            dt_h = new DataTable();
+                            sda_h.Fill(dt_h);
+                            h_dgv.DataSource = dt_h;
+                            h_dgv.Show();
+                            h_lbl.Show();
+                            conn.Close();
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                    if (s == "Freshness Factor Settings")
+                    {
+                        st = "select * from Config_Highlighting";
+                        SqlCommand sqlcom = new SqlCommand(st, conn);
+                        try
+                        {
+                            conn.Open();
+                            sda_ff = new SqlDataAdapter(sqlcom);
+                            dt_ff = new DataTable();
+                            sda_ff.Fill(dt_ff);
+                            ff_dgv.DataSource = dt_ff;
+                            ff_dgv.Show();
+                            ff_lbl.Show();
+                            conn.Close();
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+            }
+        }
+        public void hff_deselect_all(CheckedListBox checks, CheckBox setitems)
+        {
+            for (int i = 0; i < checks.Items.Count; i++)
+            {
+                checks.SetItemChecked(i, false);
+            }
+            setitems.Text = "Select All";
+            setitems.Checked = false;
+            hidegridsandlabels();
+        }
+
+        private void sa_hff_cb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sa_hff_cb.Checked == true)
+            {
+                for (int i = 0; i < hff_clb.Items.Count; i++)
+                {
+                    hff_clb.SetItemChecked(i, true);
+                }
+                sa_hff_cb.Text = "Deselect All";
+                hff_clb_SelectedIndexChanged(this, EventArgs.Empty);
+            }
+            else
+            {
+                hff_deselect_all(hff_clb, sa_hff_cb);
+            }
+        }
+
+        private void hff_updatebtn_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Are you sure to Update the table?",
+                                    "Confirm Update!!",
+                                    MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                scb_h = new SqlCommandBuilder(sda_h);
+                sda_h.Update(dt_h);
+                scb_ff = new SqlCommandBuilder(sda_ff);
+                sda_ff.Update(dt_ff);
+            }
+        }
     }
 }

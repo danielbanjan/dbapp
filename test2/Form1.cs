@@ -29,6 +29,7 @@ namespace test2
         SqlDataAdapter sda_g;
         SqlDataAdapter sda_h;
         SqlDataAdapter sda_ff;
+        SqlDataAdapter sda_mo;
         DataTable dt_sj;
         DataTable dt_f;
         DataTable dt_db;
@@ -36,12 +37,14 @@ namespace test2
         DataTable dt_g;
         DataTable dt_h;
         DataTable dt_ff;
+        DataTable dt_mo;
         SqlCommandBuilder scb_f;
         SqlCommandBuilder scb_db;
         SqlCommandBuilder scb_o;
         SqlCommandBuilder scb_sj;
         SqlCommandBuilder scb_h;
         SqlCommandBuilder scb_ff;
+        SqlCommandBuilder scb_mo;
         [DllImport("advapi32.dll")]
         public static extern bool LogonUser(string name, string domain, string pass, int logType, int logpv, ref IntPtr pht);
         private static void SetAddRemoveProgramsIcon()
@@ -98,6 +101,8 @@ namespace test2
             h_dgv.Hide();
             ff_lbl.Hide();
             ff_dgv.Hide();
+            mo_lbl.Hide();
+            mo_dgv.Hide();
         }
         public Form1()
         {
@@ -1054,6 +1059,26 @@ namespace test2
                             MessageBox.Show(ex.Message);
                         }
                     }
+                    if (s == "Metaname Overridescore")
+                    {
+                        st = "select * from config_metaname_overridescore";
+                        SqlCommand sqlcom = new SqlCommand(st, conn);
+                        try
+                        {
+                            conn.Open();
+                            sda_mo = new SqlDataAdapter(sqlcom);
+                            dt_mo = new DataTable();
+                            sda_mo.Fill(dt_mo);
+                            mo_dgv.DataSource = dt_mo;
+                            mo_dgv.Show();
+                            mo_lbl.Show();
+                            conn.Close();
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
                 }
             }
         }
@@ -1096,6 +1121,8 @@ namespace test2
                 sda_h.Update(dt_h);
                 scb_ff = new SqlCommandBuilder(sda_ff);
                 sda_ff.Update(dt_ff);
+                scb_mo = new SqlCommandBuilder(sda_mo);
+                sda_mo.Update(dt_mo);
             }
         }
     }

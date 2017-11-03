@@ -119,6 +119,8 @@
             this.ccbextra = new System.Windows.Forms.ComboBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.mo_lbl = new System.Windows.Forms.Label();
+            this.mo_dgv = new System.Windows.Forms.DataGridView();
             this.hff_pb = new System.Windows.Forms.PictureBox();
             this.ff_lbl = new System.Windows.Forms.Label();
             this.h_lbl = new System.Windows.Forms.Label();
@@ -128,8 +130,6 @@
             this.sa_hff_cb = new System.Windows.Forms.CheckBox();
             this.hff_clb = new System.Windows.Forms.CheckedListBox();
             this.hff_combobox = new System.Windows.Forms.ComboBox();
-            this.mo_dgv = new System.Windows.Forms.DataGridView();
-            this.mo_lbl = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -149,10 +149,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_g)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mo_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hff_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ff_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.h_dgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mo_dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -691,7 +691,7 @@
             "Override Settings"});
             this.fdo_clb.Location = new System.Drawing.Point(18, 77);
             this.fdo_clb.Name = "fdo_clb";
-            this.fdo_clb.Size = new System.Drawing.Size(121, 47);
+            this.fdo_clb.Size = new System.Drawing.Size(145, 47);
             this.fdo_clb.TabIndex = 3;
             this.fdo_clb.SelectedIndexChanged += new System.EventHandler(this.fdo_clb_SelectedIndexChanged);
             // 
@@ -1317,6 +1317,28 @@
             this.tabPage7.Text = "Highlight+FF";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // mo_lbl
+            // 
+            this.mo_lbl.AutoSize = true;
+            this.mo_lbl.Location = new System.Drawing.Point(274, 347);
+            this.mo_lbl.Name = "mo_lbl";
+            this.mo_lbl.Size = new System.Drawing.Size(128, 13);
+            this.mo_lbl.TabIndex = 28;
+            this.mo_lbl.Text = "Metaname OverrideScore";
+            // 
+            // mo_dgv
+            // 
+            this.mo_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mo_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.mo_dgv.BackgroundColor = System.Drawing.Color.White;
+            this.mo_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mo_dgv.Location = new System.Drawing.Point(275, 365);
+            this.mo_dgv.Name = "mo_dgv";
+            this.mo_dgv.Size = new System.Drawing.Size(624, 235);
+            this.mo_dgv.TabIndex = 27;
+            // 
             // hff_pb
             // 
             this.hff_pb.Image = ((System.Drawing.Image)(resources.GetObject("hff_pb.Image")));
@@ -1447,28 +1469,6 @@
             this.hff_combobox.TabIndex = 18;
             this.hff_combobox.SelectedIndexChanged += new System.EventHandler(this.hff_combobox_SelectedIndexChanged);
             // 
-            // mo_dgv
-            // 
-            this.mo_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mo_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.mo_dgv.BackgroundColor = System.Drawing.Color.White;
-            this.mo_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.mo_dgv.Location = new System.Drawing.Point(275, 365);
-            this.mo_dgv.Name = "mo_dgv";
-            this.mo_dgv.Size = new System.Drawing.Size(624, 235);
-            this.mo_dgv.TabIndex = 27;
-            // 
-            // mo_lbl
-            // 
-            this.mo_lbl.AutoSize = true;
-            this.mo_lbl.Location = new System.Drawing.Point(274, 347);
-            this.mo_lbl.Name = "mo_lbl";
-            this.mo_lbl.Size = new System.Drawing.Size(128, 13);
-            this.mo_lbl.TabIndex = 28;
-            this.mo_lbl.Text = "Metaname OverrideScore";
-            // 
             // Form1
             // 
             this.AcceptButton = this.loginbtn;
@@ -1509,10 +1509,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mo_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hff_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ff_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.h_dgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mo_dgv)).EndInit();
             this.ResumeLayout(false);
 
         }

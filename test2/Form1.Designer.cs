@@ -112,7 +112,13 @@
             this.we_gb = new System.Windows.Forms.GroupBox();
             this.ss_gb = new System.Windows.Forms.GroupBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.query_txtb = new System.Windows.Forms.TextBox();
+            this.Geosearchbtn = new System.Windows.Forms.Button();
+            this.ipgeocb = new System.Windows.Forms.CheckBox();
+            this.searchextralbl = new System.Windows.Forms.Label();
+            this.searchgeotxtbox = new System.Windows.Forms.RichTextBox();
+            this.stgeolbl = new System.Windows.Forms.Label();
+            this.cextralbl = new System.Windows.Forms.Label();
+            this.geotablecb = new System.Windows.Forms.ComboBox();
             this.yesnolbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_g = new System.Windows.Forms.DataGridView();
@@ -1199,7 +1205,13 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.Controls.Add(this.query_txtb);
+            this.tabPage6.Controls.Add(this.Geosearchbtn);
+            this.tabPage6.Controls.Add(this.ipgeocb);
+            this.tabPage6.Controls.Add(this.searchextralbl);
+            this.tabPage6.Controls.Add(this.searchgeotxtbox);
+            this.tabPage6.Controls.Add(this.stgeolbl);
+            this.tabPage6.Controls.Add(this.cextralbl);
+            this.tabPage6.Controls.Add(this.geotablecb);
             this.tabPage6.Controls.Add(this.yesnolbl);
             this.tabPage6.Controls.Add(this.label2);
             this.tabPage6.Controls.Add(this.dgv_g);
@@ -1210,28 +1222,89 @@
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(907, 606);
             this.tabPage6.TabIndex = 6;
-            this.tabPage6.Text = "Extra";
+            this.tabPage6.Text = "Geo";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // query_txtb
+            // Geosearchbtn
             // 
-            this.query_txtb.Location = new System.Drawing.Point(421, 25);
-            this.query_txtb.Name = "query_txtb";
-            this.query_txtb.Size = new System.Drawing.Size(483, 20);
-            this.query_txtb.TabIndex = 21;
+            this.Geosearchbtn.Location = new System.Drawing.Point(571, 20);
+            this.Geosearchbtn.Name = "Geosearchbtn";
+            this.Geosearchbtn.Size = new System.Drawing.Size(75, 23);
+            this.Geosearchbtn.TabIndex = 28;
+            this.Geosearchbtn.Text = "Search";
+            this.Geosearchbtn.UseVisualStyleBackColor = true;
+            this.Geosearchbtn.Click += new System.EventHandler(this.Geosearchbtn_Click);
+            // 
+            // ipgeocb
+            // 
+            this.ipgeocb.AutoSize = true;
+            this.ipgeocb.Location = new System.Drawing.Point(417, 26);
+            this.ipgeocb.Name = "ipgeocb";
+            this.ipgeocb.Size = new System.Drawing.Size(137, 17);
+            this.ipgeocb.TabIndex = 27;
+            this.ipgeocb.Text = "Include Partial Matches";
+            this.ipgeocb.UseVisualStyleBackColor = true;
+            // 
+            // searchextralbl
+            // 
+            this.searchextralbl.AutoSize = true;
+            this.searchextralbl.Location = new System.Drawing.Point(172, 3);
+            this.searchextralbl.Name = "searchextralbl";
+            this.searchextralbl.Size = new System.Drawing.Size(81, 13);
+            this.searchextralbl.TabIndex = 26;
+            this.searchextralbl.Text = "Search by Geo:";
+            // 
+            // searchgeotxtbox
+            // 
+            this.searchgeotxtbox.Location = new System.Drawing.Point(174, 23);
+            this.searchgeotxtbox.Name = "searchgeotxtbox";
+            this.searchgeotxtbox.Size = new System.Drawing.Size(225, 21);
+            this.searchgeotxtbox.TabIndex = 25;
+            this.searchgeotxtbox.Text = "";
+            // 
+            // stgeolbl
+            // 
+            this.stgeolbl.AutoSize = true;
+            this.stgeolbl.Location = new System.Drawing.Point(8, 56);
+            this.stgeolbl.Name = "stgeolbl";
+            this.stgeolbl.Size = new System.Drawing.Size(70, 13);
+            this.stgeolbl.TabIndex = 24;
+            this.stgeolbl.Text = "Select Table:";
+            // 
+            // cextralbl
+            // 
+            this.cextralbl.AutoSize = true;
+            this.cextralbl.Location = new System.Drawing.Point(5, 3);
+            this.cextralbl.Name = "cextralbl";
+            this.cextralbl.Size = new System.Drawing.Size(79, 13);
+            this.cextralbl.TabIndex = 23;
+            this.cextralbl.Text = "Select Country:";
+            // 
+            // geotablecb
+            // 
+            this.geotablecb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.geotablecb.FormattingEnabled = true;
+            this.geotablecb.Items.AddRange(new object[] {
+            "GeoPC",
+            "GeoPortal"});
+            this.geotablecb.Location = new System.Drawing.Point(9, 72);
+            this.geotablecb.Name = "geotablecb";
+            this.geotablecb.Size = new System.Drawing.Size(121, 21);
+            this.geotablecb.TabIndex = 22;
             // 
             // yesnolbl
             // 
             this.yesnolbl.AutoSize = true;
-            this.yesnolbl.Location = new System.Drawing.Point(312, 25);
+            this.yesnolbl.Location = new System.Drawing.Point(172, 105);
             this.yesnolbl.Name = "yesnolbl";
-            this.yesnolbl.Size = new System.Drawing.Size(0, 13);
+            this.yesnolbl.Size = new System.Drawing.Size(24, 13);
             this.yesnolbl.TabIndex = 20;
+            this.yesnolbl.Text = "test";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(158, 25);
+            this.label2.Location = new System.Drawing.Point(8, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 13);
             this.label2.TabIndex = 19;
@@ -1242,9 +1315,9 @@
             this.dgv_g.BackgroundColor = System.Drawing.Color.White;
             this.dgv_g.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_g.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_g.Location = new System.Drawing.Point(161, 53);
+            this.dgv_g.Location = new System.Drawing.Point(11, 130);
             this.dgv_g.Name = "dgv_g";
-            this.dgv_g.Size = new System.Drawing.Size(539, 252);
+            this.dgv_g.Size = new System.Drawing.Size(888, 419);
             this.dgv_g.TabIndex = 18;
             // 
             // ccbextra
@@ -1606,7 +1679,6 @@
         private System.Windows.Forms.ComboBox ccbextra;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label yesnolbl;
-        private System.Windows.Forms.TextBox query_txtb;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.CheckBox sa_hff_cb;
         private System.Windows.Forms.CheckedListBox hff_clb;
@@ -1619,6 +1691,13 @@
         private System.Windows.Forms.PictureBox hff_pb;
         private System.Windows.Forms.Label mo_lbl;
         private System.Windows.Forms.DataGridView mo_dgv;
+        private System.Windows.Forms.Label stgeolbl;
+        private System.Windows.Forms.Label cextralbl;
+        private System.Windows.Forms.ComboBox geotablecb;
+        private System.Windows.Forms.CheckBox ipgeocb;
+        private System.Windows.Forms.Label searchextralbl;
+        private System.Windows.Forms.RichTextBox searchgeotxtbox;
+        private System.Windows.Forms.Button Geosearchbtn;
     }
 }
 

@@ -129,8 +129,8 @@ namespace test2
             tabs.TabPages.Insert(2, tabPage3);
             tabs.TabPages.Insert(3, tabPage4);
             tabs.TabPages.Insert(4, tabPage7);
-            tabs.TabPages.Insert(5, tabPage5);
-            tabs.TabPages.Insert(6, tabPage6);
+            tabs.TabPages.Insert(5, tabPage6);
+            tabs.TabPages.Insert(6, tabPage5);
 
         }
         private void loginbtn_Click(object sender, EventArgs e)
@@ -948,41 +948,8 @@ namespace test2
 
         private void ccbextra_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgv_g.Hide();
-            yesnolbl.Hide();
-            String st = "";
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + ccbextra.SelectedItem.ToString()].ConnectionString);
-            //st = "select geo1name,geo2name,geo3name from config_geo_portalstructure where geo3name is not null";
-            st = query_txtb.Text;
-            SqlCommand sqlcom = new SqlCommand(st, conn);
-            try
-            {
-            conn.Open();
-            object maxCode = sqlcom.ExecuteScalar();
-            if (maxCode == null)
-            {
-                yesnolbl.Text = "NO!";
-                yesnolbl.ForeColor = System.Drawing.Color.Red;
-                yesnolbl.Show();
-            }
-            else
-            {
-                yesnolbl.Text = "Yes!";
-                yesnolbl.ForeColor = System.Drawing.Color.Green;
-                sda_g = new SqlDataAdapter(sqlcom);
-                dt_g = new DataTable();
-                sda_g.Fill(dt_g);
-                dgv_g.DataSource = dt_g;
-                dgv_g.Show();
-                yesnolbl.Show();
-            }
-                conn.Close();
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            }
+            
+        }
 
         private void hff_combobox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1125,5 +1092,99 @@ namespace test2
                 sda_mo.Update(dt_mo);
             }
         }
+
+        private void Geosearchbtn_Click(object sender, EventArgs e)
+        {
+            dgv_g.Hide();
+            yesnolbl.Hide();
+            String st = "";
+            if (ccbextra.SelectedItem == null) { cextralbl.ForeColor = System.Drawing.Color.Red; }
+            else
+            {
+                cextralbl.ForeColor = System.Drawing.Color.Black;
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + ccbextra.SelectedItem.ToString()].ConnectionString);
+
+                string searchgeo = searchgeotxtbox.Text;
+                searchextralbl.ForeColor = System.Drawing.Color.Black;
+
+                if (geotablecb.SelectedItem == null) { stgeolbl.ForeColor = System.Drawing.Color.Red; }
+                else
+                {
+                    stgeolbl.ForeColor = System.Drawing.Color.Black;
+                    if (string.IsNullOrWhiteSpace(searchgeotxtbox.Text))
+                    {
+
+                        if (geotablecb.SelectedItem.ToString() == "GeoPC")
+                        { st = "select * from config_geopc"; }
+
+                        if (geotablecb.SelectedItem.ToString() == "GeoPortal")
+                        { st = "select * from config_geo_portalstructure"; }
+                    }
+                    else
+                    {
+                        if (geotablecb.SelectedItem.ToString() == "GeoPC")
+                        {
+                            if (ipgeocb.Checked == true)
+                            {
+                                st = "select * from config_geopc where region1 like '%" + searchgeo + "%' or region2 like '%" + searchgeo + "%' or region3 like '%" + searchgeo + "%' or region4 like '%" + searchgeo + "%' or city like '%" + searchgeo + "%' or area1 like '%" + searchgeo + "%'";
+                            }
+                            else st = "select * from config_geopc where region1 ='" + searchgeo + "' or region2 ='" + searchgeo + "' or region3 ='" + searchgeo + "' or region4='" + searchgeo + "' or city ='" + searchgeo + "' or area1 ='" + searchgeo + "'";
+                        }
+                        if (geotablecb.SelectedItem.ToString() == "GeoPortal")
+                        {
+                            if (ipgeocb.Checked == true)
+                            {
+                                st = "select * from config_geo_portalstructure where geo1name like '%" + searchgeo + "%' or geo2name like '%" + searchgeo + "%' or geo3name like '%" + searchgeo + "%' or geo4name like '%" + searchgeo + "%'";
+                            }
+                            else st = "select * from config_geo_portalstructure where geo1name ='" + searchgeo + "' or geo2name ='" + searchgeo + "' or geo3name ='" + searchgeo + "' or geo4name='" + searchgeo + "'";
+
+                        }
+                    }
+                    string st1 = "select geo1name,geo2name,geo3name from config_geo_portalstructure where geo3name is not null";
+                    SqlCommand sqlcom1 = new SqlCommand(st1, conn);
+                    SqlCommand sqlcom = new SqlCommand(st, conn);
+                    try
+                    {
+                        conn.Open();
+                        object maxCode = sqlcom1.ExecuteScalar();
+                        if (maxCode == null)
+                        {
+                            yesnolbl.Text = "NO!";
+                            yesnolbl.ForeColor = System.Drawing.Color.Red;
+                            yesnolbl.Show();
+                        }
+                        else
+                        {
+                            yesnolbl.Text = "Yes!";
+                            yesnolbl.ForeColor = System.Drawing.Color.Green;
+                            yesnolbl.Show();
+                        }
+                        conn.Close();
+                    }
+
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    try
+                    {
+                        conn.Open();
+                        sda_g = new SqlDataAdapter(sqlcom);
+                        dt_g = new DataTable();
+                        sda_g.Fill(dt_g);
+                        dgv_g.DataSource = dt_g;
+                        dgv_g.Show();
+                        conn.Close();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    
+                }
+                
+            }
+        }
+
     }
 }

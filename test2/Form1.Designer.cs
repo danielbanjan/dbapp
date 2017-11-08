@@ -1295,7 +1295,7 @@
             // yesnolbl
             // 
             this.yesnolbl.AutoSize = true;
-            this.yesnolbl.Location = new System.Drawing.Point(172, 105);
+            this.yesnolbl.Location = new System.Drawing.Point(153, 105);
             this.yesnolbl.Name = "yesnolbl";
             this.yesnolbl.Size = new System.Drawing.Size(24, 13);
             this.yesnolbl.TabIndex = 20;

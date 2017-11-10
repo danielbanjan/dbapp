@@ -1286,7 +1286,8 @@
             this.geotablecb.FormattingEnabled = true;
             this.geotablecb.Items.AddRange(new object[] {
             "GeoPC",
-            "GeoPortal"});
+            "GeoPortal",
+            "Joined Geos"});
             this.geotablecb.Location = new System.Drawing.Point(9, 72);
             this.geotablecb.Name = "geotablecb";
             this.geotablecb.Size = new System.Drawing.Size(121, 21);

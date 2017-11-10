@@ -1119,6 +1119,9 @@ namespace test2
 
                         if (geotablecb.SelectedItem.ToString() == "GeoPortal")
                         { st = "select * from config_geo_portalstructure"; }
+
+                        if (geotablecb.SelectedItem.ToString() == "Joined Geos")
+                        { st = "select distinct region1 as Geo1_in_Geopc, region2 as Geo2_in_Geopc, region3 as Geo3_in_Geopc, city ,geo1name as Geo1_in_PortalStructure, geo2name as Geo2_in_PortalStructure, geo3name as  Geo3_in_PortalStructure from config_geo_portalstructure inner join Config_geo_geopc_to_portalstructure on config_geo_portalstructure.id = Config_geo_geopc_to_portalstructure.portalstructure_id inner join config_geopc on Config_geo_geopc_to_portalstructure.geopc_id = config_geopc.id"; }
                     }
                     else
                     {
@@ -1126,9 +1129,9 @@ namespace test2
                         {
                             if (ipgeocb.Checked == true)
                             {
-                                st = "select * from config_geopc where region1 like '%" + searchgeo + "%' or region2 like '%" + searchgeo + "%' or region3 like '%" + searchgeo + "%' or region4 like '%" + searchgeo + "%' or city like '%" + searchgeo + "%' or area1 like '%" + searchgeo + "%'";
+                                st = "select * from config_geopc where region1 like '%" + searchgeo + "%' or region2 like '%" + searchgeo + "%' or region3 like '%" + searchgeo + "%' or region4 like '%" + searchgeo + "%' or city like '%" + searchgeo + "%' or area1 like '%" + searchgeo + "%' or zip like '%" + searchgeo + "%'";
                             }
-                            else st = "select * from config_geopc where region1 ='" + searchgeo + "' or region2 ='" + searchgeo + "' or region3 ='" + searchgeo + "' or region4='" + searchgeo + "' or city ='" + searchgeo + "' or area1 ='" + searchgeo + "'";
+                            else st = "select * from config_geopc where region1 ='" + searchgeo + "' or region2 ='" + searchgeo + "' or region3 ='" + searchgeo + "' or region4='" + searchgeo + "' or city ='" + searchgeo + "' or area1 ='" + searchgeo + "' or zip='" + searchgeo + "'";
                         }
                         if (geotablecb.SelectedItem.ToString() == "GeoPortal")
                         {
@@ -1138,6 +1141,14 @@ namespace test2
                             }
                             else st = "select * from config_geo_portalstructure where geo1name ='" + searchgeo + "' or geo2name ='" + searchgeo + "' or geo3name ='" + searchgeo + "' or geo4name='" + searchgeo + "'";
 
+                        }
+                        if (geotablecb.SelectedItem.ToString() == "Joined Geos")
+                        {
+                            if (ipgeocb.Checked == true)
+                            {
+                                st = "select distinct region1 as Geo1_in_Geopc, region2 as Geo2_in_Geopc, region3 as Geo3_in_Geopc, city ,geo1name as Geo1_in_PortalStructure, geo2name as Geo2_in_PortalStructure, geo3name as  Geo3_in_PortalStructure from config_geo_portalstructure inner join Config_geo_geopc_to_portalstructure on config_geo_portalstructure.id = Config_geo_geopc_to_portalstructure.portalstructure_id inner join config_geopc on Config_geo_geopc_to_portalstructure.geopc_id = config_geopc.id where geo1name like '%" + searchgeo + "%' or geo2name like '%" + searchgeo + "%' or geo3name like '%" + searchgeo + "%' or geo4name like '%" + searchgeo + "%' or region1 like '%" + searchgeo + "%' or region2 like '%" + searchgeo + "%' or region3 like '%" + searchgeo + "%' or region4 like '%" + searchgeo + "%' or city like '%" + searchgeo + "%' or area1 like '%" + searchgeo + "%' or zip like '%" + searchgeo + "%'";
+                            }
+                            else st = "select distinct region1 as Geo1_in_Geopc, region2 as Geo2_in_Geopc, region3 as Geo3_in_Geopc, city ,geo1name as Geo1_in_PortalStructure, geo2name as Geo2_in_PortalStructure, geo3name as  Geo3_in_PortalStructure from config_geo_portalstructure inner join Config_geo_geopc_to_portalstructure on config_geo_portalstructure.id = Config_geo_geopc_to_portalstructure.portalstructure_id inner join config_geopc on Config_geo_geopc_to_portalstructure.geopc_id = config_geopc.id where geo1name ='" + searchgeo + "' or geo2name ='" + searchgeo + "' or geo3name ='" + searchgeo + "' or geo4name='" + searchgeo + "' or region1 ='" + searchgeo + "' or region2 ='" + searchgeo + "' or region3 ='" + searchgeo + "' or region4='" + searchgeo + "' or city ='" + searchgeo + "' or area1 ='" + searchgeo + "' or zip='" + searchgeo + "' ";
                         }
                     }
                     string st1 = "select geo1name,geo2name,geo3name from config_geo_portalstructure where geo3name is not null";

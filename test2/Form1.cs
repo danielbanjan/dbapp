@@ -588,9 +588,9 @@ namespace test2
                             MessageBox.Show(ex.Message);
                         }
                     }
-                    if (s == "Override Settings")
+                    if (s == "MaxNum Settings")
                     {
-                        st = "select * from Config_CategoryTree_PremiumAds";
+                        st = "select * from Config_CategoryTree_MaxNum";
                         SqlCommand sqlcom = new SqlCommand(st, conn);
                         try
                         {

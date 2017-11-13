@@ -617,9 +617,9 @@
             this.owlbl.AutoSize = true;
             this.owlbl.Location = new System.Drawing.Point(277, 434);
             this.owlbl.Name = "owlbl";
-            this.owlbl.Size = new System.Drawing.Size(88, 13);
+            this.owlbl.Size = new System.Drawing.Size(90, 13);
             this.owlbl.TabIndex = 17;
-            this.owlbl.Text = "Override Settings";
+            this.owlbl.Text = "MaxNum Settings";
             // 
             // deblbl
             // 
@@ -694,7 +694,7 @@
             this.fdo_clb.Items.AddRange(new object[] {
             "Featured Campaigns",
             "Deboost Campaigns",
-            "Override Settings"});
+            "MaxNum Settings"});
             this.fdo_clb.Location = new System.Drawing.Point(18, 77);
             this.fdo_clb.Name = "fdo_clb";
             this.fdo_clb.Size = new System.Drawing.Size(145, 47);

@@ -988,7 +988,7 @@ namespace test2
                 {
                     if (s == "Highlight Settings")
                     {
-                        st = "select * from Config_Freshness";
+                        st = "select * from Config_Highlighting";
                         SqlCommand sqlcom = new SqlCommand(st, conn);
                         try
                         {
@@ -1008,7 +1008,7 @@ namespace test2
                     }
                     if (s == "Freshness Factor Settings")
                     {
-                        st = "select * from Config_Highlighting";
+                        st = "select * from Config_Freshness";
                         SqlCommand sqlcom = new SqlCommand(st, conn);
                         try
                         {

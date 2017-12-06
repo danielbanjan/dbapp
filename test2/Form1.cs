@@ -291,17 +291,17 @@ namespace test2
                             {
                                 if (pmcb.Checked == true)
                                 {
-                                    st = "DELETE FROM JobTitles_WhitelistedJobTitles where JobTitle like '%" + jttxtbox.Text + "%'";
+                                    st = "DELETE FROM JobTitles_WhitelistedJobTitles where JobTitle like '%" + lines[j] + "%'";
                                 }
-                                else st = "DELETE FROM JobTitles_WhitelistedJobTitles where JobTitle = '" + jttxtbox.Text + "'";
+                                else st = "DELETE FROM JobTitles_WhitelistedJobTitles where JobTitle = '" + lines[j] + "'";
                             }
                             if (tablecb.SelectedItem.ToString() == "Job Titles Local Job Category")
                             {
                                 if (pmcb.Checked == true)
                                 {
-                                    st = "DELETE FROM JobTitles_LocalJobCategory where LocalDisplayName like '%" + jttxtbox.Text + "%'";
+                                    st = "DELETE FROM JobTitles_LocalJobCategory where LocalDisplayName like '%" + lines[j] + "%'";
                                 }
-                                else st = "DELETE FROM JobTitles_LocalJobCategory where LocalDisplayName = '" + jttxtbox.Text + "'";
+                                else st = "DELETE FROM JobTitles_LocalJobCategory where LocalDisplayName = '" + lines[j] + "'";
                             }
                             SqlCommand sqlcom = new SqlCommand(st, conn);
                             try
@@ -964,11 +964,17 @@ namespace test2
                 {
                     h_lbl.Hide();
                     h_dgv.Hide();
+   
                 }
                 if (hff_clb.GetItemCheckState(1) == CheckState.Unchecked)
                 {
                     ff_lbl.Hide();
                     ff_dgv.Hide();
+                }
+                if (hff_clb.GetItemCheckState(2) == CheckState.Unchecked)
+                {
+                    mo_dgv.Hide();
+                    mo_lbl.Hide();
                 }
             }
         }

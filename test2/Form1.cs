@@ -257,7 +257,7 @@ namespace test2
         }
         private void deletebtnjob_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Are you sure to Delete these jobs?",
+            var confirmResult = MessageBox.Show("Are you sure you want to Delete these jobs?",
                                      "Confirm Update!!",
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
@@ -550,7 +550,7 @@ namespace test2
                 {
                     if (s == "Featured Campaigns")
                     {
-                        st = "select id,campaign_name,categorykey,domain,filter,status,boost,start_time from Config_Customerv2_Campaign";
+                        st = "select id,domain,categorykey,filter,status,boost,start_time,cpc from Config_Customerv2_Campaign";
                         SqlCommand sqlcom = new SqlCommand(st, conn);
                         try
                         {

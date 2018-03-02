@@ -30,6 +30,7 @@ namespace test2
         SqlDataAdapter sda_h;
         SqlDataAdapter sda_ff;
         SqlDataAdapter sda_mo;
+        SqlDataAdapter sda_custom;
         DataTable dt_sj;
         DataTable dt_f;
         DataTable dt_db;
@@ -38,6 +39,7 @@ namespace test2
         DataTable dt_h;
         DataTable dt_ff;
         DataTable dt_mo;
+        DataTable dt_custom;
         SqlCommandBuilder scb_f;
         SqlCommandBuilder scb_db;
         SqlCommandBuilder scb_o;
@@ -45,6 +47,7 @@ namespace test2
         SqlCommandBuilder scb_h;
         SqlCommandBuilder scb_ff;
         SqlCommandBuilder scb_mo;
+        SqlCommandBuilder scb_custom;
         [DllImport("advapi32.dll")]
         public static extern bool LogonUser(string name, string domain, string pass, int logType, int logpv, ref IntPtr pht);
         private static void SetAddRemoveProgramsIcon()
@@ -103,6 +106,8 @@ namespace test2
             ff_dgv.Hide();
             mo_lbl.Hide();
             mo_dgv.Hide();
+            dgvcustom.Hide();
+
         }
         public Form1()
         {
@@ -122,6 +127,7 @@ namespace test2
             tabs.TabPages.Remove(tabPage5);
             tabs.TabPages.Remove(tabPage6);
             tabs.TabPages.Remove(tabPage7);
+            tabs.TabPages.Remove(tabPage8);
         }
         public void showpages()
         {
@@ -131,6 +137,7 @@ namespace test2
             tabs.TabPages.Insert(4, tabPage7);
             tabs.TabPages.Insert(5, tabPage6);
             tabs.TabPages.Insert(6, tabPage5);
+            tabs.TabPages.Insert(7, tabPage8);
 
         }
         private void loginbtn_Click(object sender, EventArgs e)
@@ -1200,6 +1207,41 @@ namespace test2
                     
                 }
                 
+            }
+        }
+
+        private void updbtncustom_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Are you sure to Update the table?",
+                                    "Confirm Update!!",
+                                    MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                scb_custom = new SqlCommandBuilder(sda_custom);
+                sda_custom.Update(dt_custom);
+                MessageBox.Show("Table Updated Successfully!");
+            }
+        }
+
+        private void cb_custom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String st = "";
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["test2.Properties.Settings." + cb_custom.SelectedItem.ToString()].ConnectionString);
+            st = "select * from freki_language where [key] in('lblNoResultsFor','lblAlsoInterestedIn','lblClassifiedsfrom','lblRelatedAds','lblClassifiedsRelated','lblRelatedAdsWithSimilar','lblShowingResultsFor')";
+            SqlCommand sqlcom = new SqlCommand(st, conn);
+            try
+            {
+                conn.Open();
+                sda_custom = new SqlDataAdapter(sqlcom);
+                dt_custom = new DataTable();
+                sda_custom.Fill(dt_custom);
+                dgvcustom.DataSource = dt_custom;
+                dgvcustom.Show();
+                conn.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

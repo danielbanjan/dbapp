@@ -12,7 +12,7 @@ namespace test2.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.1.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.5.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -193,17 +193,6 @@ namespace test2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=db-ie.hugintechnologies.com;Initial Catalog=Ireland;Persist Security " +
-            "Info=True;User ID=rubrikkadmin@xwvn9ei84e;Password=q4hi0Awi")]
-        public string Ireland {
-            get {
-                return ((string)(this["Ireland"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=db-it.hugintechnologies.com;Initial Catalog=Italy;Persist Security In" +
             "fo=True;User ID=rubrikkadmin@v1c1hu0aph;Password=q4hi0Awi")]
         public string Italy {
@@ -303,17 +292,6 @@ namespace test2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=db-pl.hugintechnologies.com;Initial Catalog=Poland;Persist Security I" +
-            "nfo=True;User ID=rubrikkadmin@dt1vdkr840;Password=q4hi0Awi")]
-        public string Poland {
-            get {
-                return ((string)(this["Poland"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=db-co.hugintechnologies.com;Initial Catalog=Colombia;Persist Security" +
             " Info=True;User ID=rubrikkadmin@h8ej5gxyx0;Password=q4hi0Awi")]
         public string Colombia {
@@ -325,33 +303,11 @@ namespace test2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=db-in.hugintechnologies.com;Initial Catalog=India;Persist Security In" +
-            "fo=True;User ID=rubrikkadmin@ke1ocsvquc;Password=q4hi0Awi")]
-        public string India {
-            get {
-                return ((string)(this["India"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=db-tr.hugintechnologies.com;Initial Catalog=Turkey;Persist Security I" +
             "nfo=True;User ID=rubrikkadmin@txqkrxhb87;Password=q4hi0Awi")]
         public string Turkey {
             get {
                 return ((string)(this["Turkey"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=db-be.hugintechnologies.com;Initial Catalog=Belgium;Persist Security " +
-            "Info=True;User ID=rubrikkadmin@rubbe;Password=q4hi0Awi")]
-        public string Belgium {
-            get {
-                return ((string)(this["Belgium"]));
             }
         }
         

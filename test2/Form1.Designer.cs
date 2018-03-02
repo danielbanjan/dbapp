@@ -136,6 +136,10 @@
             this.sa_hff_cb = new System.Windows.Forms.CheckBox();
             this.hff_clb = new System.Windows.Forms.CheckedListBox();
             this.hff_combobox = new System.Windows.Forms.ComboBox();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.dgvcustom = new System.Windows.Forms.DataGridView();
+            this.updbtncustom = new System.Windows.Forms.Button();
+            this.cb_custom = new System.Windows.Forms.ComboBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -159,6 +163,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.hff_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ff_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.h_dgv)).BeginInit();
+            this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcustom)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -377,6 +383,7 @@
             this.tabs.Controls.Add(this.tabPage5);
             this.tabs.Controls.Add(this.tabPage6);
             this.tabs.Controls.Add(this.tabPage7);
+            this.tabs.Controls.Add(this.tabPage8);
             this.tabs.HotTrack = true;
             this.tabs.Location = new System.Drawing.Point(0, 0);
             this.tabs.Name = "tabs";
@@ -1330,7 +1337,6 @@
             "Australia",
             "Austria",
             "Bangladesh",
-            "Belgium",
             "Brazil",
             "Canada",
             "Chile",
@@ -1339,13 +1345,10 @@
             "Finland",
             "France",
             "Germany",
-            "India",
-            "Ireland",
             "Italy",
             "Kenya",
             "Mexico",
             "Norway",
-            "Poland",
             "Romania",
             "SouthAfrica",
             "Spain",
@@ -1513,7 +1516,6 @@
             "Australia",
             "Austria",
             "Bangladesh",
-            "Belgium",
             "Brazil",
             "Canada",
             "Chile",
@@ -1522,13 +1524,10 @@
             "Finland",
             "France",
             "Germany",
-            "India",
-            "Ireland",
             "Italy",
             "Kenya",
             "Mexico",
             "Norway",
-            "Poland",
             "Romania",
             "SouthAfrica",
             "Spain",
@@ -1542,6 +1541,78 @@
             this.hff_combobox.Size = new System.Drawing.Size(121, 21);
             this.hff_combobox.TabIndex = 18;
             this.hff_combobox.SelectedIndexChanged += new System.EventHandler(this.hff_combobox_SelectedIndexChanged);
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.dgvcustom);
+            this.tabPage8.Controls.Add(this.updbtncustom);
+            this.tabPage8.Controls.Add(this.cb_custom);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(907, 606);
+            this.tabPage8.TabIndex = 8;
+            this.tabPage8.Text = "Custom";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // dgvcustom
+            // 
+            this.dgvcustom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvcustom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvcustom.BackgroundColor = System.Drawing.Color.White;
+            this.dgvcustom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvcustom.Location = new System.Drawing.Point(275, 3);
+            this.dgvcustom.Name = "dgvcustom";
+            this.dgvcustom.RowHeadersWidth = 30;
+            this.dgvcustom.Size = new System.Drawing.Size(624, 595);
+            this.dgvcustom.TabIndex = 27;
+            // 
+            // updbtncustom
+            // 
+            this.updbtncustom.Location = new System.Drawing.Point(171, 24);
+            this.updbtncustom.Name = "updbtncustom";
+            this.updbtncustom.Size = new System.Drawing.Size(75, 23);
+            this.updbtncustom.TabIndex = 26;
+            this.updbtncustom.Text = "Update";
+            this.updbtncustom.UseVisualStyleBackColor = true;
+            this.updbtncustom.Click += new System.EventHandler(this.updbtncustom_Click);
+            // 
+            // cb_custom
+            // 
+            this.cb_custom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_custom.FormattingEnabled = true;
+            this.cb_custom.Items.AddRange(new object[] {
+            "Argentina",
+            "Australia",
+            "Austria",
+            "Bangladesh",
+            "Brazil",
+            "Canada",
+            "Chile",
+            "Colombia",
+            "Denmark",
+            "Finland",
+            "France",
+            "Germany",
+            "Italy",
+            "Kenya",
+            "Mexico",
+            "Norway",
+            "Romania",
+            "SouthAfrica",
+            "Spain",
+            "Sweden",
+            "Switzerland",
+            "Turkey",
+            "UK",
+            "Vietnam"});
+            this.cb_custom.Location = new System.Drawing.Point(18, 24);
+            this.cb_custom.Name = "cb_custom";
+            this.cb_custom.Size = new System.Drawing.Size(121, 21);
+            this.cb_custom.TabIndex = 25;
+            this.cb_custom.SelectedIndexChanged += new System.EventHandler(this.cb_custom_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -1587,6 +1658,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.hff_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ff_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.h_dgv)).EndInit();
+            this.tabPage8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcustom)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1699,6 +1772,10 @@
         private System.Windows.Forms.Label searchextralbl;
         private System.Windows.Forms.RichTextBox searchgeotxtbox;
         private System.Windows.Forms.Button Geosearchbtn;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.DataGridView dgvcustom;
+        private System.Windows.Forms.Button updbtncustom;
+        private System.Windows.Forms.ComboBox cb_custom;
     }
 }
 

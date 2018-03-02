@@ -106,14 +106,6 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=db-bd.hugintechnologies.com;Initial Catalog=Bangladesh;Persist Security Info=True;User ID=rubrikkadmin@gwxzwgqfxt;Password=q4hi0Awi</Value>
     </Setting>
-    <Setting Name="Ireland" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=db-ie.hugintechnologies.com;Initial Catalog=Ireland;Persist Security Info=True;User ID=rubrikkadmin@xwvn9ei84e;Password=q4hi0Awi&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=db-ie.hugintechnologies.com;Initial Catalog=Ireland;Persist Security Info=True;User ID=rubrikkadmin@xwvn9ei84e;Password=q4hi0Awi</Value>
-    </Setting>
     <Setting Name="Italy" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
@@ -186,14 +178,6 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=db-fr.hugintechnologies.com;Initial Catalog=France;Persist Security Info=True;User ID=rubrikkadmin@ftv8jg8dd4;Password=q4hi0Awi</Value>
     </Setting>
-    <Setting Name="Poland" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=db-pl.hugintechnologies.com;Initial Catalog=Poland;Persist Security Info=True;User ID=rubrikkadmin@dt1vdkr840;Password=q4hi0Awi&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=db-pl.hugintechnologies.com;Initial Catalog=Poland;Persist Security Info=True;User ID=rubrikkadmin@dt1vdkr840;Password=q4hi0Awi</Value>
-    </Setting>
     <Setting Name="Colombia" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
@@ -202,14 +186,6 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=db-co.hugintechnologies.com;Initial Catalog=Colombia;Persist Security Info=True;User ID=rubrikkadmin@h8ej5gxyx0;Password=q4hi0Awi</Value>
     </Setting>
-    <Setting Name="India" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=db-in.hugintechnologies.com;Initial Catalog=India;Persist Security Info=True;User ID=rubrikkadmin@ke1ocsvquc;Password=q4hi0Awi&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=db-in.hugintechnologies.com;Initial Catalog=India;Persist Security Info=True;User ID=rubrikkadmin@ke1ocsvquc;Password=q4hi0Awi</Value>
-    </Setting>
     <Setting Name="Turkey" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
@@ -217,14 +193,6 @@
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=db-tr.hugintechnologies.com;Initial Catalog=Turkey;Persist Security Info=True;User ID=rubrikkadmin@txqkrxhb87;Password=q4hi0Awi</Value>
-    </Setting>
-    <Setting Name="Belgium" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=db-be.hugintechnologies.com;Initial Catalog=Belgium;Persist Security Info=True;User ID=rubrikkadmin@rubbe;Password=q4hi0Awi&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=db-be.hugintechnologies.com;Initial Catalog=Belgium;Persist Security Info=True;User ID=rubrikkadmin@rubbe;Password=q4hi0Awi</Value>
     </Setting>
     <Setting Name="Romania" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;

@@ -341,7 +341,6 @@
             "Australia",
             "Austria",
             "Bangladesh",
-            "Belgium",
             "Brazil",
             "Canada",
             "Chile",
@@ -350,13 +349,10 @@
             "Finland",
             "France",
             "Germany",
-            "India",
-            "Ireland",
             "Italy",
             "Kenya",
             "Mexico",
             "Norway",
-            "Poland",
             "Romania",
             "SouthAfrica",
             "Spain",
@@ -367,7 +363,7 @@
             "Vietnam"});
             this.checkbox.Location = new System.Drawing.Point(480, 29);
             this.checkbox.Name = "checkbox";
-            this.checkbox.Size = new System.Drawing.Size(175, 467);
+            this.checkbox.Size = new System.Drawing.Size(175, 377);
             this.checkbox.TabIndex = 1;
             // 
             // tabs
@@ -567,7 +563,6 @@
             "Australia",
             "Austria",
             "Bangladesh",
-            "Belgium",
             "Brazil",
             "Canada",
             "Chile",
@@ -576,13 +571,10 @@
             "Finland",
             "France",
             "Germany",
-            "India",
-            "Ireland",
             "Italy",
             "Kenya",
             "Mexico",
             "Norway",
-            "Poland",
             "Romania",
             "SouthAfrica",
             "Spain",
@@ -593,7 +585,7 @@
             "Vietnam"});
             this.jobtitlecb.Location = new System.Drawing.Point(633, 24);
             this.jobtitlecb.Name = "jobtitlecb";
-            this.jobtitlecb.Size = new System.Drawing.Size(165, 437);
+            this.jobtitlecb.Size = new System.Drawing.Size(165, 377);
             this.jobtitlecb.Sorted = true;
             this.jobtitlecb.TabIndex = 10;
             // 
@@ -717,7 +709,6 @@
             "Australia",
             "Austria",
             "Bangladesh",
-            "Belgium",
             "Brazil",
             "Canada",
             "Chile",
@@ -726,13 +717,10 @@
             "Finland",
             "France",
             "Germany",
-            "India",
-            "Ireland",
             "Italy",
             "Kenya",
             "Mexico",
             "Norway",
-            "Poland",
             "Romania",
             "SouthAfrica",
             "Spain",
